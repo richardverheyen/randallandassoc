@@ -18,6 +18,16 @@ html {
 
 h1 {
   @include typography.typography("headline1");
+  font-size: 5vw;
+  font-weight: 400;
+  line-height: 100%;
+  
+  @media (min-width: 1000px) {
+    font-size: 50px;
+  }
+  @media (max-width: 600px) {
+    font-size: 30px;
+  }
 }
 
 h2 {
@@ -77,4 +87,34 @@ section {
   max-width: 64rem;
   padding: 0 1rem;
   margin: 0 auto;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > h1 {
+    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    max-width: 100%;
+    min-width: 250px;
+    min-height: 96px;
+    padding: 0px 24px;
+    box-sizing: border-box;
+    background: #282e3c;
+    color: white;
+
+    @media (min-width: 1000px) {
+      padding: 10px 60px;
+    }
+  }
 }

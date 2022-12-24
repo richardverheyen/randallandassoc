@@ -54,10 +54,7 @@
 
       <img src={bannerFull} alt="A work station with coffee" />
     </picture>
-    <h1
-      class="mdc-typography--headline3"
-      style="color: white; background: #282e3c; padding: 50px 50px;"
-    >
+    <h1 class="mdc-typography--headline4">
       Contact Us
     </h1>
   </div>
@@ -126,30 +123,12 @@
 <Footer />
 
 <style lang="scss">
-  .hero {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    > h1 {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      max-width: 100%;
-    }
-  }
   form {
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 600px;
     margin: 4em auto;
-
-    > h2 {
-      text-align: center;
-    }
 
     > fieldset {
       margin-bottom: 1rem;

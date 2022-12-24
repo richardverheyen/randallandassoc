@@ -40,7 +40,9 @@
 <style lang="scss">
   .footer-main {
     background-color: #484c5a;
-    height: 250px;
+    @media (max-width: 550px) {
+      padding-bottom: 2em;
+    }
   }
   .footer-list {
     display: flex;
@@ -52,9 +54,14 @@
     > li {
       flex: 1;
 
-      &:not(:first-child):not(:last-child) {
-        margin-left: 2.4rem;
+      @media (min-width: 551px) {
+        min-height: 216px;
+
+        &:not(:first-child):not(:last-child) {
+          margin-left: 2.4rem;
+        }
       }
+
 
       > img {
         height: 180px;

@@ -26,19 +26,16 @@
 
 <style lang="scss">
 	header {
-		display: flex;
-		justify-content: center;
 		background: #282e3c;
 
 		nav {
 			display: flex;
-			justify-content: center;
 
 			ul {
 				position: relative;
 				padding: 0;
 				margin: 0;
-				height: 3em;
+				height: 5em;
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -60,16 +57,18 @@
 				height: 100%;
 				align-items: center;
 				padding: 0 0.5rem;
-				color: var(--color-text);
 				font-weight: 700;
 				font-size: 0.8rem;
 				text-transform: uppercase;
 				letter-spacing: 0.1em;
 				text-decoration: none;
 				transition: color 0.2s linear;
+				color: white;
 
 				&:hover {
 					color: var(--color-theme-1);
+					color: darken(white, 50%);
+
 				}
 			}
 		}

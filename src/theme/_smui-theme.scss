@@ -14,6 +14,9 @@ body {
 }
 html {
   @include typography.typography("body1");
+  font-family: 'Cardo', serif;
+  font-weight: 400;
+  line-height: 130%;
 }
 
 h1 {
@@ -32,6 +35,16 @@ h1 {
 
 h2 {
   @include typography.typography("headline2");
+  font-size: 2.5vw;
+  font-weight: 500;
+  line-height: 100%;
+  
+  @media (min-width: 1000px) {
+    font-size: 25px;
+  }
+  @media (max-width: 800px) {
+    font-size: 20px;
+  }
 }
 
 h3 {
@@ -96,7 +109,6 @@ section {
   align-items: center;
 
   > h1 {
-    
     position: absolute;
     left: 50%;
     top: 50%;
@@ -112,6 +124,7 @@ section {
     box-sizing: border-box;
     background: #282e3c;
     color: white;
+    text-align: center;
 
     @media (min-width: 1000px) {
       padding: 10px 60px;

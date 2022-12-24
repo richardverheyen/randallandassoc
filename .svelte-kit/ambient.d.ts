@@ -31,8 +31,9 @@ declare module '$env/static/private' {
 	export const NODE: string;
 	export const INIT_CWD: string;
 	export const NVM_CD_FLAGS: string;
-	export const TERM: string;
 	export const SHELL: string;
+	export const TERM: string;
+	export const OMF_CONFIG: string;
 	export const npm_config_metrics_registry: string;
 	export const TMPDIR: string;
 	export const npm_config_global_prefix: string;
@@ -41,7 +42,6 @@ declare module '$env/static/private' {
 	export const TERM_SESSION_ID: string;
 	export const npm_config_noproxy: string;
 	export const npm_config_local_prefix: string;
-	export const ZSH: string;
 	export const NVM_DIR: string;
 	export const USER: string;
 	export const COMMAND_MODE: string;
@@ -49,11 +49,8 @@ declare module '$env/static/private' {
 	export const SSH_AUTH_SOCK: string;
 	export const __CF_USER_TEXT_ENCODING: string;
 	export const npm_execpath: string;
-	export const PAGER: string;
-	export const LSCOLORS: string;
 	export const PATH: string;
 	export const npm_package_json: string;
-	export const _: string;
 	export const npm_config_userconfig: string;
 	export const npm_config_init_module: string;
 	export const __CFBundleIdentifier: string;
@@ -66,16 +63,15 @@ declare module '$env/static/private' {
 	export const ITERM_PROFILE: string;
 	export const XPC_FLAGS: string;
 	export const npm_config_node_gyp: string;
-	export const RBENV_SHELL: string;
 	export const npm_package_version: string;
 	export const XPC_SERVICE_NAME: string;
 	export const SHLVL: string;
 	export const HOME: string;
 	export const COLORFGBG: string;
 	export const LC_TERMINAL_VERSION: string;
+	export const OMF_PATH: string;
 	export const ITERM_SESSION_ID: string;
 	export const npm_config_cache: string;
-	export const LESS: string;
 	export const LOGNAME: string;
 	export const npm_lifecycle_script: string;
 	export const NVM_BIN: string;
@@ -84,6 +80,7 @@ declare module '$env/static/private' {
 	export const npm_node_execpath: string;
 	export const npm_config_prefix: string;
 	export const COLORTERM: string;
+	export const _: string;
 	export const NODE_ENV: string;
 }
 
@@ -119,8 +116,9 @@ declare module '$env/dynamic/private' {
 		NODE: string;
 		INIT_CWD: string;
 		NVM_CD_FLAGS: string;
-		TERM: string;
 		SHELL: string;
+		TERM: string;
+		OMF_CONFIG: string;
 		npm_config_metrics_registry: string;
 		TMPDIR: string;
 		npm_config_global_prefix: string;
@@ -129,7 +127,6 @@ declare module '$env/dynamic/private' {
 		TERM_SESSION_ID: string;
 		npm_config_noproxy: string;
 		npm_config_local_prefix: string;
-		ZSH: string;
 		NVM_DIR: string;
 		USER: string;
 		COMMAND_MODE: string;
@@ -137,11 +134,8 @@ declare module '$env/dynamic/private' {
 		SSH_AUTH_SOCK: string;
 		__CF_USER_TEXT_ENCODING: string;
 		npm_execpath: string;
-		PAGER: string;
-		LSCOLORS: string;
 		PATH: string;
 		npm_package_json: string;
-		_: string;
 		npm_config_userconfig: string;
 		npm_config_init_module: string;
 		__CFBundleIdentifier: string;
@@ -154,16 +148,15 @@ declare module '$env/dynamic/private' {
 		ITERM_PROFILE: string;
 		XPC_FLAGS: string;
 		npm_config_node_gyp: string;
-		RBENV_SHELL: string;
 		npm_package_version: string;
 		XPC_SERVICE_NAME: string;
 		SHLVL: string;
 		HOME: string;
 		COLORFGBG: string;
 		LC_TERMINAL_VERSION: string;
+		OMF_PATH: string;
 		ITERM_SESSION_ID: string;
 		npm_config_cache: string;
-		LESS: string;
 		LOGNAME: string;
 		npm_lifecycle_script: string;
 		NVM_BIN: string;
@@ -172,6 +165,7 @@ declare module '$env/dynamic/private' {
 		npm_node_execpath: string;
 		npm_config_prefix: string;
 		COLORTERM: string;
+		_: string;
 		NODE_ENV: string;
 		[key: `PUBLIC_${string}`]: undefined;
 		[key: string]: string | undefined;

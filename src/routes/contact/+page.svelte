@@ -8,7 +8,8 @@
   import banner2 from "$lib/images/contact-banner2.webp";
   import banner1 from "$lib/images/contact-banner1.webp";
   import bannerFull from "$lib/images/contact-banner-full.jpg";
-  import Footer from "./footer.svelte";
+  import ContactFooter from "./ContactFooter.svelte";
+  import Footer from "../Footer.svelte";
 
   let name = "";
   let email = "";
@@ -54,9 +55,7 @@
 
       <img src={bannerFull} alt="A work station with coffee" />
     </picture>
-    <h1 class="mdc-typography--headline4">
-      Contact Us
-    </h1>
+    <h1 class="mdc-typography--headline4">Contact Us</h1>
   </div>
 
   <div class="gutters">
@@ -120,9 +119,13 @@
     </form>
   </div>
 </section>
+<ContactFooter />
 <Footer />
 
 <style lang="scss">
+  #contact {
+    background-color: white;
+  }
   form {
     display: flex;
     flex-direction: column;

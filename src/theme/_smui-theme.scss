@@ -17,6 +17,7 @@ html {
   font-family: 'Cardo', serif;
   font-weight: 400;
   line-height: 130%;
+  background-color: theme.$primary;
 }
 
 h1 {
@@ -61,6 +62,7 @@ h5 {
 
 h6 {
   @include typography.typography("headline6");
+  font-size: 15px;
 }
 
 caption {
@@ -97,7 +99,7 @@ section {
 .gutters {
   box-sizing: border-box;
   width: 100%;
-  max-width: 64rem;
+  max-width: 76rem;
   padding: 0 1rem;
   margin: 0 auto;
 }
@@ -107,6 +109,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 
   > h1 {
     position: absolute;

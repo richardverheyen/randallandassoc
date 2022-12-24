@@ -1,0 +1,17 @@
+{
+	"/": [
+		"src/routes/+page.ts"
+	],
+	"/contact": [
+		"src/routes/contact/+page.ts"
+	],
+	"/personal-injury": [
+		"src/routes/personal-injury/+page.ts"
+	],
+	"/property-and-conveyancing": [
+		"src/routes/property-and-conveyancing/+page.ts"
+	],
+	"/wills-and-estates": [
+		"src/routes/wills-and-estates/+page.ts"
+	]
+}

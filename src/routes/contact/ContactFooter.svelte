@@ -40,11 +40,26 @@
       justify-content: space-around;
       align-items: center;
 
+      @media (max-width: 720px) {
+        flex-direction: column;
+      }
+
       > div {
         margin: 30px 0;
         height: 190px;
         width: 33%;
         color: white;
+        padding: 1em;
+
+        @media (max-width: 720px) {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          width: 100%;
+          max-width: 440px;
+          height: auto;
+          text-align: center;
+        }
 
         > img {
           filter: invert(100%);

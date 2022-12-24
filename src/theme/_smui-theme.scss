@@ -63,6 +63,7 @@ h5 {
 h6 {
   @include typography.typography("headline6");
   font-size: 15px;
+  font-weight: 700;
 }
 
 caption {
@@ -85,6 +86,10 @@ big {
 b,
 strong {
   font-weight: bold;
+}
+
+a {
+  font-family: 'Roboto', serif;
 }
 
 fieldset {
@@ -110,6 +115,18 @@ section {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  height: 500px;
+
+  picture,
+  img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 100%;
+    height: auto;
+    min-width: 100%;
+  }
 
   > h1 {
     position: absolute;

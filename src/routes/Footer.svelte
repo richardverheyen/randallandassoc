@@ -27,8 +27,8 @@
     </ul>
   </div>
 </section>
-<section class="footer-sub">
-  <div class="footers-foot gutters">
+<section id="footers-foot">
+  <div class="gutters">
     <p>Copyright © Randall & Associates Pty Ltd, 2022. All rights reserved.</p>
     <ul>
       <a href="/">Home</a>
@@ -61,7 +61,6 @@
           margin-left: 2.4rem;
         }
       }
-
 
       > img {
         height: 180px;
@@ -122,28 +121,30 @@
       }
     }
   }
-  .footer-sub {
+
+  #footers-foot {
     height: 60px;
     background-color: #282d3d;
-  }
-  .footers-foot {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
 
-    > p {
-      font-size: 15px;
-    }
-
-    > ul > a {
-      padding: 15px 15px;
-      font-size: 15px;
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       color: white;
-      text-decoration: none;
 
-      &:hover {
-        text-decoration: underline;
+      > p {
+        font-size: 15px;
+      }
+
+      > ul > a {
+        padding: 15px 15px;
+        font-size: 15px;
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }

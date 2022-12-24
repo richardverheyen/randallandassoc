@@ -1,8 +1,6 @@
 <script>
   import Logo from './Logo.svelte';
-  import Parallax from './Parallax.svelte';
   import Services from './Services.svelte';
-//   import Team from './Team.svelte';
   import Testimonials from './Testimonials.svelte';
 </script>
 
@@ -17,7 +15,6 @@
 		<p class="about mdc-typography--body1">We are a team of experienced and skilled writers dedicated to creating compelling and effective copy for our clients. Our services range from website content and product descriptions to marketing emails and social media posts. Whether you're a small business owner, a marketing manager, or a content creator, we have the expertise and creativity to elevate your brand and drive results.</p>
 	</div>
 </section>
-<Parallax />
 <Services />
 <Testimonials />
 

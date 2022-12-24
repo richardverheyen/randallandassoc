@@ -1,12 +1,15 @@
 <script>
 	import { page } from '$app/stores';
+	import logo from "$lib/logo.svg";
 </script>
 
 <header>
 	<nav class="gutters">
 		<ul>
 			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Home</a>
+				<a href="/" class='logo'>
+					<img src={logo} alt="logo" />
+				</a>
 			</li>
 			<li aria-current={$page.url.pathname === '/property-and-conveyancing' ? 'page' : undefined}>
 				<a href="/property-and-conveyancing">Property &amp; Conveyancing</a>
@@ -35,7 +38,7 @@
 				position: relative;
 				padding: 0;
 				margin: 0;
-				height: 5em;
+				height: 8em;
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -64,6 +67,21 @@
 				text-decoration: none;
 				transition: color 0.2s linear;
 				color: white;
+
+				&.logo {
+					width: 210px;
+					position: relative;
+					overflow: hidden;
+				}
+
+				> img {
+					position: absolute;
+					top: 46%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: auto;
+					height: 190px;
+				}
 
 				&:hover {
 					color: var(--color-theme-1);

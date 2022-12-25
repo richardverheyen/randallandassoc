@@ -1,7 +1,7 @@
 <script>
-  import banner2 from "$lib/images/injury-banner2.webp";
-  import banner1 from "$lib/images/injury-banner1.webp";
-  import bannerFull from "$lib/images/injury-banner-full.jpg";
+  import banner2 from "$lib/images/property-banner2.webp";
+  import banner1 from "$lib/images/property-banner1.webp";
+  import bannerFull from "$lib/images/property-banner-full.jpg";
 </script>
 
 <section id="terms-and-conditions">

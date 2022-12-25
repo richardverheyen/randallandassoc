@@ -49,9 +49,8 @@
       avatar: avatar1,
       avatarFallback: avatar1alt,
       jobTitle: "Property Client",
-      rating: ['star', 'star', 'star', 'star', 'star'],
-      text:
-        '"Very thorough and great communication throughout the entire process from the time we made our offer on the property right up until settlement. Would definitely recommend!"',
+      rating: ["star", "star", "star", "star", "star"],
+      text: '"Very thorough and great communication throughout the entire process from the time we made our offer on the property right up until settlement. Would definitely recommend!"',
     },
     {
       name: "Emily Johnson",
@@ -59,9 +58,8 @@
       avatar: avatar2,
       avatarFallback: avatar2alt,
       jobTitle: "Wills and Estate Client",
-      rating: ['star', 'star', 'star', 'star', 'star_half'],
-      text:
-        '"I recently used Randall and Associates to draft a new will and update my estate plan. The process was smooth and efficient, and the staff was knowledgeable and professional. They answered all of my questions and made sure I understood everything before moving forward. I was very satisfied with the final result and would highly recommend Joshua Randall to anyone in need of these services."',
+      rating: ["star", "star", "star", "star", "star_half"],
+      text: '"I recently used Randall and Associates to draft a new will and update my estate plan. The process was smooth and efficient, and the staff was knowledgeable and professional. They answered all of my questions and made sure I understood everything before moving forward. I was very satisfied with the final result and would highly recommend Joshua Randall to anyone in need of these services."',
     },
     {
       name: "Tom Davis",
@@ -69,9 +67,8 @@
       avatar: avatar3,
       avatarFallback: avatar3alt,
       jobTitle: "Personal Injury Client ",
-      rating: ['star', 'star', 'star', 'star', 'star'],
-      text:
-        '"After my recent car accident a friend recommended Randall and Associates to me and I\'m so glad I called them. I spoke to Joshua Randall and he was really understanding and helpful. The whole team at Randall and Associates was amazing and they did a great job handling my case. I\'m really happy with the outcome and would definitely recommend them to anyone who needs help with a personal injury claim."',
+      rating: ["star", "star", "star", "star", "star"],
+      text: "\"After my recent car accident a friend recommended Randall and Associates to me and I'm so glad I called them. I spoke to Joshua Randall and he was really understanding and helpful. The whole team at Randall and Associates was amazing and they did a great job handling my case. I'm really happy with the outcome and would definitely recommend them to anyone who needs help with a personal injury claim.\"",
     },
   ];
 </script>
@@ -80,7 +77,7 @@
 
 <section id="testimonials">
   <div class="gutters">
-    <h2 class="mdc-typography--headline4">Our feedback</h2>
+    <h2 class="mdc-typography--headline2">Feedback from our clients</h2>
   </div>
   <div class="testimonials">
     <div class="desktop-navigation">
@@ -97,7 +94,7 @@
                 <Graphic
                   style="background-image: url({item.avatar});background-size: 40px;"
                 />
-                
+
                 <Text>
                   <PrimaryText>{item.name}</PrimaryText>
                   <SecondaryText>{item.company}</SecondaryText>
@@ -123,20 +120,28 @@
           <article class="hidden" aria-hidden="true" style="opacity: {offset};">
             <div>
               {#each reviews[Math.floor($displayed_count + 1)]?.rating || [] as icon}
-                  <Icon class="material-icons">{icon}</Icon>
+                <Icon class="material-icons">{icon}</Icon>
               {/each}
             </div>
             <p>{reviews[Math.floor($displayed_count + 1)]?.text}</p>
-            <p class="name">{reviews[Math.floor($displayed_count + 1)]?.name} - {reviews[Math.floor($displayed_count + 1)]?.company}</p>
+            <p class="name">
+              {reviews[Math.floor($displayed_count + 1)]?.name} - {reviews[
+                Math.floor($displayed_count + 1)
+              ]?.company}
+            </p>
           </article>
           <article style="opacity: {1 - offset};">
             <div>
               {#each reviews[Math.floor($displayed_count)]?.rating || [] as icon}
-                  <Icon class="material-icons">{icon}</Icon>
+                <Icon class="material-icons">{icon}</Icon>
               {/each}
             </div>
             <p>{reviews[Math.floor($displayed_count)]?.text}</p>
-            <p class="name">{reviews[Math.floor($displayed_count)]?.name} - {reviews[Math.floor($displayed_count)]?.company}</p>
+            <p class="name">
+              {reviews[Math.floor($displayed_count)]?.name} - {reviews[
+                Math.floor($displayed_count)
+              ]?.company}
+            </p>
           </article>
         </div>
 
@@ -186,13 +191,18 @@
       box-sizing: border-box;
       width: 100%;
       min-width: 500px;
-      height: 480px;
       overflow: hidden;
       text-align: center;
       position: relative;
       padding: 0 3em;
+      height: 300px;
+
+      @media (max-width: 850px) and (min-width: 751px) {
+        min-width: 400px;
+      }
 
       @media (min-width: 751px) {
+        height: 350px;
         mask-image: linear-gradient(
           rgba(0, 0, 0, 0),
           rgba(0, 0, 0, 1) 8%,
@@ -207,13 +217,12 @@
         );
       }
 
-      
-
-      @media (max-width: 850px) and (min-width: 751px) {
-        min-width: 400px;
-      }
       @media (max-width: 750px) {
         min-width: calc(100vw - 1em);
+      }
+
+      @media (max-width: 500px) {
+        height: 420px;
       }
 
       .testimonial-display {

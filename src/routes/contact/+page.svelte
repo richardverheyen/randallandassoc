@@ -107,7 +107,7 @@
         type="submit"
         variant="unelevated"
         disabled={messageSent || loading}
-        style="height: 44px; min-width: 180px; margin: auto"
+        style="height: 44px; min-width: 250px; margin: auto"
       >
         {#if loading}
           <CircularProgress style="height: 24px; width: 24px;" indeterminate />

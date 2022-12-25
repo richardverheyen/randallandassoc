@@ -9,7 +9,6 @@
   import banner1 from "$lib/images/contact-banner1.webp";
   import bannerFull from "$lib/images/contact-banner-full.jpg";
   import ContactFooter from "./ContactFooter.svelte";
-  import Footer from "../Footer.svelte";
 
   let name = "";
   let email = "";
@@ -120,7 +119,6 @@
   </div>
 </section>
 <ContactFooter />
-<Footer />
 
 <style lang="scss">
   #contact {

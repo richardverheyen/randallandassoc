@@ -131,16 +131,31 @@
       align-items: center;
       justify-content: space-between;
       color: white;
+      @media (max-width: 724px) {
+          justify-content: center;
+        }
 
       > p {
         font-size: 15px;
+        @media (max-width: 724px) {
+          text-align: center;
+          font-size: 12px;
+        }
       }
-
+      > ul {
+        @media (max-width: 724px) {
+          padding: 0;
+        }
+      }
       > ul > a {
         padding: 15px 15px;
         font-size: 15px;
         color: white;
         text-decoration: none;
+        white-space: nowrap;
+        @media (max-width: 724px) {
+          display: none;
+        }
 
         &:hover {
           text-decoration: underline;

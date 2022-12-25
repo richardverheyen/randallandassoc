@@ -35,13 +35,23 @@
 
 <style lang="scss">
   #terms-and-conditions {
-    h2 {
-      text-align: center;
-      margin-top: 100px;
-      margin-bottom: 50px;
-    }
-    p {
-      margin-bottom: 50px;
+    > .gutters {
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 2em;
+
+      h2 {
+        text-align: center;
+        margin-top: 3em;
+        margin-bottom: 1em;
+      }
+      p {
+        margin-bottom: 2em;
+        max-width: 850px;
+        text-align: center;
+      }
     }
   }
 </style>

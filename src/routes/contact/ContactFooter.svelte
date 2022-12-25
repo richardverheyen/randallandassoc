@@ -40,7 +40,7 @@
       justify-content: space-around;
       align-items: center;
 
-      @media (max-width: 720px) {
+      @media (max-width: 735px) {
         flex-direction: column;
       }
 
@@ -51,7 +51,7 @@
         color: white;
         padding: 1em;
 
-        @media (max-width: 720px) {
+        @media (max-width: 735px) {
           display: flex;
           align-items: center;
           flex-direction: column;

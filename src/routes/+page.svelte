@@ -1,5 +1,4 @@
 <script>
-  import Footer from "./Footer.svelte";
   import Logo from "./Logo.svelte";
   import Services from "./Services.svelte";
   import Testimonials from "./Testimonials.svelte";
@@ -28,7 +27,6 @@
 </section>
 <Services />
 <Testimonials />
-<Footer />
 
 <style lang="scss">
   section {

@@ -11,6 +11,7 @@
 
 body {
   margin: 0;
+  background: white;
 }
 html {
   @include typography.typography("body1");

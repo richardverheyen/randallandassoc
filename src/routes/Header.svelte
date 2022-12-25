@@ -35,6 +35,11 @@
       <li aria-current={$page.url.pathname === "/contact" ? "page" : undefined}>
         <a href="/contact">Contact</a>
       </li>
+      <li>
+        <span style="color: white" class="material-symbols-rounded">
+          menu
+        </span>
+      </li>
     </ul>
   </nav>
 </header>

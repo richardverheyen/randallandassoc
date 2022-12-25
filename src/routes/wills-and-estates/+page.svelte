@@ -1,7 +1,7 @@
 <script>
 	import banner2 from "$lib/images/wills-banner2.webp";
 	import banner1 from "$lib/images/wills-banner1.webp";
-	import bannerFull from "$lib/images/wills-banner-full.jpg";
+	import bannerFull from "$lib/images/wills-banner.jpg";
   </script>
   
   <section id="wills-and-estates">
@@ -15,7 +15,7 @@
 		/>
 		<source type="image/webp" srcset={banner1} />
   
-		<img src={bannerFull} alt="A work station with coffee" />
+		<img src={bannerFull} alt="A pen on paper" />
 	  </picture>
 	  <h1 class="mdc-typography--headline1">Wills and Estates</h1>
 	</div>

@@ -7,7 +7,7 @@
 
   import banner2 from "$lib/images/contact-banner2.webp";
   import banner1 from "$lib/images/contact-banner1.webp";
-  import bannerFull from "$lib/images/contact-banner-full.jpg";
+  import bannerFull from "$lib/images/contact-banner.jpg";
   import ContactFooter from "./ContactFooter.svelte";
 
   let name = "";

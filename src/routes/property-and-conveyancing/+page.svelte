@@ -1,7 +1,7 @@
 <script>
   import banner2 from "$lib/images/property-banner2.webp";
   import banner1 from "$lib/images/property-banner1.webp";
-  import bannerFull from "$lib/images/property-banner-full.jpg";
+  import bannerFull from "$lib/images/property-banner.jpg";
 </script>
 
 <section id="terms-and-conditions">
@@ -15,7 +15,7 @@
       />
       <source type="image/webp" srcset={banner1} />
 
-      <img src={bannerFull} alt="A work station with coffee" />
+      <img src={bannerFull} alt="A modern building" />
     </picture>
     <h1 class="mdc-typography--headline1">Property and Conveyancing</h1>
   </div>
@@ -111,6 +111,13 @@
         margin-bottom: 2em;
         max-width: 850px;
         text-align: center;
+		> a {
+			color: black;
+			text-decoration: none;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
       }
 
       ul {

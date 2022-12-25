@@ -75,6 +75,7 @@
       a {
         display: block;
         font-size: 15px;
+        font-family: "Roboto";
         margin: 6px 0;
         color: white;
         text-decoration: none;

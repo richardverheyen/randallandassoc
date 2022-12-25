@@ -45,33 +45,33 @@
   let reviews = [
     {
       name: "Zac Cobb",
-      company: "Smith Creative Solutions",
+      company: "Property Client",
       avatar: avatar1,
       avatarFallback: avatar1alt,
-      jobTitle: "Advertising Director",
+      jobTitle: "Property Client",
       rating: ['star', 'star', 'star', 'star', 'star'],
       text:
-        '"Good Call Copywriting significantly increased our website traffic and conversions with their skilled and effective copywriting. Their team truly understands our business and delivers results. Highly recommend."',
+        '"Very thorough and great communication throughout the entire process from the time we made our offer on the property right up until settlement. Would definitely recommend!"',
     },
     {
       name: "Emily Johnson",
-      company: "Davis Public Relations",
+      company: "Wills and Estate Client",
       avatar: avatar2,
       avatarFallback: avatar2alt,
-      jobTitle: "Marketing Coordinator",
+      jobTitle: "Wills and Estate Client",
       rating: ['star', 'star', 'star', 'star', 'star_half'],
       text:
-        '"Good Call Copywriting has been an invaluable asset to our business. Their copywriting skills have contributed to a noticeable increase in website traffic and conversions. The team at Good Call takes the time to understand our unique voice and needs, leading to exceptional results. We highly recommend their services."',
+        '"I recently used Randall and Associates to draft a new will and update my estate plan. The process was smooth and efficient, and the staff was knowledgeable and professional. They answered all of my questions and made sure I understood everything before moving forward. I was very satisfied with the final result and would highly recommend Joshua Randall to anyone in need of these services."',
     },
     {
       name: "Tom Davis",
-      company: "Brown Advertising Agency",
+      company: "Personal Injury Client",
       avatar: avatar3,
       avatarFallback: avatar3alt,
-      jobTitle: "Branding Specialist ",
+      jobTitle: "Personal Injury Client ",
       rating: ['star', 'star', 'star', 'star', 'star'],
       text:
-        '"I recently worked with Nick at the copywriting business and was blown away by the speed and efficiency of his service. He was a pleasure to work with and I highly recommend him for anyone in need of top-notch copywriting assistance."',
+        '"After my recent car accident a friend recommended Randall and Associates to me and I\'m so glad I called them. I spoke to Joshua Randall and he was really understanding and helpful. The whole team at Randall and Associates was amazing and they did a great job handling my case. I\'m really happy with the outcome and would definitely recommend them to anyone who needs help with a personal injury claim."',
     },
   ];
 </script>
@@ -127,7 +127,7 @@
               {/each}
             </div>
             <p>{reviews[Math.floor($displayed_count + 1)]?.text}</p>
-            <p>{reviews[Math.floor($displayed_count + 1)]?.name} - {reviews[Math.floor($displayed_count + 1)]?.company}</p>
+            <p class="name">{reviews[Math.floor($displayed_count + 1)]?.name} - {reviews[Math.floor($displayed_count + 1)]?.company}</p>
           </article>
           <article style="opacity: {1 - offset};">
             <div>
@@ -136,7 +136,7 @@
               {/each}
             </div>
             <p>{reviews[Math.floor($displayed_count)]?.text}</p>
-            <p>{reviews[Math.floor($displayed_count)]?.name} - {reviews[Math.floor($displayed_count)]?.company}</p>
+            <p class="name">{reviews[Math.floor($displayed_count)]?.name} - {reviews[Math.floor($displayed_count)]?.company}</p>
           </article>
         </div>
 
@@ -241,6 +241,12 @@
       justify-content: center;
       padding: 0 2em;
       box-sizing: border-box;
+
+      @media (min-width: 751px) {
+        p.name {
+          display: none;
+        }
+      }
     }
 
     .hidden {

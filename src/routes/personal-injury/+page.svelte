@@ -1,7 +1,7 @@
 <script>
-  import banner2 from "$lib/images/contact-banner2.webp";
-  import banner1 from "$lib/images/contact-banner1.webp";
-  import bannerFull from "$lib/images/contact-banner-full.jpg";
+  import banner2 from "$lib/images/injury-banner2.webp";
+  import banner1 from "$lib/images/injury-banner1.webp";
+  import bannerFull from "$lib/images/injury-banner-full.jpg";
 </script>
 
 <section id="terms-and-conditions">
@@ -17,7 +17,7 @@
 
       <img src={bannerFull} alt="A work station with coffee" />
     </picture>
-    <h1 class="mdc-typography--headline4">
+    <h1 class="mdc-typography--headline1">
       Personal Injury
     </h1>
   </div>

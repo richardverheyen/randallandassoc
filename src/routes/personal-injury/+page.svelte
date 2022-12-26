@@ -17,17 +17,17 @@
 
       <img src={bannerFull} alt="An xray" />
     </picture>
-    <h1 class="mdc-typography--headline1">
-      Personal Injury
-    </h1>
+    <h1 class="mdc-typography--headline1">Personal Injury</h1>
   </div>
 
   <div class="gutters">
-    <h2 class="mdc-typography--headline2">
-      Injury Law
-    </h2>
-    <p>Have you suffered an injury in NSW</p>
-    <p>Was your injury caused because of the actions or negligence of somebody else, during a motor vehicle accident, or during the course of your employment?</p>
+    <h2 class="mdc-typography--headline2">Injury Law</h2>
+    <p>Have you suffered an injury in NSW?</p>
+    <p>
+      Was your injury caused because of the actions or negligence of somebody
+      else, during a motor vehicle accident, or during the course of your
+      employment?
+    </p>
     <h2 class="mdc-typography--headline2">
       Randall &amp; Associates assist injured people with claims for:
     </h2>
@@ -39,18 +39,22 @@
       <li>Personal Injury</li>
     </ul>
 
-    <p>If you would like us to review the circumstances surrounding your injury for a free no obligation check of your potential entitlements, contact us on <a href='phone:0283787698'>(02) 8378 7698</a> or <a href="mailto:mail@randallandassoc.com">mail@randallandassoc.com</a></p>
+    <p>
+      If you would like us to review the circumstances surrounding your injury
+      for a free no obligation check of your potential entitlements, contact us
+      on <a href="phone:0283787698">(02) 8378 7698</a> or
+      <a href="mailto:mail@randallandassoc.com">mail@randallandassoc.com</a>
+    </p>
   </div>
 </section>
 
 <style lang="scss">
   #terms-and-conditions {
     > .gutters {
-
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-bottom: 2em;
+      padding-bottom: 1em;
 
       h2 {
         text-align: center;
@@ -58,6 +62,7 @@
         margin-bottom: 1em;
       }
       p {
+        margin-top: 0;
         margin-bottom: 2em;
         max-width: 850px;
         text-align: center;
@@ -65,13 +70,12 @@
 
       ul {
         padding-left: 0;
+        max-width: 600px;
         > li {
-          list-style-type: "\2713"; 
+          list-style-type: "\2713";
+          margin-bottom: 2em;
         }
       }
     }
   }
 </style>
-
-
-

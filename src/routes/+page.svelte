@@ -66,7 +66,6 @@
       <li>Property and Conveyancing</li>
       <li>Personal Injury</li>
       <li>Wills and Estates</li>
-      <li>About</li>
     </ul>
     
   </div>
@@ -125,6 +124,23 @@
       align-items: center;
       max-width: 500px;
       padding: 0 2em;
+    }
+  }
+
+  .services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
+
+    ul {
+      padding: 0;
+      text-align: center;
+      
+      > li {
+        list-style: none;
+      }
     }
   }
 

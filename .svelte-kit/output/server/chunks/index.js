@@ -299,10 +299,10 @@ function add_styles(style_object) {
   return styles ? ` style="${styles}"` : "";
 }
 export {
-  prevent_default as A,
-  stop_propagation as B,
-  is_void as C,
-  globals as D,
+  stop_propagation as A,
+  is_void as B,
+  now as C,
+  loop as D,
   set_store_value as E,
   compute_slots as F,
   safe_not_equal as a,
@@ -320,15 +320,15 @@ export {
   missing_component as m,
   noop as n,
   onDestroy as o,
-  getContext as p,
-  compute_rest_props as q,
+  compute_rest_props as p,
+  get_current_component as q,
   run_all as r,
   setContext as s,
-  get_current_component as t,
-  escape_attribute_value as u,
+  getContext as t,
+  globals as u,
   validate_component as v,
-  now as w,
-  loop as x,
-  listen as y,
-  bubble as z
+  escape_attribute_value as w,
+  listen as x,
+  bubble as y,
+  prevent_default as z
 };

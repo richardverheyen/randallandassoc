@@ -6,14 +6,14 @@ import { set_building, set_version } from '../../node_modules/@sveltejs/kit/src/
 import { set_private_env } from '../../node_modules/@sveltejs/kit/src/runtime/env-private.js';
 import { set_public_env } from '../../node_modules/@sveltejs/kit/src/runtime/env-public.js';
 
-const app_template = ({ head, body, assets, nonce }) => "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"" + assets + "/favicon.png\" />\n    <meta name=\"viewport\" content=\"width=device-width\" />\n    " + head + "\n\n    <!-- Material Icons -->\n    <link\n      rel=\"stylesheet\"\n      href=\"https://fonts.googleapis.com/icon?family=Material+Icons\"\n    />\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" />\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin />\n    <link\n      href=\"https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Roboto:wght@300;400;500;600;700;&display=swap\"\n      rel=\"stylesheet\"\n    />\n\n    <!-- SMUI Styles -->\n    <link rel=\"stylesheet\" href=\"/smui.css\" />\n  </head>\n  <body data-sveltekit-preload-data=\"hover\">\n    <div style=\"display: contents\">" + body + "</div>\n  </body>\n</html>\n";
+const app_template = ({ head, body, assets, nonce }) => "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"" + assets + "/favicon.ico\" />\n    <meta name=\"viewport\" content=\"width=device-width\" />\n    " + head + "\n\n\n\t\t<!-- Material Icons -->\n\t\t<link\n      rel=\"stylesheet\"\n      href=\"https://fonts.googleapis.com/icon?family=Material+Icons\"\n    />\n\n    <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200\" />\n\n    <!-- Material Icons -->\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n    <link href=\"https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Roboto&display=swap\" rel=\"stylesheet\">\n\n    <!-- SMUI Styles -->\n    <link rel=\"stylesheet\" href=\"/smui.css\" />\n  </head>\n  <body data-sveltekit-preload-data=\"hover\">\n    <div style=\"display: contents\">" + body + "</div>\n  </body>\n</html>\n";
 
 const error_template = ({ status, message }) => "<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta charset=\"utf-8\" />\n\t\t<title>" + message + "</title>\n\n\t\t<style>\n\t\t\tbody {\n\t\t\t\tfont-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,\n\t\t\t\t\tUbuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n\t\t\t\tdisplay: flex;\n\t\t\t\talign-items: center;\n\t\t\t\tjustify-content: center;\n\t\t\t\theight: 100vh;\n\t\t\t}\n\n\t\t\t.error {\n\t\t\t\tdisplay: flex;\n\t\t\t\talign-items: center;\n\t\t\t\tmax-width: 32rem;\n\t\t\t\tmargin: 0 1rem;\n\t\t\t}\n\n\t\t\t.status {\n\t\t\t\tfont-weight: 200;\n\t\t\t\tfont-size: 3rem;\n\t\t\t\tline-height: 1;\n\t\t\t\tposition: relative;\n\t\t\t\ttop: -0.05rem;\n\t\t\t}\n\n\t\t\t.message {\n\t\t\t\tborder-left: 1px solid #ccc;\n\t\t\t\tpadding: 0 0 0 1rem;\n\t\t\t\tmargin: 0 0 0 1rem;\n\t\t\t\tmin-height: 2.5rem;\n\t\t\t\tdisplay: flex;\n\t\t\t\talign-items: center;\n\t\t\t}\n\n\t\t\t.message h1 {\n\t\t\t\tfont-weight: 400;\n\t\t\t\tfont-size: 1em;\n\t\t\t\tmargin: 0;\n\t\t\t}\n\t\t</style>\n\t</head>\n\t<body>\n\t\t<div class=\"error\">\n\t\t\t<span class=\"status\">" + status + "</span>\n\t\t\t<div class=\"message\">\n\t\t\t\t<h1>" + message + "</h1>\n\t\t\t</div>\n\t\t</div>\n\t</body>\n</html>\n";
 
 let read = null;
 
 set_paths({"base":"","assets":""});
-set_version("1671856559944");
+set_version("1672015468443");
 
 let default_protocol = 'https';
 
@@ -50,7 +50,7 @@ export class Server {
 			app_template,
 			app_template_contains_nonce: false,
 			error_template,
-			version: "1671856559944"
+			version: "1672015468443"
 		};
 	}
 

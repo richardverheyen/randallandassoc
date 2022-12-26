@@ -44,10 +44,11 @@
       </li>
     </ul>
     <div id="hamburger">
-      <IconButton
+      <IconButton 
+        ripple={false}
         on:click={() => {
-          open = !open;
-        }}
+        open = !open;
+      }}
         ><Icon class="material-icons" style="color: white;"
           >{open ? "close" : "menu"}</Icon
         ></IconButton
@@ -74,7 +75,7 @@
         }}
       >
         <h2 class="mdc-typography--heading2">
-          <a href="/property-and-conveyancing">Home</a>
+          <a href="/">Home</a>
         </h2>
       </li>
       <!-- svelte-ignore a11y-click-events-have-key-events -->

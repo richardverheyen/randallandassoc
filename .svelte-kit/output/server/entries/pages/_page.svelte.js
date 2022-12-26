@@ -1,191 +1,73 @@
-import { c as create_ssr_component, q as compute_rest_props, t as get_current_component, s as setContext, o as onDestroy, f as spread, u as escape_attribute_value, h as escape_object, k as add_attribute, w as now, x as loop, b as subscribe, v as validate_component, l as each, e as escape } from "../../chunks/index.js";
-import { MDCDismissibleDrawerFoundation, MDCModalDrawerFoundation } from "@material/drawer";
-import { f as forwardEventsBuilder, c as classMap, d as dispatch, a as classAdderBuilder, L as List, I as Item, G as Graphic, T as Text, P as PrimaryText, S as SecondaryText } from "../../chunks/Subheader.js";
+import { c as create_ssr_component, p as compute_rest_props, q as get_current_component, t as getContext, v as validate_component, m as missing_component, C as now, D as loop, b as subscribe, l as each, e as escape, k as add_attribute } from "../../chunks/index.js";
+import { D as Drawer, a as Content, A as AppContent, C as CommonIcon, I as IconButton, l as logo } from "../../chunks/Subtitle.js";
+import { L as List, I as Item, G as Graphic, T as Text, P as PrimaryText, S as SecondaryText, B as Button } from "../../chunks/Button.js";
 import { w as writable } from "../../chunks/index2.js";
-const Logo_svelte_svelte_type_style_lang = "";
-const css$3 = {
-  code: '.logo.svelte-10mlfiw.svelte-10mlfiw{margin:4em auto 0;display:block;border:2px solid #ae8f35;font-size:3em;font-family:"Squada One";text-transform:uppercase;line-height:80%;font-weight:900;padding:44px 36px;color:#ae8f35}.logo.svelte-10mlfiw>span.svelte-10mlfiw{font-size:0.8em}h2.tagline.svelte-10mlfiw.svelte-10mlfiw{font-size:18px;text-transform:uppercase;line-height:100%;margin-top:0.5em;font-weight:400;letter-spacing:2px;color:#ae8f35}',
-  map: null
-};
-const Logo = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  $$result.css.add(css$3);
-  return `<h1 class="${"logo svelte-10mlfiw"}">Good Call <br>
-	<span class="${"svelte-10mlfiw"}">Copywriting</span></h1>
-<h2 class="${"tagline svelte-10mlfiw"}">Words that work</h2>`;
-});
-const Services_svelte_svelte_type_style_lang = "";
-const css$2 = {
-  code: "section.svelte-167hqpe{margin:6em 0}ul.svelte-167hqpe{padding:0;margin:auto}",
-  map: null
-};
-const Services = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  $$result.css.add(css$2);
-  return `<section id="${"services"}" class="${"svelte-167hqpe"}"><div class="${"gutters"}"><h2 class="${"mdc-typography--headline4"}">We provide</h2>
-    <ul class="${"svelte-167hqpe"}"><li>Sales Copy</li>
-      <li>Email copy</li>
-      <li>SEO Rich Website Copy</li>
-      <li>Property Listing Copy</li></ul></div>
-</section>`;
-});
-const Drawer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let $$restProps = compute_rest_props($$props, ["use", "class", "variant", "open", "fixed", "setOpen", "isOpen", "getElement"]);
-  forwardEventsBuilder(get_current_component());
+import { f as forwardEventsBuilder, c as classMap, S as SmuiElement } from "../../chunks/classAdderBuilder.js";
+const CommonLabel = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let $$restProps = compute_rest_props($$props, ["use", "class", "component", "tag", "getElement"]);
+  const forwardEvents = forwardEventsBuilder(get_current_component());
   let { use = [] } = $$props;
   let { class: className = "" } = $$props;
-  let { variant = void 0 } = $$props;
-  let { open = false } = $$props;
-  let { fixed = true } = $$props;
   let element;
-  let instance = void 0;
-  let internalClasses = {};
-  let previousFocus = null;
-  let focusTrap;
-  let scrim = false;
-  setContext("SMUI:list:nav", true);
-  setContext("SMUI:list:item:nav", true);
-  setContext("SMUI:list:wrapFocus", true);
-  let oldVariant = variant;
-  onDestroy(() => {
-    instance && instance.destroy();
-    scrim && scrim.removeEventListener("SMUIDrawerScrim:click", handleScrimClick);
-  });
-  function getInstance() {
-    var _a, _b;
-    if (scrim) {
-      scrim.removeEventListener("SMUIDrawerScrim:click", handleScrimClick);
-    }
-    if (variant === "modal") {
-      scrim = (_b = (_a = element.parentNode) === null || _a === void 0 ? void 0 : _a.querySelector(".mdc-drawer-scrim")) !== null && _b !== void 0 ? _b : false;
-      if (scrim) {
-        scrim.addEventListener("SMUIDrawerScrim:click", handleScrimClick);
-      }
-    }
-    const Foundation = variant === "dismissible" ? MDCDismissibleDrawerFoundation : variant === "modal" ? MDCModalDrawerFoundation : void 0;
-    return Foundation ? new Foundation({
-      addClass,
-      removeClass,
-      hasClass,
-      elementHasClass: (element2, className2) => element2.classList.contains(className2),
-      saveFocus: () => previousFocus = document.activeElement,
-      restoreFocus: () => {
-        if (previousFocus && "focus" in previousFocus && element.contains(document.activeElement)) {
-          previousFocus.focus();
-        }
-      },
-      focusActiveNavigationItem: () => {
-        const activeNavItemEl = element.querySelector(".mdc-list-item--activated,.mdc-deprecated-list-item--activated");
-        if (activeNavItemEl) {
-          activeNavItemEl.focus();
-        }
-      },
-      notifyClose: () => {
-        open = false;
-        dispatch(element, "SMUIDrawer:closed", void 0, void 0, true);
-      },
-      notifyOpen: () => {
-        open = true;
-        dispatch(element, "SMUIDrawer:opened", void 0, void 0, true);
-      },
-      trapFocus: () => focusTrap.trapFocus(),
-      releaseFocus: () => focusTrap.releaseFocus()
-    }) : void 0;
-  }
-  function hasClass(className2) {
-    return className2 in internalClasses ? internalClasses[className2] : getElement().classList.contains(className2);
-  }
-  function addClass(className2) {
-    if (!internalClasses[className2]) {
-      internalClasses[className2] = true;
-    }
-  }
-  function removeClass(className2) {
-    if (!(className2 in internalClasses) || internalClasses[className2]) {
-      internalClasses[className2] = false;
-    }
-  }
-  function handleScrimClick() {
-    instance && "handleScrimClick" in instance && instance.handleScrimClick();
-  }
-  function setOpen(value) {
-    open = value;
-  }
-  function isOpen() {
-    return open;
-  }
+  let { component = SmuiElement } = $$props;
+  let { tag = component === SmuiElement ? "span" : void 0 } = $$props;
+  const context = getContext("SMUI:label:context");
+  const tabindex = getContext("SMUI:label:tabindex");
   function getElement() {
-    return element;
+    return element.getElement();
   }
   if ($$props.use === void 0 && $$bindings.use && use !== void 0)
     $$bindings.use(use);
   if ($$props.class === void 0 && $$bindings.class && className !== void 0)
     $$bindings.class(className);
-  if ($$props.variant === void 0 && $$bindings.variant && variant !== void 0)
-    $$bindings.variant(variant);
-  if ($$props.open === void 0 && $$bindings.open && open !== void 0)
-    $$bindings.open(open);
-  if ($$props.fixed === void 0 && $$bindings.fixed && fixed !== void 0)
-    $$bindings.fixed(fixed);
-  if ($$props.setOpen === void 0 && $$bindings.setOpen && setOpen !== void 0)
-    $$bindings.setOpen(setOpen);
-  if ($$props.isOpen === void 0 && $$bindings.isOpen && isOpen !== void 0)
-    $$bindings.isOpen(isOpen);
+  if ($$props.component === void 0 && $$bindings.component && component !== void 0)
+    $$bindings.component(component);
+  if ($$props.tag === void 0 && $$bindings.tag && tag !== void 0)
+    $$bindings.tag(tag);
   if ($$props.getElement === void 0 && $$bindings.getElement && getElement !== void 0)
     $$bindings.getElement(getElement);
-  {
-    if (oldVariant !== variant) {
-      oldVariant = variant;
-      instance && instance.destroy();
-      internalClasses = {};
-      instance = getInstance();
-      instance && instance.init();
-    }
-  }
-  {
-    if (instance && instance.isOpen() !== open) {
-      if (open) {
-        instance.open();
-      } else {
-        instance.close();
-      }
-    }
-  }
-  return `<aside${spread(
-    [
+  let $$settled;
+  let $$rendered;
+  do {
+    $$settled = true;
+    $$rendered = `${validate_component(component || missing_component, "svelte:component").$$render(
+      $$result,
+      Object.assign(
+        { tag },
+        { use: [forwardEvents, ...use] },
+        {
+          class: classMap({
+            [className]: true,
+            "mdc-button__label": context === "button",
+            "mdc-fab__label": context === "fab",
+            "mdc-tab__text-label": context === "tab",
+            "mdc-image-list__label": context === "image-list",
+            "mdc-snackbar__label": context === "snackbar",
+            "mdc-banner__text": context === "banner",
+            "mdc-segmented-button__label": context === "segmented-button",
+            "mdc-data-table__pagination-rows-per-page-label": context === "data-table:pagination",
+            "mdc-data-table__header-cell-label": context === "data-table:sortable-header-cell"
+          })
+        },
+        context === "snackbar" ? { "aria-atomic": "false" } : {},
+        { tabindex },
+        $$restProps,
+        { this: element }
+      ),
       {
-        class: escape_attribute_value(classMap({
-          [className]: true,
-          "mdc-drawer": true,
-          "mdc-drawer--dismissible": variant === "dismissible",
-          "mdc-drawer--modal": variant === "modal",
-          "smui-drawer__absolute": variant === "modal" && !fixed,
-          ...internalClasses
-        }))
+        this: ($$value) => {
+          element = $$value;
+          $$settled = false;
+        }
       },
-      escape_object($$restProps)
-    ],
-    {}
-  )}${add_attribute("this", element, 0)}>${slots.default ? slots.default({}) : ``}
-</aside>`;
-});
-const AppContent = classAdderBuilder({
-  class: "mdc-drawer-app-content",
-  tag: "div"
-});
-const Content = classAdderBuilder({
-  class: "mdc-drawer__content",
-  tag: "div"
-});
-classAdderBuilder({
-  class: "mdc-drawer__header",
-  tag: "div"
-});
-classAdderBuilder({
-  class: "mdc-drawer__title",
-  tag: "h1"
-});
-classAdderBuilder({
-  class: "mdc-drawer__subtitle",
-  tag: "h2"
+      {
+        default: () => {
+          return `${slots.default ? slots.default({}) : ``}`;
+        }
+      }
+    )}`;
+  } while (!$$settled);
+  return $$rendered;
 });
 function is_date(obj) {
   return Object.prototype.toString.call(obj) === "[object Date]";
@@ -284,9 +166,15 @@ function spring(value, opts = {}) {
   };
   return spring2;
 }
+const avatar1 = "/_app/immutable/assets/avatar1-1a10a024.webp";
+const avatar1alt = "/_app/immutable/assets/avatar1-ef913f5d.png";
+const avatar2 = "/_app/immutable/assets/avatar2-7e15bc4f.webp";
+const avatar2alt = "/_app/immutable/assets/avatar2-67dae90c.png";
+const avatar3 = "/_app/immutable/assets/avatar3-60f9ab82.webp";
+const avatar3alt = "/_app/immutable/assets/avatar3-78282b4b.png";
 const Testimonials_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: "section.svelte-1dugae4{margin:4em 0}h2.svelte-1dugae4{text-align:center}.drawer-container.svelte-1dugae4{position:relative;display:flex;overflow:hidden;z-index:0}.main-content.svelte-1dugae4{height:100%;box-sizing:border-box;width:100%;min-width:500px;height:100%;overflow:hidden;text-align:center;position:relative}article.svelte-1dugae4{position:absolute;display:flex;width:100%;height:100%;color:var(--color-theme-1);align-items:center;justify-content:center}.testimonial-display.svelte-1dugae4{position:absolute;width:100%;height:100%}.hidden.svelte-1dugae4{top:100%;user-select:none}",
+  code: "section.svelte-on72st.svelte-on72st{margin:4em 0}h2.svelte-on72st.svelte-on72st{text-align:center}.testimonials.svelte-on72st.svelte-on72st{position:relative;display:flex;justify-content:center;overflow:hidden;z-index:0}@media(max-width: 750px){.testimonials.svelte-on72st .desktop-navigation.svelte-on72st{display:none}}.testimonials.svelte-on72st .main-content.svelte-on72st{height:100%;box-sizing:border-box;width:100%;min-width:500px;overflow:hidden;text-align:center;position:relative;padding:0 3em;height:300px}@media(max-width: 850px) and (min-width: 751px){.testimonials.svelte-on72st .main-content.svelte-on72st{min-width:400px}}@media(min-width: 751px){.testimonials.svelte-on72st .main-content.svelte-on72st{height:350px;mask-image:linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0) 8%, rgb(0, 0, 0) 92%, rgba(0, 0, 0, 0));-webkit-mask-image:linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0) 8%, rgb(0, 0, 0) 92%, rgba(0, 0, 0, 0))}}@media(max-width: 750px){.testimonials.svelte-on72st .main-content.svelte-on72st{min-width:calc(100vw - 1em)}}@media(max-width: 500px){.testimonials.svelte-on72st .main-content.svelte-on72st{height:420px}}.testimonials.svelte-on72st .main-content .testimonial-display.svelte-on72st{width:100%;height:100%;margin-left:-2em;width:calc(100% + 4em)}@media(min-width: 751px){.testimonials.svelte-on72st .carousel-icons.svelte-on72st{display:none}}.testimonials.svelte-on72st article.svelte-on72st{position:absolute;display:flex;flex-direction:column;width:100%;height:100%;color:var(--color-theme-1);align-items:center;justify-content:center;padding:0 2em;box-sizing:border-box}@media(min-width: 751px){.testimonials.svelte-on72st article p.name.svelte-on72st{display:none}}.testimonials.svelte-on72st .hidden.svelte-on72st{top:100%;left:0%;user-select:none}@media(max-width: 750px){.testimonials.svelte-on72st .hidden.svelte-on72st{left:100%;top:0%}}",
   map: null
 };
 function modulo(n, m) {
@@ -298,24 +186,33 @@ const Testimonials = create_ssr_component(($$result, $$props, $$bindings, slots)
   let count = 0;
   const displayed_count = spring(0, { stiffness: 0.08 });
   $$unsubscribe_displayed_count = subscribe(displayed_count, (value) => $displayed_count = value);
-  let options = [
+  let reviews = [
     {
-      name: "Bruce Willis",
-      company: "Smith Creative Solutions",
-      jobTitle: "Advertising Director",
-      testimonial: '"Good Call Copywriting significantly increased our website traffic and conversions with their skilled and effective copywriting. Their team truly understands our business and delivers results. Highly recommend."'
-    },
-    {
-      name: "Peter Johnson",
-      company: "Davis Public Relations",
-      jobTitle: "Marketing Coordinator",
-      testimonial: '"Good Call Copywriting has been an invaluable asset to our business. Their copywriting skills have contributed to a noticeable increase in website traffic and conversions. The team at Good Call takes the time to understand our unique voice and needs, leading to exceptional results. We highly recommend their services."'
+      name: "Zac Cobb",
+      company: "Property Client",
+      avatar: avatar1,
+      avatarFallback: avatar1alt,
+      jobTitle: "Property Client",
+      rating: ["star", "star", "star", "star", "star"],
+      text: '"Very thorough and great communication throughout the entire process from the time we made our offer on the property right up until settlement. Would definitely recommend!"'
     },
     {
       name: "Emily Johnson",
-      company: "Brown Advertising Agency",
-      jobTitle: "Branding Specialist ",
-      testimonial: '"I recently worked with Nick at the copywriting business and was blown away by the speed and efficiency of his service. He was a pleasure to work with and I highly recommend him for anyone in need of top-notch copywriting assistance."'
+      company: "Wills and Estate Client",
+      avatar: avatar2,
+      avatarFallback: avatar2alt,
+      jobTitle: "Wills and Estate Client",
+      rating: ["star", "star", "star", "star", "star_half"],
+      text: '"I recently used Randall and Associates to draft a new will and update my estate plan. The process was smooth and efficient, and the staff was knowledgeable and professional. They answered all of my questions and made sure I understood everything before moving forward. I was very satisfied with the final result and would highly recommend Joshua Randall to anyone in need of these services."'
+    },
+    {
+      name: "Tom Davis",
+      company: "Personal Injury Client",
+      avatar: avatar3,
+      avatarFallback: avatar3alt,
+      jobTitle: "Personal Injury Client ",
+      rating: ["star", "star", "star", "star", "star"],
+      text: `"After my recent car accident a friend recommended Randall and Associates to me and I'm so glad I called them. I spoke to Joshua Randall and he was really understanding and helpful. The whole team at Randall and Associates was amazing and they did a great job handling my case. I'm really happy with the outcome and would definitely recommend them to anyone who needs help with a personal injury claim."`
     }
   ];
   $$result.css.add(css$1);
@@ -324,90 +221,204 @@ const Testimonials = create_ssr_component(($$result, $$props, $$bindings, slots)
   }
   offset = modulo($displayed_count, 1);
   $$unsubscribe_displayed_count();
-  return `<section id="${"testimonials"}" class="${"svelte-1dugae4"}"><div class="${"gutters"}"><h2 class="${"mdc-typography--headline4 svelte-1dugae4"}">Testimonials</h2>
-    <div class="${"drawer-container svelte-1dugae4"}">${validate_component(Drawer, "Drawer").$$render(
+  return `
+
+<section id="${"testimonials"}" class="${"svelte-on72st"}"><div class="${"gutters"}"><h2 class="${"mdc-typography--headline2 svelte-on72st"}">Feedback from our clients</h2></div>
+  <div class="${"testimonials svelte-on72st"}"><div class="${"desktop-navigation svelte-on72st"}">${validate_component(Drawer, "Drawer").$$render(
     $$result,
     {
-      style: "border-right: 0; background: none; margin-right: 3em; width: 350px"
+      style: "border-right: 0; background: none; width: 350px"
     },
     {},
     {
       default: () => {
-        return `${validate_component(Content, "Content").$$render($$result, {}, {}, {
+        return `${validate_component(Content, "Content").$$render($$result, { style: "display: flex;" }, {}, {
           default: () => {
-            return `${validate_component(List, "List").$$render($$result, { twoLine: true, avatarList: true }, {}, {
-              default: () => {
-                return `${each(options, (item, index) => {
-                  return `${validate_component(Item, "Item").$$render(
-                    $$result,
-                    {
-                      selected: index === count,
-                      href: "javascript:void(0)",
-                      style: "margin: 2em"
-                    },
-                    {},
-                    {
-                      default: () => {
-                        return `${validate_component(Graphic, "Graphic").$$render(
-                          $$result,
-                          {
-                            style: "background-image: url(https://place-hold.it/40x40?text=" + item.name.split(" ").map((val) => val.substring(0, 1)).join("") + "&fontsize=16);"
-                          },
-                          {},
-                          {}
-                        )}
+            return `${validate_component(List, "List").$$render(
+              $$result,
+              {
+                twoLine: true,
+                avatarList: true,
+                style: "margin: auto"
+              },
+              {},
+              {
+                default: () => {
+                  return `${each(reviews, (item, index) => {
+                    return `${validate_component(Item, "Item").$$render(
+                      $$result,
+                      {
+                        selected: index === count,
+                        href: "javascript:void(0)",
+                        style: "margin: 2em"
+                      },
+                      {},
+                      {
+                        default: () => {
+                          return `${validate_component(Graphic, "Graphic").$$render(
+                            $$result,
+                            {
+                              style: "background-image: url(" + item.avatar + ");background-size: 40px;"
+                            },
+                            {},
+                            {}
+                          )}
+
                 ${validate_component(Text, "Text").$$render($$result, {}, {}, {
-                          default: () => {
-                            return `${validate_component(PrimaryText, "PrimaryText").$$render($$result, {}, {}, {
-                              default: () => {
-                                return `${escape(item.name)}`;
-                              }
-                            })}
+                            default: () => {
+                              return `${validate_component(PrimaryText, "PrimaryText").$$render($$result, {}, {}, {
+                                default: () => {
+                                  return `${escape(item.name)}`;
+                                }
+                              })}
                   ${validate_component(SecondaryText, "SecondaryText").$$render($$result, {}, {}, {
-                              default: () => {
-                                return `${escape(item.company)}`;
-                              }
-                            })}
+                                default: () => {
+                                  return `${escape(item.company)}`;
+                                }
+                              })}
                 `;
-                          }
-                        })}
+                            }
+                          })}
               `;
+                        }
                       }
-                    }
-                  )}`;
-                })}`;
+                    )}`;
+                  })}`;
+                }
               }
-            })}`;
+            )}`;
           }
         })}`;
       }
     }
-  )}
+  )}</div>
 
-      ${validate_component(AppContent, "AppContent").$$render($$result, { class: "app-content" }, {}, {
+    ${validate_component(AppContent, "AppContent").$$render($$result, {}, {}, {
     default: () => {
-      return `<main class="${"main-content svelte-1dugae4"}">
-          
-          
-          <div class="${"testimonial-display svelte-1dugae4"}" style="${"transform: translate(0, " + escape(-100 * offset, true) + "%)"}"><article class="${"hidden svelte-1dugae4"}" aria-hidden="${"true"}" style="${"opacity: " + escape(offset, true) + ";"}">${escape(options[Math.floor($displayed_count + 1)]?.testimonial)}</article>
-            <article style="${"opacity: " + escape(1 - offset, true) + ";"}" class="${"svelte-1dugae4"}">${escape(options[Math.floor($displayed_count)]?.testimonial)}</article></div></main>`;
+      return `<main class="${"main-content svelte-on72st"}">
+        
+        
+        <div class="${"testimonial-display svelte-on72st"}" style="${"transform: translate(" + escape(0, true) + "%, " + escape(0, true) + "%)"}"><article class="${"hidden svelte-on72st"}" aria-hidden="${"true"}" style="${"opacity: " + escape(offset, true) + ";"}"><div>${each(reviews[Math.floor($displayed_count + 1)]?.rating || [], (icon) => {
+        return `${validate_component(CommonIcon, "Icon").$$render($$result, { class: "material-icons" }, {}, {
+          default: () => {
+            return `${escape(icon)}`;
+          }
+        })}`;
+      })}</div>
+            <p>${escape(reviews[Math.floor($displayed_count + 1)]?.text)}</p>
+            <p class="${"name svelte-on72st"}">${escape(reviews[Math.floor($displayed_count + 1)]?.name)} - ${escape(reviews[Math.floor($displayed_count + 1)]?.company)}</p></article>
+          <article style="${"opacity: " + escape(1 - offset, true) + ";"}" class="${"svelte-on72st"}"><div>${each(reviews[Math.floor($displayed_count)]?.rating || [], (icon) => {
+        return `${validate_component(CommonIcon, "Icon").$$render($$result, { class: "material-icons" }, {}, {
+          default: () => {
+            return `${escape(icon)}`;
+          }
+        })}`;
+      })}</div>
+            <p>${escape(reviews[Math.floor($displayed_count)]?.text)}</p>
+            <p class="${"name svelte-on72st"}">${escape(reviews[Math.floor($displayed_count)]?.name)} - ${escape(reviews[Math.floor($displayed_count)]?.company)}</p></article></div>
+
+        <div class="${"carousel-icons svelte-on72st"}">${validate_component(IconButton, "IconButton").$$render(
+        $$result,
+        {
+          disabled: count === 0,
+          style: "position: absolute; left: 0; top: 50%; transform: translate(0, -50%);"
+        },
+        {},
+        {
+          default: () => {
+            return `${validate_component(CommonIcon, "Icon").$$render($$result, { class: "material-icons" }, {}, {
+              default: () => {
+                return `chevron_left`;
+              }
+            })}`;
+          }
+        }
+      )}
+          ${validate_component(IconButton, "IconButton").$$render(
+        $$result,
+        {
+          disabled: count === reviews.length - 1,
+          style: "position: absolute; right: 0; top: 50%; transform: translate(0, -50%);"
+        },
+        {},
+        {
+          default: () => {
+            return `${validate_component(CommonIcon, "Icon").$$render($$result, { class: "material-icons" }, {}, {
+              default: () => {
+                return `chevron_right`;
+              }
+            })}`;
+          }
+        }
+      )}</div></main>`;
     }
-  })}</div></div>
+  })}</div>
 </section>`;
 });
+const banner2 = "/_app/immutable/assets/home-banner2-51d10a4d.webp";
+const banner1 = "/_app/immutable/assets/home-banner1-acf3bc19.webp";
+const bannerFull = "/_app/immutable/assets/home-banner-full-313f1baa.jpg";
 const _page_svelte_svelte_type_style_lang = "";
 const css = {
-  code: "section.svelte-1f9f1dx.svelte-1f9f1dx{display:flex;flex-direction:column;align-items:center;padding-top:40px}section.svelte-1f9f1dx .about.svelte-1f9f1dx{max-width:600px;margin:2em auto 5em}",
+  code: ".logo.svelte-6h0lrl.svelte-6h0lrl.svelte-6h0lrl{position:absolute;width:400px;max-width:calc(100vw - 2em);height:180px;max-height:calc((100vw - 2em) / 2.5);overflow:hidden}.logo.svelte-6h0lrl>img.svelte-6h0lrl.svelte-6h0lrl{position:absolute;left:50%;top:45%;transform:translate(-50%, -50%);width:125%}.about.svelte-6h0lrl.svelte-6h0lrl.svelte-6h0lrl{display:flex;justify-content:center;padding:2em 0}@media(max-width: 1000px){.about.svelte-6h0lrl.svelte-6h0lrl.svelte-6h0lrl{flex-direction:column;text-align:center;align-items:center}}.about.svelte-6h0lrl>div.svelte-6h0lrl.svelte-6h0lrl{display:flex;align-items:center;max-width:500px;padding:0 2em}.services.svelte-6h0lrl.svelte-6h0lrl.svelte-6h0lrl{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2em 0}.services.svelte-6h0lrl ul.svelte-6h0lrl.svelte-6h0lrl{padding:0;text-align:center}.services.svelte-6h0lrl ul.svelte-6h0lrl>li.svelte-6h0lrl{list-style:none}.contact-us.svelte-6h0lrl.svelte-6h0lrl.svelte-6h0lrl{display:flex;flex-direction:column;align-items:center;text-align:center;padding-bottom:6em}.contact-us.svelte-6h0lrl p.svelte-6h0lrl.svelte-6h0lrl{padding:0;margin-top:0}",
   map: null
 };
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
-  return `${$$result.head += `<!-- HEAD_svelte-gaw9f2_START -->${$$result.title = `<title>Good Call 🤙</title>`, ""}<meta name="${"description"}" content="${"Words that work"}"><!-- HEAD_svelte-gaw9f2_END -->`, ""}
+  return `${$$result.head += `<!-- HEAD_svelte-1woy9cy_START -->${$$result.title = `<title>Randall and Associates</title>`, ""}<meta name="${"Randall and Associates"}" content="${"Joshua Randall is the Director/Principal Lawyer of Randall & Associates, a law firm providing legal services focusing in Property & Conveyancing, Personal Injury, and Wills & Estate matters."}"><!-- HEAD_svelte-1woy9cy_END -->`, ""}
 
-${validate_component(Logo, "Logo").$$render($$result, {}, {}, {})}
-<section class="${"svelte-1f9f1dx"}"><div class="${"gutters"}"><p class="${"about mdc-typography--body1 svelte-1f9f1dx"}">We are a team of experienced and skilled writers dedicated to creating compelling and effective copy for our clients. Our services range from website content and product descriptions to marketing emails and social media posts. Whether you&#39;re a small business owner, a marketing manager, or a content creator, we have the expertise and creativity to elevate your brand and drive results.</p></div></section>
-${validate_component(Services, "Services").$$render($$result, {}, {}, {})}
-${validate_component(Testimonials, "Testimonials").$$render($$result, {}, {}, {})}`;
+<section><div class="${"hero"}"><picture><source type="${"image/webp"}"${add_attribute("srcset", banner1, 0)} media="${"(max-width: 1200px)"}">
+      <source type="${"image/webp"}"${add_attribute("srcset", banner2, 0)} media="${"(min-resolution: 50dpi)"}">
+      <source type="${"image/webp"}"${add_attribute("srcset", banner1, 0)}>
+
+      <img${add_attribute("src", bannerFull, 0)} alt="${"A work station with coffee"}"></picture>
+    <div class="${"logo svelte-6h0lrl"}"><img${add_attribute("src", logo, 0)} alt="${"Randall and Associates"}" class="${"svelte-6h0lrl"}"></div></div></section>
+
+<section><div class="${"gutters about svelte-6h0lrl"}"><div class="${"left svelte-6h0lrl"}"><h2 class="${"mdc-typography--heading2"}">Sydney Lawyers &amp; Conveyancers<br> you can count on.
+      </h2></div>
+    <div class="${"right svelte-6h0lrl"}"><p class="${"about mdc-typography--body1 svelte-6h0lrl"}">For over twenty years Joshua Randall has represented and supported the
+        legal interests of a diverse range of individuals and companies
+        throughout New South Wales. Putting YOU first is crucial as we develop
+        realistic and sustainable legal solutions that work when you most need
+        it.
+      </p></div></div></section>
+
+<section style="${"background: #E8D6B3;"}"><div class="${"gutters services svelte-6h0lrl"}"><h2 class="${"mdc-typography--headline2"}">Services we offer
+    </h2>
+    <ul class="${"svelte-6h0lrl"}"><li class="${"svelte-6h0lrl"}">Property and Conveyancing</li>
+      <li class="${"svelte-6h0lrl"}">Personal Injury</li>
+      <li class="${"svelte-6h0lrl"}">Wills and Estates</li></ul></div></section>
+
+${validate_component(Testimonials, "Testimonials").$$render($$result, {}, {}, {})}
+
+<section><div class="${"gutters contact-us svelte-6h0lrl"}"><h2 class="${"mdc-typography--heading2"}">Contact us.<br> Get in touch today for a fast responce within 24hrs.
+    </h2>
+    <p class="${"about mdc-typography--body1 svelte-6h0lrl"}">Randall and Associates are ready to assit you with your legal matters.
+      Contact us for fast, easy and affordable service.
+    </p>
+    ${validate_component(Button, "Button").$$render(
+    $$result,
+    {
+      variant: "unelevated",
+      style: "height: 44px; min-width: 250px;"
+    },
+    {},
+    {
+      default: () => {
+        return `${validate_component(CommonIcon, "Icon").$$render($$result, { class: "material-symbols-rounded" }, {}, {
+          default: () => {
+            return `mail`;
+          }
+        })}
+      ${validate_component(CommonLabel, "Label").$$render($$result, {}, {}, {
+          default: () => {
+            return `Enquire Online`;
+          }
+        })}`;
+      }
+    }
+  )}</div>
+</section>`;
 });
 export {
   Page as default

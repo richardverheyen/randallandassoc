@@ -121,7 +121,8 @@
       }
 
       ul {
-        padding-left: 0;
+        padding: 0 2em;
+		
         > li {
           list-style-type: "\2713";
         }

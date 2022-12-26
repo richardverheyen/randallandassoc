@@ -69,7 +69,8 @@
       }
 
       ul {
-        padding-left: 0;
+        padding: 0 2em;
+
         max-width: 600px;
         > li {
           list-style-type: "\2713";

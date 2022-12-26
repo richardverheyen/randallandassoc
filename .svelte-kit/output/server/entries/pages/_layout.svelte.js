@@ -1,6 +1,8 @@
-import { g as get_store_value, o as onDestroy, c as create_ssr_component, d as add_styles, e as escape, v as validate_component, m as missing_component, f as spread, h as escape_object, j as merge_ssr_styles, k as add_attribute, b as subscribe, l as each } from "../../chunks/index.js";
+import { g as get_store_value, o as onDestroy, c as create_ssr_component, d as add_styles, e as escape, v as validate_component, m as missing_component, f as spread, h as escape_object, j as merge_ssr_styles, k as add_attribute, b as subscribe, l as each, p as compute_rest_props, q as get_current_component } from "../../chunks/index.js";
 import { d as derived, w as writable } from "../../chunks/index2.js";
+import { l as logo, I as IconButton, C as CommonIcon, D as Drawer, a as Content } from "../../chunks/Subtitle.js";
 import { p as page } from "../../chunks/stores.js";
+import { f as forwardEventsBuilder, c as classMap, S as SmuiElement } from "../../chunks/classAdderBuilder.js";
 function writableDerived(origins, derive, reflect, initial) {
   var childDerivedSetter, originValues, blockNextDerive = false;
   var reflectOldValues = "withOld" in reflect;
@@ -313,7 +315,7 @@ function useToaster(toastOptions) {
   return { toasts: toasts2, handlers };
 }
 const CheckmarkIcon_svelte_svelte_type_style_lang = "";
-const css$9 = {
+const css$a = {
   code: "div.svelte-1vib967{width:20px;opacity:0;height:20px;border-radius:10px;background:var(--primary, #61d345);position:relative;transform:rotate(45deg);-webkit-animation:svelte-1vib967-circleAnimation 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;animation:svelte-1vib967-circleAnimation 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;-webkit-animation-delay:100ms;animation-delay:100ms}div.svelte-1vib967::after{content:'';box-sizing:border-box;-webkit-animation:svelte-1vib967-checkmarkAnimation 0.2s ease-out forwards;animation:svelte-1vib967-checkmarkAnimation 0.2s ease-out forwards;opacity:0;-webkit-animation-delay:200ms;animation-delay:200ms;position:absolute;border-right:2px solid;border-bottom:2px solid;border-color:var(--secondary, #fff);bottom:6px;left:6px;height:10px;width:6px}@-webkit-keyframes svelte-1vib967-circleAnimation{from{transform:scale(0) rotate(45deg);opacity:0}to{transform:scale(1) rotate(45deg);opacity:1}}@keyframes svelte-1vib967-circleAnimation{from{transform:scale(0) rotate(45deg);opacity:0}to{transform:scale(1) rotate(45deg);opacity:1}}@-webkit-keyframes svelte-1vib967-checkmarkAnimation{0%{height:0;width:0;opacity:0}40%{height:0;width:6px;opacity:1}100%{opacity:1;height:10px}}@keyframes svelte-1vib967-checkmarkAnimation{0%{height:0;width:0;opacity:0}40%{height:0;width:6px;opacity:1}100%{opacity:1;height:10px}}",
   map: null
 };
@@ -324,7 +326,7 @@ const CheckmarkIcon = create_ssr_component(($$result, $$props, $$bindings, slots
     $$bindings.primary(primary);
   if ($$props.secondary === void 0 && $$bindings.secondary && secondary !== void 0)
     $$bindings.secondary(secondary);
-  $$result.css.add(css$9);
+  $$result.css.add(css$a);
   return `
 
 
@@ -335,7 +337,7 @@ const CheckmarkIcon = create_ssr_component(($$result, $$props, $$bindings, slots
 });
 const CheckmarkIcon$1 = CheckmarkIcon;
 const ErrorIcon_svelte_svelte_type_style_lang = "";
-const css$8 = {
+const css$9 = {
   code: "div.svelte-14jc2sj{width:20px;opacity:0;height:20px;border-radius:10px;background:var(--primary, #ff4b4b);position:relative;transform:rotate(45deg);-webkit-animation:svelte-14jc2sj-circleAnimation 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;animation:svelte-14jc2sj-circleAnimation 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;-webkit-animation-delay:100ms;animation-delay:100ms}div.svelte-14jc2sj::after,div.svelte-14jc2sj::before{content:'';-webkit-animation:svelte-14jc2sj-firstLineAnimation 0.15s ease-out forwards;animation:svelte-14jc2sj-firstLineAnimation 0.15s ease-out forwards;-webkit-animation-delay:150ms;animation-delay:150ms;position:absolute;border-radius:3px;opacity:0;background:var(--secondary, #fff);bottom:9px;left:4px;height:2px;width:12px}div.svelte-14jc2sj:before{-webkit-animation:svelte-14jc2sj-secondLineAnimation 0.15s ease-out forwards;animation:svelte-14jc2sj-secondLineAnimation 0.15s ease-out forwards;-webkit-animation-delay:180ms;animation-delay:180ms;transform:rotate(90deg)}@-webkit-keyframes svelte-14jc2sj-circleAnimation{from{transform:scale(0) rotate(45deg);opacity:0}to{transform:scale(1) rotate(45deg);opacity:1}}@keyframes svelte-14jc2sj-circleAnimation{from{transform:scale(0) rotate(45deg);opacity:0}to{transform:scale(1) rotate(45deg);opacity:1}}@-webkit-keyframes svelte-14jc2sj-firstLineAnimation{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}@keyframes svelte-14jc2sj-firstLineAnimation{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}@-webkit-keyframes svelte-14jc2sj-secondLineAnimation{from{transform:scale(0) rotate(90deg);opacity:0}to{transform:scale(1) rotate(90deg);opacity:1}}@keyframes svelte-14jc2sj-secondLineAnimation{from{transform:scale(0) rotate(90deg);opacity:0}to{transform:scale(1) rotate(90deg);opacity:1}}",
   map: null
 };
@@ -346,7 +348,7 @@ const ErrorIcon = create_ssr_component(($$result, $$props, $$bindings, slots) =>
     $$bindings.primary(primary);
   if ($$props.secondary === void 0 && $$bindings.secondary && secondary !== void 0)
     $$bindings.secondary(secondary);
-  $$result.css.add(css$8);
+  $$result.css.add(css$9);
   return `
 
 
@@ -357,7 +359,7 @@ const ErrorIcon = create_ssr_component(($$result, $$props, $$bindings, slots) =>
 });
 const ErrorIcon$1 = ErrorIcon;
 const LoaderIcon_svelte_svelte_type_style_lang = "";
-const css$7 = {
+const css$8 = {
   code: "div.svelte-el8rh1{width:12px;height:12px;box-sizing:border-box;border:2px solid;border-radius:100%;border-color:var(--secondary, #e0e0e0);border-right-color:var(--primary, #616161);-webkit-animation:svelte-el8rh1-rotate 1s linear infinite;animation:svelte-el8rh1-rotate 1s linear infinite}@-webkit-keyframes svelte-el8rh1-rotate{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}@keyframes svelte-el8rh1-rotate{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}",
   map: null
 };
@@ -368,7 +370,7 @@ const LoaderIcon = create_ssr_component(($$result, $$props, $$bindings, slots) =
     $$bindings.primary(primary);
   if ($$props.secondary === void 0 && $$bindings.secondary && secondary !== void 0)
     $$bindings.secondary(secondary);
-  $$result.css.add(css$7);
+  $$result.css.add(css$8);
   return `
 
 
@@ -379,7 +381,7 @@ const LoaderIcon = create_ssr_component(($$result, $$props, $$bindings, slots) =
 });
 const LoaderIcon$1 = LoaderIcon;
 const ToastIcon_svelte_svelte_type_style_lang = "";
-const css$6 = {
+const css$7 = {
   code: ".indicator.svelte-1yutmpl{position:relative;display:flex;justify-content:center;align-items:center;min-width:20px;min-height:20px}.status.svelte-1yutmpl{position:absolute}.animated.svelte-1yutmpl{position:relative;transform:scale(0.6);opacity:0.4;min-width:20px;-webkit-animation:svelte-1yutmpl-enter 0.3s 0.12s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;animation:svelte-1yutmpl-enter 0.3s 0.12s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards}@-webkit-keyframes svelte-1yutmpl-enter{from{transform:scale(0.6);opacity:0.4}to{transform:scale(1);opacity:1}}@keyframes svelte-1yutmpl-enter{from{transform:scale(0.6);opacity:0.4}to{transform:scale(1);opacity:1}}",
   map: null
 };
@@ -390,14 +392,14 @@ const ToastIcon = create_ssr_component(($$result, $$props, $$bindings, slots) =>
   let { toast: toast2 } = $$props;
   if ($$props.toast === void 0 && $$bindings.toast && toast2 !== void 0)
     $$bindings.toast(toast2);
-  $$result.css.add(css$6);
+  $$result.css.add(css$7);
   ({ type, icon, iconTheme } = toast2);
   return `${typeof icon === "string" ? `<div class="${"animated svelte-1yutmpl"}">${escape(icon)}</div>` : `${typeof icon !== "undefined" ? `${validate_component(icon || missing_component, "svelte:component").$$render($$result, {}, {}, {})}` : `${type !== "blank" ? `<div class="${"indicator svelte-1yutmpl"}">${validate_component(LoaderIcon$1, "LoaderIcon").$$render($$result, Object.assign(iconTheme), {}, {})}
 		${type !== "loading" ? `<div class="${"status svelte-1yutmpl"}">${type === "error" ? `${validate_component(ErrorIcon$1, "ErrorIcon").$$render($$result, Object.assign(iconTheme), {}, {})}` : `${validate_component(CheckmarkIcon$1, "CheckmarkIcon").$$render($$result, Object.assign(iconTheme), {}, {})}`}</div>` : ``}</div>` : ``}`}`}`;
 });
 const ToastIcon$1 = ToastIcon;
 const ToastMessage_svelte_svelte_type_style_lang = "";
-const css$5 = {
+const css$6 = {
   code: ".message.svelte-o805t1{display:flex;justify-content:center;margin:4px 10px;color:inherit;flex:1 1 auto;white-space:pre-line}",
   map: null
 };
@@ -405,13 +407,13 @@ const ToastMessage = create_ssr_component(($$result, $$props, $$bindings, slots)
   let { toast: toast2 } = $$props;
   if ($$props.toast === void 0 && $$bindings.toast && toast2 !== void 0)
     $$bindings.toast(toast2);
-  $$result.css.add(css$5);
+  $$result.css.add(css$6);
   return `<div${spread([{ class: "message" }, escape_object(toast2.ariaProps)], { classes: "svelte-o805t1" })}>${typeof toast2.message === "string" ? `${escape(toast2.message)}` : `${validate_component(toast2.message || missing_component, "svelte:component").$$render($$result, { toast: toast2 }, {}, {})}`}
 </div>`;
 });
 const ToastMessage$1 = ToastMessage;
 const ToastBar_svelte_svelte_type_style_lang = "";
-const css$4 = {
+const css$5 = {
   code: "@-webkit-keyframes svelte-jj17sd-enterAnimation{0%{transform:translate3d(0, calc(var(--factor) * -200%), 0) scale(0.6);opacity:0.5}100%{transform:translate3d(0, 0, 0) scale(1);opacity:1}}@keyframes svelte-jj17sd-enterAnimation{0%{transform:translate3d(0, calc(var(--factor) * -200%), 0) scale(0.6);opacity:0.5}100%{transform:translate3d(0, 0, 0) scale(1);opacity:1}}@-webkit-keyframes svelte-jj17sd-exitAnimation{0%{transform:translate3d(0, 0, -1px) scale(1);opacity:1}100%{transform:translate3d(0, calc(var(--factor) * -150%), -1px) scale(0.6);opacity:0}}@keyframes svelte-jj17sd-exitAnimation{0%{transform:translate3d(0, 0, -1px) scale(1);opacity:1}100%{transform:translate3d(0, calc(var(--factor) * -150%), -1px) scale(0.6);opacity:0}}@-webkit-keyframes svelte-jj17sd-fadeInAnimation{0%{opacity:0}100%{opacity:1}}@keyframes svelte-jj17sd-fadeInAnimation{0%{opacity:0}100%{opacity:1}}@-webkit-keyframes svelte-jj17sd-fadeOutAnimation{0%{opacity:1}100%{opacity:0}}@keyframes svelte-jj17sd-fadeOutAnimation{0%{opacity:1}100%{opacity:0}}.base.svelte-jj17sd{display:flex;align-items:center;background:#fff;color:#363636;line-height:1.3;will-change:transform;box-shadow:0 3px 10px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.05);max-width:350px;pointer-events:auto;padding:8px 10px;border-radius:8px}.transparent.svelte-jj17sd{opacity:0}.enter.svelte-jj17sd{-webkit-animation:svelte-jj17sd-enterAnimation 0.35s cubic-bezier(0.21, 1.02, 0.73, 1) forwards;animation:svelte-jj17sd-enterAnimation 0.35s cubic-bezier(0.21, 1.02, 0.73, 1) forwards}.exit.svelte-jj17sd{-webkit-animation:svelte-jj17sd-exitAnimation 0.4s cubic-bezier(0.06, 0.71, 0.55, 1) forwards;animation:svelte-jj17sd-exitAnimation 0.4s cubic-bezier(0.06, 0.71, 0.55, 1) forwards}.fadeIn.svelte-jj17sd{-webkit-animation:svelte-jj17sd-fadeInAnimation 0.35s cubic-bezier(0.21, 1.02, 0.73, 1) forwards;animation:svelte-jj17sd-fadeInAnimation 0.35s cubic-bezier(0.21, 1.02, 0.73, 1) forwards}.fadeOut.svelte-jj17sd{-webkit-animation:svelte-jj17sd-fadeOutAnimation 0.4s cubic-bezier(0.06, 0.71, 0.55, 1) forwards;animation:svelte-jj17sd-fadeOutAnimation 0.4s cubic-bezier(0.06, 0.71, 0.55, 1) forwards}",
   map: null
 };
@@ -430,7 +432,7 @@ const ToastBar = create_ssr_component(($$result, $$props, $$bindings, slots) => 
     $$bindings.style(style);
   if ($$props.Component === void 0 && $$bindings.Component && Component !== void 0)
     $$bindings.Component(Component);
-  $$result.css.add(css$4);
+  $$result.css.add(css$5);
   {
     {
       const top = (toast2.position || position || "top-center").includes("top");
@@ -454,7 +456,7 @@ const ToastBar = create_ssr_component(($$result, $$props, $$bindings, slots) => 
 });
 const ToastBar$1 = ToastBar;
 const ToastWrapper_svelte_svelte_type_style_lang = "";
-const css$3 = {
+const css$4 = {
   code: ".wrapper.svelte-1pakgpd{left:0;right:0;display:flex;position:absolute;transform:translateY(calc(var(--offset, 16px) * var(--factor) * 1px))}.transition.svelte-1pakgpd{transition:all 230ms cubic-bezier(0.21, 1.02, 0.73, 1)}.active.svelte-1pakgpd{z-index:9999}.active.svelte-1pakgpd>*{pointer-events:auto}",
   map: null
 };
@@ -470,7 +472,7 @@ const ToastWrapper = create_ssr_component(($$result, $$props, $$bindings, slots)
     $$bindings.toast(toast2);
   if ($$props.setHeight === void 0 && $$bindings.setHeight && setHeight !== void 0)
     $$bindings.setHeight(setHeight);
-  $$result.css.add(css$3);
+  $$result.css.add(css$4);
   top = toast2.position?.includes("top") ? 0 : null;
   bottom = toast2.position?.includes("bottom") ? 0 : null;
   factor = toast2.position?.includes("top") ? 1 : -1;
@@ -491,7 +493,7 @@ const ToastWrapper = create_ssr_component(($$result, $$props, $$bindings, slots)
 });
 const ToastWrapper$1 = ToastWrapper;
 const Toaster_svelte_svelte_type_style_lang = "";
-const css$2 = {
+const css$3 = {
   code: ".toaster.svelte-jyff3d{--default-offset:16px;position:fixed;z-index:9999;top:var(--default-offset);left:var(--default-offset);right:var(--default-offset);bottom:var(--default-offset);pointer-events:none}",
   map: null
 };
@@ -518,7 +520,7 @@ const Toaster = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$bindings.containerStyle(containerStyle);
   if ($$props.containerClassName === void 0 && $$bindings.containerClassName && containerClassName !== void 0)
     $$bindings.containerClassName(containerClassName);
-  $$result.css.add(css$2);
+  $$result.css.add(css$3);
   _toasts = $toasts.map((toast2) => ({
     ...toast2,
     position: toast2.position || position,
@@ -543,48 +545,207 @@ const Toaster = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 </div>`;
 });
 const Toaster$1 = Toaster;
+const Footer_svelte_svelte_type_style_lang = "";
+const css$2 = {
+  code: '.footer-main.svelte-12t2pus.svelte-12t2pus.svelte-12t2pus.svelte-12t2pus{background-color:#484c5a}@media(max-width: 550px){.footer-main.svelte-12t2pus.svelte-12t2pus.svelte-12t2pus.svelte-12t2pus{padding-bottom:2em}}.footer-list.svelte-12t2pus.svelte-12t2pus.svelte-12t2pus.svelte-12t2pus{display:flex;justify-content:space-around;padding-left:0;list-style-type:none;color:white}.footer-list.svelte-12t2pus>li.svelte-12t2pus.svelte-12t2pus.svelte-12t2pus{flex:1}@media(min-width: 551px){.footer-list.svelte-12t2pus>li.svelte-12t2pus.svelte-12t2pus.svelte-12t2pus{min-height:216px}.footer-list.svelte-12t2pus>li.svelte-12t2pus.svelte-12t2pus.svelte-12t2pus:not(:first-child):not(:last-child){margin-left:2.4rem}}.footer-list.svelte-12t2pus>li.svelte-12t2pus>img.svelte-12t2pus.svelte-12t2pus{height:180px;margin:15px 0}.footer-list.svelte-12t2pus>li.svelte-12t2pus>h6.svelte-12t2pus.svelte-12t2pus{margin-top:35px;margin-bottom:10px}.footer-list.svelte-12t2pus>li a.svelte-12t2pus.svelte-12t2pus.svelte-12t2pus{display:block;font-size:15px;font-family:"Roboto";margin:6px 0;color:white;text-decoration:none}.footer-list.svelte-12t2pus>li a.svelte-12t2pus.svelte-12t2pus.svelte-12t2pus:hover{text-decoration:underline}@media(max-width: 900px) and (min-width: 551px){.footer-list.svelte-12t2pus.svelte-12t2pus.svelte-12t2pus.svelte-12t2pus{display:grid;grid-template-columns:repeat(2, 1fr);gap:1em;grid-auto-rows:minmax(100px, auto)}.footer-list.svelte-12t2pus>li.svelte-12t2pus.svelte-12t2pus.svelte-12t2pus:nth-child(1){grid-column:1/2;grid-row:1/2}.footer-list.svelte-12t2pus>li.svelte-12t2pus.svelte-12t2pus.svelte-12t2pus:nth-child(2){grid-column:1/2;grid-row:2/3}.footer-list.svelte-12t2pus>li.svelte-12t2pus.svelte-12t2pus.svelte-12t2pus:nth-child(3){grid-column:2/3;grid-row:1/2}.footer-list.svelte-12t2pus>li.svelte-12t2pus.svelte-12t2pus.svelte-12t2pus:nth-child(4){grid-column:2/3;grid-row:2/3}}@media(max-width: 550px){.footer-list.svelte-12t2pus.svelte-12t2pus.svelte-12t2pus.svelte-12t2pus{flex-direction:column;max-width:400px;margin:auto}.footer-list.svelte-12t2pus li.svelte-12t2pus>img.svelte-12t2pus.svelte-12t2pus{height:auto;width:100%}}#footers-foot.svelte-12t2pus.svelte-12t2pus.svelte-12t2pus.svelte-12t2pus{height:60px;background-color:#282d3d}#footers-foot.svelte-12t2pus>div.svelte-12t2pus.svelte-12t2pus.svelte-12t2pus{display:flex;align-items:center;justify-content:space-between;color:white}@media(max-width: 724px){#footers-foot.svelte-12t2pus>div.svelte-12t2pus.svelte-12t2pus.svelte-12t2pus{justify-content:center}}#footers-foot.svelte-12t2pus>div.svelte-12t2pus>p.svelte-12t2pus.svelte-12t2pus{font-size:15px}@media(max-width: 724px){#footers-foot.svelte-12t2pus>div.svelte-12t2pus>p.svelte-12t2pus.svelte-12t2pus{text-align:center;font-size:12px}}@media(max-width: 724px){#footers-foot.svelte-12t2pus>div.svelte-12t2pus>ul.svelte-12t2pus.svelte-12t2pus{padding:0}}#footers-foot.svelte-12t2pus>div.svelte-12t2pus>ul.svelte-12t2pus>a.svelte-12t2pus{padding:15px 15px;font-size:15px;color:white;text-decoration:none;white-space:nowrap}@media(max-width: 724px){#footers-foot.svelte-12t2pus>div.svelte-12t2pus>ul.svelte-12t2pus>a.svelte-12t2pus{display:none}}#footers-foot.svelte-12t2pus>div.svelte-12t2pus>ul.svelte-12t2pus>a.svelte-12t2pus:hover{text-decoration:underline}',
+  map: null
+};
+const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  $$result.css.add(css$2);
+  return `<section class="${"footer-main svelte-12t2pus"}"><div class="${"gutters"}"><ul class="${"footer-list svelte-12t2pus"}"><li class="${"svelte-12t2pus"}"><img${add_attribute("src", logo, 0)} alt="${"logo"}" class="${"svelte-12t2pus"}"></li>
+      <li class="${"svelte-12t2pus"}"><h6 class="${"svelte-12t2pus"}">Contact Information</h6>
+        <a href="${"/contact"}" class="${"svelte-12t2pus"}">(02) 8378 7698</a>
+        <a href="${"mailto:mail@randallandassoc.com"}" class="${"svelte-12t2pus"}">mail@randallandassoc.com</a>
+        <a href="${"/contact"}" class="${"svelte-12t2pus"}">Video appointments available on request</a></li>
+      <li class="${"svelte-12t2pus"}"><h6 class="${"svelte-12t2pus"}">Practice Areas</h6>
+        <a href="${"/property-and-conveyancing"}" class="${"svelte-12t2pus"}">Property &amp; Conveyancing</a>
+        <a href="${"/personal-injury"}" class="${"svelte-12t2pus"}">Personal Injury</a>
+        <a href="${"/wills-and-estates"}" class="${"svelte-12t2pus"}">Wills &amp; Estates</a></li>
+      <li class="${"svelte-12t2pus"}"><h6 class="${"svelte-12t2pus"}">Terms &amp; Conditions</h6>
+        <a href="${"/terms-and-conditions"}" class="${"svelte-12t2pus"}">T &amp; C&#39;s</a></li></ul></div></section>
+<section id="${"footers-foot"}" class="${"svelte-12t2pus"}"><div class="${"gutters svelte-12t2pus"}"><p class="${"svelte-12t2pus"}">Copyright © Randall &amp; Associates Pty Ltd, 2022. All rights reserved.</p>
+    <ul class="${"svelte-12t2pus"}"><a href="${"/"}" class="${"svelte-12t2pus"}">Home</a>
+      <a href="${"/contact"}" class="${"svelte-12t2pus"}">Contact us</a></ul></div>
+</section>`;
+});
+const Scrim = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let $$restProps = compute_rest_props($$props, ["use", "class", "fixed", "component", "tag", "getElement"]);
+  const forwardEvents = forwardEventsBuilder(get_current_component());
+  let { use = [] } = $$props;
+  let { class: className = "" } = $$props;
+  let { fixed = true } = $$props;
+  let element;
+  let { component = SmuiElement } = $$props;
+  let { tag = component === SmuiElement ? "div" : void 0 } = $$props;
+  function getElement() {
+    return element.getElement();
+  }
+  if ($$props.use === void 0 && $$bindings.use && use !== void 0)
+    $$bindings.use(use);
+  if ($$props.class === void 0 && $$bindings.class && className !== void 0)
+    $$bindings.class(className);
+  if ($$props.fixed === void 0 && $$bindings.fixed && fixed !== void 0)
+    $$bindings.fixed(fixed);
+  if ($$props.component === void 0 && $$bindings.component && component !== void 0)
+    $$bindings.component(component);
+  if ($$props.tag === void 0 && $$bindings.tag && tag !== void 0)
+    $$bindings.tag(tag);
+  if ($$props.getElement === void 0 && $$bindings.getElement && getElement !== void 0)
+    $$bindings.getElement(getElement);
+  let $$settled;
+  let $$rendered;
+  do {
+    $$settled = true;
+    $$rendered = `${validate_component(component || missing_component, "svelte:component").$$render(
+      $$result,
+      Object.assign(
+        { tag },
+        { use: [forwardEvents, ...use] },
+        {
+          class: classMap({
+            [className]: true,
+            "mdc-drawer-scrim": true,
+            "smui-drawer-scrim__absolute": !fixed
+          })
+        },
+        $$restProps,
+        { this: element }
+      ),
+      {
+        this: ($$value) => {
+          element = $$value;
+          $$settled = false;
+        }
+      },
+      {
+        default: () => {
+          return `${slots.default ? slots.default({}) : ``}`;
+        }
+      }
+    )}`;
+  } while (!$$settled);
+  return $$rendered;
+});
 const Header_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: "header.svelte-14lnf47.svelte-14lnf47{background:#282e3c}header.svelte-14lnf47 nav.svelte-14lnf47{display:flex}header.svelte-14lnf47 nav ul.svelte-14lnf47{position:relative;padding:0;margin:0;height:5em;display:flex;justify-content:center;align-items:center;list-style:none;background-size:contain}header.svelte-14lnf47 nav ul li.svelte-14lnf47{position:relative;height:100%}header.svelte-14lnf47 nav ul li[aria-current=page].svelte-14lnf47{background-color:var(--color-theme-2)}header.svelte-14lnf47 nav a.svelte-14lnf47{display:flex;height:100%;align-items:center;padding:0 0.5rem;font-weight:700;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.1em;text-decoration:none;transition:color 0.2s linear;color:white}header.svelte-14lnf47 nav a.svelte-14lnf47:hover{color:var(--color-theme-1);color:gray}",
+  code: "header.svelte-1e53vh1.svelte-1e53vh1.svelte-1e53vh1{background:#282e3c}header.svelte-1e53vh1 nav.svelte-1e53vh1.svelte-1e53vh1{display:flex;align-items:center;width:100%}header.svelte-1e53vh1 nav ul.svelte-1e53vh1.svelte-1e53vh1{position:relative;padding:0;margin:0;height:8em;width:100%;display:flex;align-items:center;list-style:none;background-size:contain}@media(max-width: 1000px){header.svelte-1e53vh1 nav ul.svelte-1e53vh1.svelte-1e53vh1{display:none}}header.svelte-1e53vh1 nav ul.svelte-1e53vh1 li.svelte-1e53vh1{position:relative;height:100%;margin-left:1em}header.svelte-1e53vh1 nav ul.svelte-1e53vh1 li[aria-current=page].svelte-1e53vh1{background-color:var(--color-theme-2)}header.svelte-1e53vh1 nav #hamburger.svelte-1e53vh1.svelte-1e53vh1{margin-left:auto}@media(min-width: 1001px){header.svelte-1e53vh1 nav #hamburger.svelte-1e53vh1.svelte-1e53vh1{display:none}}header.svelte-1e53vh1 nav a.svelte-1e53vh1.svelte-1e53vh1{display:flex;height:100%;align-items:center;padding:0 0.5rem;font-weight:700;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.1em;text-decoration:none;transition:color 0.2s linear;color:white}header.svelte-1e53vh1 nav a.logo.svelte-1e53vh1.svelte-1e53vh1{width:240px;height:8em;position:relative;overflow:hidden}@media(max-width: 420px){header.svelte-1e53vh1 nav a.logo.svelte-1e53vh1.svelte-1e53vh1{width:180px;height:7em}}header.svelte-1e53vh1 nav a.svelte-1e53vh1>img.svelte-1e53vh1{position:absolute;top:46%;left:50%;transform:translate(-50%, -50%);width:auto;height:190px}@media(max-width: 420px){header.svelte-1e53vh1 nav a.svelte-1e53vh1>img.svelte-1e53vh1{height:160px}}header.svelte-1e53vh1 nav a.svelte-1e53vh1.svelte-1e53vh1:hover{color:var(--color-theme-1);color:gray}ul.mobile-nav.svelte-1e53vh1.svelte-1e53vh1.svelte-1e53vh1{display:flex;flex-direction:column;padding:3em}ul.mobile-nav.svelte-1e53vh1 li.svelte-1e53vh1.svelte-1e53vh1{list-style:none}ul.mobile-nav.svelte-1e53vh1 li.svelte-1e53vh1 h2 a.svelte-1e53vh1,ul.mobile-nav.svelte-1e53vh1 li.svelte-1e53vh1 h2 a.svelte-1e53vh1:link,ul.mobile-nav.svelte-1e53vh1 li.svelte-1e53vh1 h2 a.svelte-1e53vh1:visited{color:white;text-decoration:none}ul.mobile-nav.svelte-1e53vh1 li.svelte-1e53vh1 h2 a.svelte-1e53vh1:hover,ul.mobile-nav.svelte-1e53vh1 li.svelte-1e53vh1 h2 a.svelte-1e53vh1:link:hover,ul.mobile-nav.svelte-1e53vh1 li.svelte-1e53vh1 h2 a.svelte-1e53vh1:visited:hover{text-decoration:underline}ul.mobile-nav.svelte-1e53vh1 li[aria-current=page].svelte-1e53vh1 h2 a.svelte-1e53vh1{text-decoration:underline}",
   map: null
 };
 const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $page, $$unsubscribe_page;
   $$unsubscribe_page = subscribe(page, (value) => $page = value);
+  let open = false;
   $$result.css.add(css$1);
+  let $$settled;
+  let $$rendered;
+  do {
+    $$settled = true;
+    $$rendered = `${validate_component(Scrim, "Scrim").$$render($$result, { fixed: false }, {}, {})}
+<header class="${"svelte-1e53vh1"}"><nav class="${"gutters svelte-1e53vh1"}"><a href="${"/"}" class="${"logo svelte-1e53vh1"}"><img${add_attribute("src", logo, 0)} alt="${"logo"}" class="${"svelte-1e53vh1"}"></a>
+
+    <ul class="${"svelte-1e53vh1"}"><li${add_attribute(
+      "aria-current",
+      $page.url.pathname === "/property-and-conveyancing" ? "page" : void 0,
+      0
+    )} class="${"svelte-1e53vh1"}"><a href="${"/property-and-conveyancing"}" class="${"svelte-1e53vh1"}">Property &amp; Conveyancing</a></li>
+      <li${add_attribute(
+      "aria-current",
+      $page.url.pathname === "/personal-injury" ? "page" : void 0,
+      0
+    )} class="${"svelte-1e53vh1"}"><a href="${"/personal-injury"}" class="${"svelte-1e53vh1"}">Personal Injury</a></li>
+      <li${add_attribute(
+      "aria-current",
+      $page.url.pathname === "/wills-and-estates" ? "page" : void 0,
+      0
+    )} class="${"svelte-1e53vh1"}"><a href="${"/wills-and-estates"}" class="${"svelte-1e53vh1"}">Wills &amp; Estates</a></li>
+      <li${add_attribute("aria-current", $page.url.pathname === "/contact" ? "page" : void 0, 0)} class="${"svelte-1e53vh1"}"><a href="${"/contact"}" class="${"svelte-1e53vh1"}">Contact</a></li></ul>
+    <div id="${"hamburger"}" class="${"svelte-1e53vh1"}">${validate_component(IconButton, "IconButton").$$render($$result, { ripple: false }, {}, {
+      default: () => {
+        return `${validate_component(CommonIcon, "Icon").$$render(
+          $$result,
+          {
+            class: "material-icons",
+            style: "color: white;"
+          },
+          {},
+          {
+            default: () => {
+              return `${escape(open ? "close" : "menu")}`;
+            }
+          }
+        )}`;
+      }
+    })}</div></nav></header>
+
+${validate_component(Drawer, "Drawer").$$render(
+      $$result,
+      {
+        variant: "modal",
+        fixed: false,
+        style: "background: #282d3c; width: 500px; max-width: calc(100vw - 80px)",
+        open
+      },
+      {
+        open: ($$value) => {
+          open = $$value;
+          $$settled = false;
+        }
+      },
+      {
+        default: () => {
+          return `${validate_component(Content, "Content").$$render(
+            $$result,
+            {
+              style: "width: 500px; max-width: calc(100vw - 80px)"
+            },
+            {},
+            {
+              default: () => {
+                return `<ul class="${"mobile-nav svelte-1e53vh1"}">
+      <li${add_attribute("aria-current", $page.url.pathname === "/" ? "page" : void 0, 0)} class="${"svelte-1e53vh1"}"><h2 class="${"mdc-typography--heading2"}"><a href="${"/"}" class="${"svelte-1e53vh1"}">Home</a></h2></li>
+      
+      <li${add_attribute(
+                  "aria-current",
+                  $page.url.pathname === "/property-and-conveyancing" ? "page" : void 0,
+                  0
+                )} class="${"svelte-1e53vh1"}"><h2 class="${"mdc-typography--heading2"}"><a href="${"/property-and-conveyancing"}" class="${"svelte-1e53vh1"}">Property &amp; Conveyancing</a></h2></li>
+      
+      <li${add_attribute(
+                  "aria-current",
+                  $page.url.pathname === "/personal-injury" ? "page" : void 0,
+                  0
+                )} class="${"svelte-1e53vh1"}"><h2 class="${"mdc-typography--heading2"}"><a href="${"/personal-injury"}" class="${"svelte-1e53vh1"}">Personal Injury</a></h2></li>
+      
+      <li${add_attribute(
+                  "aria-current",
+                  $page.url.pathname === "/wills-and-estates" ? "page" : void 0,
+                  0
+                )} class="${"svelte-1e53vh1"}"><h2 class="${"mdc-typography--heading2"}"><a href="${"/wills-and-estates"}" class="${"svelte-1e53vh1"}">Wills &amp; Estates</a></h2></li>
+      
+      <li${add_attribute("aria-current", $page.url.pathname === "/contact" ? "page" : void 0, 0)} class="${"svelte-1e53vh1"}"><h2 class="${"mdc-typography--heading2"}"><a href="${"/contact"}" class="${"svelte-1e53vh1"}">Contact</a></h2></li></ul>
+
+    <a href="${"/"}" class="${"logo"}"><img${add_attribute("src", logo, 0)} alt="${"logo"}"></a>`;
+              }
+            }
+          )}`;
+        }
+      }
+    )}`;
+  } while (!$$settled);
   $$unsubscribe_page();
-  return `<header class="${"svelte-14lnf47"}"><nav class="${"gutters svelte-14lnf47"}"><ul class="${"svelte-14lnf47"}"><li${add_attribute("aria-current", $page.url.pathname === "/" ? "page" : void 0, 0)} class="${"svelte-14lnf47"}"><a href="${"/"}" class="${"svelte-14lnf47"}">Home</a></li>
-			<li${add_attribute(
-    "aria-current",
-    $page.url.pathname === "/property-and-conveyancing" ? "page" : void 0,
-    0
-  )} class="${"svelte-14lnf47"}"><a href="${"/property-and-conveyancing"}" class="${"svelte-14lnf47"}">Property &amp; Conveyancing</a></li>
-			<li${add_attribute(
-    "aria-current",
-    $page.url.pathname === "/personal-injury" ? "page" : void 0,
-    0
-  )} class="${"svelte-14lnf47"}"><a href="${"/personal-injury"}" class="${"svelte-14lnf47"}">Personal Injury</a></li>
-			<li${add_attribute(
-    "aria-current",
-    $page.url.pathname === "/wills-and-estates" ? "page" : void 0,
-    0
-  )} class="${"svelte-14lnf47"}"><a href="${"/wills-and-estates"}" class="${"svelte-14lnf47"}">Wills &amp; Estates</a></li>
-			<li${add_attribute("aria-current", $page.url.pathname === "/contact" ? "page" : void 0, 0)} class="${"svelte-14lnf47"}"><a href="${"/contact"}" class="${"svelte-14lnf47"}">Contact</a></li></ul></nav>
-</header>`;
+  return $$rendered;
 });
 const _layout_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".app.svelte-11u55uv{display:flex;flex-direction:column;min-height:100vh}main.svelte-11u55uv{flex:1;display:flex;flex-direction:column;align-items:center}footer.svelte-11u55uv{display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px 0;padding:12px}",
+  code: ".app.svelte-1dkad02{display:flex;flex-direction:column;min-height:100vh}main.svelte-1dkad02{flex:1;display:flex;flex-direction:column;align-items:center}",
   map: null
 };
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
-  return `<div class="${"app svelte-11u55uv"}">${validate_component(Header, "Header").$$render($$result, {}, {}, {})}
-	<main class="${"svelte-11u55uv"}">${slots.default ? slots.default({}) : ``}</main>
-
-	<footer class="${"svelte-11u55uv"}"><p>📞 03 8880 9919</p>
-		<p>✉️ holler@goodcallcopywriting.com</p></footer>
-	${validate_component(Toaster$1, "Toaster").$$render($$result, {}, {}, {})}
+  return `<div class="${"app svelte-1dkad02"}">${validate_component(Header, "Header").$$render($$result, {}, {}, {})}
+  <main class="${"svelte-1dkad02"}">${slots.default ? slots.default({}) : ``}</main>
+  ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}
+  ${validate_component(Toaster$1, "Toaster").$$render($$result, {}, {}, {})}
 </div>`;
 });
 export {

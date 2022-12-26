@@ -1,7 +1,7 @@
-import { c as create_ssr_component, b as subscribe, s as setContext, o as onDestroy, E as set_store_value, q as compute_rest_props, t as get_current_component, p as getContext, f as spread, u as escape_attribute_value, h as escape_object, k as add_attribute, v as validate_component, e as escape, D as globals, F as compute_slots, m as missing_component, l as each } from "../../../chunks/index.js";
-import { f as forwardEventsBuilder, c as classMap, a as classAdderBuilder, R as Ripple, b as SmuiElement, G as Graphic, L as List, I as Item } from "../../../chunks/Subheader.js";
+import { c as create_ssr_component, b as subscribe, s as setContext, o as onDestroy, E as set_store_value, p as compute_rest_props, q as get_current_component, t as getContext, f as spread, w as escape_attribute_value, h as escape_object, k as add_attribute, v as validate_component, e as escape, u as globals, F as compute_slots, l as each } from "../../../chunks/index.js";
+import { f as forwardEventsBuilder, c as classMap, a as classAdderBuilder } from "../../../chunks/classAdderBuilder.js";
 import { w as writable } from "../../../chunks/index2.js";
-import { b as banner1, a as banner2, c as bannerFull } from "../../../chunks/contact-banner-full.js";
+import { G as Graphic, L as List, I as Item, B as Button } from "../../../chunks/Button.js";
 function exclude(obj, keys) {
   let names = Object.getOwnPropertyNames(obj);
   const newObj = {};
@@ -525,7 +525,7 @@ const Textarea = create_ssr_component(($$result, $$props, $$bindings, slots) => 
     {}
   )}${add_attribute("this", element, 0)}>${value || ""}</textarea>`;
 });
-const { Object: Object_1$2 } = globals;
+const { Object: Object_1$1 } = globals;
 const Textfield = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$restProps = compute_rest_props($$props, [
     "use",
@@ -725,7 +725,7 @@ const Textfield = create_ssr_component(($$result, $$props, $$bindings, slots) =>
     )}${add_attribute("this", element, 0)}>${!textarea && variant !== "outlined" ? `${variant === "filled" ? `<span class="${"mdc-text-field__ripple"}"></span>` : ``}
       ${!noLabel && (label != null || $$slots.label) ? `${validate_component(FloatingLabel, "FloatingLabel").$$render(
       $$result,
-      Object_1$2.assign(
+      Object_1$1.assign(
         {
           floatAbove: value != null && value !== ""
         },
@@ -748,7 +748,7 @@ const Textfield = create_ssr_component(($$result, $$props, $$bindings, slots) =>
     )}` : ``}` : ``}
     ${textarea || variant === "outlined" ? `${validate_component(NotchedOutline, "NotchedOutline").$$render(
       $$result,
-      Object_1$2.assign(
+      Object_1$1.assign(
         {
           noLabel: noLabel || label == null && !$$slots.label
         },
@@ -765,7 +765,7 @@ const Textfield = create_ssr_component(($$result, $$props, $$bindings, slots) =>
         default: () => {
           return `${!noLabel && (label != null || $$slots.label) ? `${validate_component(FloatingLabel, "FloatingLabel").$$render(
             $$result,
-            Object_1$2.assign(
+            Object_1$1.assign(
               {
                 floatAbove: value != null && value !== ""
               },
@@ -811,7 +811,7 @@ const Textfield = create_ssr_component(($$result, $$props, $$bindings, slots) =>
       0
     )}>${validate_component(Textarea, "Textarea").$$render(
       $$result,
-      Object_1$2.assign({ disabled }, { required }, { updateInvalid }, { "aria-controls": helperId }, { "aria-describedby": helperId }, prefixFilter($$restProps, "input$"), { this: input }, { value }, { dirty }, { invalid }),
+      Object_1$1.assign({ disabled }, { required }, { updateInvalid }, { "aria-controls": helperId }, { "aria-describedby": helperId }, prefixFilter($$restProps, "input$"), { this: input }, { value }, { dirty }, { invalid }),
       {
         this: ($$value) => {
           input = $$value;
@@ -840,7 +840,7 @@ const Textfield = create_ssr_component(($$result, $$props, $$bindings, slots) =>
     })}` : ``}
       ${validate_component(Input, "Input").$$render(
       $$result,
-      Object_1$2.assign({ type }, { disabled }, { required }, { updateInvalid }, { "aria-controls": helperId }, { "aria-describedby": helperId }, noLabel && label != null ? { placeholder: label } : {}, prefixFilter($$restProps, "input$"), { this: input }, { value }, { files }, { dirty }, { invalid }),
+      Object_1$1.assign({ type }, { disabled }, { required }, { updateInvalid }, { "aria-controls": helperId }, { "aria-describedby": helperId }, noLabel && label != null ? { placeholder: label } : {}, prefixFilter($$restProps, "input$"), { this: input }, { value }, { files }, { dirty }, { invalid }),
       {
         this: ($$value) => {
           input = $$value;
@@ -886,7 +886,7 @@ const Textfield = create_ssr_component(($$result, $$props, $$bindings, slots) =>
     )}
     ${!textarea && variant !== "outlined" && ripple ? `${validate_component(LineRipple, "LineRipple").$$render(
       $$result,
-      Object_1$2.assign(prefixFilter($$restProps, "ripple$"), { this: lineRipple }),
+      Object_1$1.assign(prefixFilter($$restProps, "ripple$"), { this: lineRipple }),
       {
         this: ($$value) => {
           lineRipple = $$value;
@@ -947,189 +947,11 @@ const Textfield = create_ssr_component(($$result, $$props, $$bindings, slots) =>
       }
     )}
     ${slots.ripple ? slots.ripple({}) : ``}</div>`}
-${$$slots.helper ? `${validate_component(HelperLine, "HelperLine").$$render($$result, Object_1$2.assign(prefixFilter($$restProps, "helperLine$")), {}, {
+${$$slots.helper ? `${validate_component(HelperLine, "HelperLine").$$render($$result, Object_1$1.assign(prefixFilter($$restProps, "helperLine$")), {}, {
       default: () => {
         return `${slots.helper ? slots.helper({}) : ``}`;
       }
     })}` : ``}`;
-  } while (!$$settled);
-  return $$rendered;
-});
-const { Object: Object_1$1 } = globals;
-const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let actionProp;
-  let defaultProp;
-  let secondaryProp;
-  let $$restProps = compute_rest_props($$props, [
-    "use",
-    "class",
-    "style",
-    "ripple",
-    "color",
-    "variant",
-    "touch",
-    "href",
-    "action",
-    "defaultAction",
-    "secondary",
-    "component",
-    "tag",
-    "getElement"
-  ]);
-  const forwardEvents = forwardEventsBuilder(get_current_component());
-  let { use = [] } = $$props;
-  let { class: className = "" } = $$props;
-  let { style = "" } = $$props;
-  let { ripple = true } = $$props;
-  let { color = "primary" } = $$props;
-  let { variant = "text" } = $$props;
-  let { touch = false } = $$props;
-  let { href = void 0 } = $$props;
-  let { action = "close" } = $$props;
-  let { defaultAction = false } = $$props;
-  let { secondary = false } = $$props;
-  let element;
-  let internalClasses = {};
-  let internalStyles = {};
-  let context = getContext("SMUI:button:context");
-  let { component = SmuiElement } = $$props;
-  let { tag = component === SmuiElement ? href == null ? "button" : "a" : void 0 } = $$props;
-  let previousDisabled = $$restProps.disabled;
-  setContext("SMUI:label:context", "button");
-  setContext("SMUI:icon:context", "button");
-  function addClass(className2) {
-    if (!internalClasses[className2]) {
-      internalClasses[className2] = true;
-    }
-  }
-  function removeClass(className2) {
-    if (!(className2 in internalClasses) || internalClasses[className2]) {
-      internalClasses[className2] = false;
-    }
-  }
-  function addStyle(name, value) {
-    if (internalStyles[name] != value) {
-      if (value === "" || value == null) {
-        delete internalStyles[name];
-        internalStyles = internalStyles;
-      } else {
-        internalStyles[name] = value;
-      }
-    }
-  }
-  function getElement() {
-    return element.getElement();
-  }
-  if ($$props.use === void 0 && $$bindings.use && use !== void 0)
-    $$bindings.use(use);
-  if ($$props.class === void 0 && $$bindings.class && className !== void 0)
-    $$bindings.class(className);
-  if ($$props.style === void 0 && $$bindings.style && style !== void 0)
-    $$bindings.style(style);
-  if ($$props.ripple === void 0 && $$bindings.ripple && ripple !== void 0)
-    $$bindings.ripple(ripple);
-  if ($$props.color === void 0 && $$bindings.color && color !== void 0)
-    $$bindings.color(color);
-  if ($$props.variant === void 0 && $$bindings.variant && variant !== void 0)
-    $$bindings.variant(variant);
-  if ($$props.touch === void 0 && $$bindings.touch && touch !== void 0)
-    $$bindings.touch(touch);
-  if ($$props.href === void 0 && $$bindings.href && href !== void 0)
-    $$bindings.href(href);
-  if ($$props.action === void 0 && $$bindings.action && action !== void 0)
-    $$bindings.action(action);
-  if ($$props.defaultAction === void 0 && $$bindings.defaultAction && defaultAction !== void 0)
-    $$bindings.defaultAction(defaultAction);
-  if ($$props.secondary === void 0 && $$bindings.secondary && secondary !== void 0)
-    $$bindings.secondary(secondary);
-  if ($$props.component === void 0 && $$bindings.component && component !== void 0)
-    $$bindings.component(component);
-  if ($$props.tag === void 0 && $$bindings.tag && tag !== void 0)
-    $$bindings.tag(tag);
-  if ($$props.getElement === void 0 && $$bindings.getElement && getElement !== void 0)
-    $$bindings.getElement(getElement);
-  let $$settled;
-  let $$rendered;
-  do {
-    $$settled = true;
-    actionProp = context === "dialog:action" && action != null ? { "data-mdc-dialog-action": action } : { action: $$props.action };
-    defaultProp = context === "dialog:action" && defaultAction ? { "data-mdc-dialog-button-default": "" } : { default: $$props.default };
-    secondaryProp = context === "banner" ? {} : { secondary: $$props.secondary };
-    {
-      if (previousDisabled !== $$restProps.disabled) {
-        const el = getElement();
-        if ("blur" in el) {
-          el.blur();
-        }
-        previousDisabled = $$restProps.disabled;
-      }
-    }
-    $$rendered = `${validate_component(component || missing_component, "svelte:component").$$render(
-      $$result,
-      Object_1$1.assign(
-        { tag },
-        {
-          use: [
-            [
-              Ripple,
-              {
-                ripple,
-                unbounded: false,
-                color,
-                disabled: !!$$restProps.disabled,
-                addClass,
-                removeClass,
-                addStyle
-              }
-            ],
-            forwardEvents,
-            ...use
-          ]
-        },
-        {
-          class: classMap({
-            [className]: true,
-            "mdc-button": true,
-            "mdc-button--raised": variant === "raised",
-            "mdc-button--unelevated": variant === "unelevated",
-            "mdc-button--outlined": variant === "outlined",
-            "smui-button--color-secondary": color === "secondary",
-            "mdc-button--touch": touch,
-            "mdc-card__action": context === "card:action",
-            "mdc-card__action--button": context === "card:action",
-            "mdc-dialog__button": context === "dialog:action",
-            "mdc-top-app-bar__navigation-icon": context === "top-app-bar:navigation",
-            "mdc-top-app-bar__action-item": context === "top-app-bar:action",
-            "mdc-snackbar__action": context === "snackbar:actions",
-            "mdc-banner__secondary-action": context === "banner" && secondary,
-            "mdc-banner__primary-action": context === "banner" && !secondary,
-            "mdc-tooltip__action": context === "tooltip:rich-actions",
-            ...internalClasses
-          })
-        },
-        {
-          style: Object.entries(internalStyles).map(([name, value]) => `${name}: ${value};`).concat([style]).join(" ")
-        },
-        actionProp,
-        defaultProp,
-        secondaryProp,
-        { href },
-        $$restProps,
-        { this: element }
-      ),
-      {
-        this: ($$value) => {
-          element = $$value;
-          $$settled = false;
-        }
-      },
-      {
-        default: () => {
-          return `<div class="${"mdc-button__ripple"}"></div>
-  ${slots.default ? slots.default({}) : ``}${touch ? `<div class="${"mdc-button__touch"}"></div>` : ``}`;
-        }
-      }
-    )}`;
   } while (!$$settled);
   return $$rendered;
 });
@@ -1909,33 +1731,42 @@ const Option = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$unsubscribe_selectedValue();
   return $$rendered;
 });
+const banner2 = "/_app/immutable/assets/contact-banner2-125af5e4.webp";
+const banner1 = "/_app/immutable/assets/contact-banner1-45cd011f.webp";
+const bannerFull = "/_app/immutable/assets/contact-banner-8e472086.jpg";
 const phone = "/_app/immutable/assets/phone-59fc09f4.svg";
-const footer_svelte_svelte_type_style_lang = "";
+const email = "/_app/immutable/assets/email-e34c11c9.svg";
+const video = "/_app/immutable/assets/video-f9f88f42.svg";
+const ContactFooter_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: ".footer.svelte-136tjbj{background-color:#282e3c}",
+  code: ".footer.svelte-pk4ovo.svelte-pk4ovo.svelte-pk4ovo.svelte-pk4ovo{background-color:#282e3c}.footer.svelte-pk4ovo .icons h5.svelte-pk4ovo.svelte-pk4ovo.svelte-pk4ovo{margin:15px 0 10px}.footer.svelte-pk4ovo .icons.svelte-pk4ovo.svelte-pk4ovo.svelte-pk4ovo{display:flex;justify-content:space-around;align-items:center}@media(max-width: 735px){.footer.svelte-pk4ovo .icons.svelte-pk4ovo.svelte-pk4ovo.svelte-pk4ovo{flex-direction:column}}.footer.svelte-pk4ovo .icons.svelte-pk4ovo>div.svelte-pk4ovo.svelte-pk4ovo{margin:30px 0;height:190px;width:33%;color:white;padding:1em}@media(max-width: 735px){.footer.svelte-pk4ovo .icons.svelte-pk4ovo>div.svelte-pk4ovo.svelte-pk4ovo{display:flex;align-items:center;flex-direction:column;width:100%;max-width:440px;height:auto;text-align:center}}.footer.svelte-pk4ovo .icons.svelte-pk4ovo>div.svelte-pk4ovo>img.svelte-pk4ovo{filter:invert(100%)}.footer.svelte-pk4ovo .icons.svelte-pk4ovo>div.svelte-pk4ovo>p.svelte-pk4ovo,.footer.svelte-pk4ovo .icons>div a.svelte-pk4ovo.svelte-pk4ovo.svelte-pk4ovo{margin:6px 0;color:white;text-decoration:none;font-size:15px}.footer.svelte-pk4ovo .icons>div a.svelte-pk4ovo.svelte-pk4ovo.svelte-pk4ovo:hover{text-decoration:underline}",
   map: null
 };
-const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+const ContactFooter = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
-  return `<section class="${"footer svelte-136tjbj"}"><div class="${"gutters"}"><div><img${add_attribute("src", phone, 0)} alt="${"phone"}">
-            <h3>Phone</h3>
-            <p>Talk to our experienced lawyers</p>
-            <p>(02) 8378 7698</p></div>
-        <div><h3>Email</h3>
-            <p>Email us to book an appointment</p>
-            <p>mail@randallandassoc.com</p></div>
-        <div><h3>Video Consultation</h3>
-            <p>We are pleased to offer video consultations for our clients. Please complete the form above or call us to arrange an online meeting</p></div></div>
+  return `<section class="${"footer svelte-pk4ovo"}"><div class="${"gutters icons svelte-pk4ovo"}"><div class="${"svelte-pk4ovo"}"><img${add_attribute("src", phone, 0)} alt="${"phone"}" class="${"svelte-pk4ovo"}">
+      <h5 class="${"svelte-pk4ovo"}">Phone</h5>
+      <p class="${"svelte-pk4ovo"}">Talk to our experienced lawyers</p>
+      <p class="${"svelte-pk4ovo"}">(02) 8378 7698</p></div>
+    <div class="${"svelte-pk4ovo"}"><img${add_attribute("src", email, 0)} alt="${"email"}" class="${"svelte-pk4ovo"}">
+      <h5 class="${"svelte-pk4ovo"}">Email</h5>
+      <p class="${"svelte-pk4ovo"}">Email us to book an appointment</p>
+      <a href="${"mailto:mail@randallandassoc.com"}" class="${"svelte-pk4ovo"}">mail@randallandassoc.com</a></div>
+    <div class="${"svelte-pk4ovo"}"><img${add_attribute("src", video, 0)} alt="${"video"}" class="${"svelte-pk4ovo"}">
+      <h5 class="${"svelte-pk4ovo"}">Video Consultation</h5>
+      <p class="${"svelte-pk4ovo"}">We are pleased to offer video consultations for our clients. Please
+        complete the form above or call us to arrange an online meeting
+      </p></div></div>
 </section>`;
 });
 const _page_svelte_svelte_type_style_lang = "";
 const css = {
-  code: "form.svelte-mza286.svelte-mza286{display:flex;flex-direction:column;width:100%;max-width:600px;margin:4em auto}form.svelte-mza286>fieldset.svelte-mza286{margin-bottom:1rem}",
+  code: "#contact.svelte-1ceman3.svelte-1ceman3{background-color:white}form.svelte-1ceman3.svelte-1ceman3{display:flex;flex-direction:column;width:100%;max-width:600px;margin:4em auto}form.svelte-1ceman3>fieldset.svelte-1ceman3{margin-bottom:1rem}",
   map: null
 };
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let name = "";
-  let email = "";
+  let email2 = "";
   let areaOfEnquiry = "";
   let message = "";
   let loading = false;
@@ -1945,16 +1776,15 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$rendered;
   do {
     $$settled = true;
-    $$rendered = `<section id="${"contact"}"><div class="${"hero"}"><picture><source type="${"image/webp"}"${add_attribute("srcset", banner1, 0)} media="${"(max-width: 1200px)"}">
+    $$rendered = `<section id="${"contact"}" class="${"svelte-1ceman3"}"><div class="${"hero"}"><picture><source type="${"image/webp"}"${add_attribute("srcset", banner1, 0)} media="${"(max-width: 1200px)"}">
       <source type="${"image/webp"}"${add_attribute("srcset", banner2, 0)} media="${"(min-resolution: 50dpi)"}">
       <source type="${"image/webp"}"${add_attribute("srcset", banner1, 0)}>
 
       <img${add_attribute("src", bannerFull, 0)} alt="${"A work station with coffee"}"></picture>
-    <h1 class="${"mdc-typography--headline4"}">Contact Us
-    </h1></div>
+    <h1 class="${"mdc-typography--headline4"}">Contact Us</h1></div>
 
-  <div class="${"gutters"}"><form class="${"svelte-mza286"}"><h4 class="${"mdc-typography--headline4"}">Contact Us</h4>
-      <fieldset class="${"svelte-mza286"}">${validate_component(Textfield, "Textfield").$$render(
+  <div class="${"gutters"}"><form class="${"svelte-1ceman3"}"><h4 class="${"mdc-typography--headline4"}">Contact Us</h4>
+      <fieldset class="${"svelte-1ceman3"}">${validate_component(Textfield, "Textfield").$$render(
       $$result,
       {
         label: "Your Name",
@@ -1971,7 +1801,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       },
       {}
     )}</fieldset>
-      <fieldset class="${"svelte-mza286"}">${validate_component(Textfield, "Textfield").$$render(
+      <fieldset class="${"svelte-1ceman3"}">${validate_component(Textfield, "Textfield").$$render(
       $$result,
       {
         label: "Your Email",
@@ -1979,17 +1809,17 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         style: "width: 100%;",
         required: true,
         input$autocomplete: "email",
-        value: email
+        value: email2
       },
       {
         value: ($$value) => {
-          email = $$value;
+          email2 = $$value;
           $$settled = false;
         }
       },
       {}
     )}</fieldset>
-      <fieldset class="${"svelte-mza286"}">${validate_component(Select, "Select").$$render(
+      <fieldset class="${"svelte-1ceman3"}">${validate_component(Select, "Select").$$render(
       $$result,
       {
         label: "Area of Enquiry",
@@ -2014,7 +1844,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         }
       }
     )}</fieldset>
-      <fieldset class="${"svelte-mza286"}">${validate_component(Textfield, "Textfield").$$render(
+      <fieldset class="${"svelte-1ceman3"}">${validate_component(Textfield, "Textfield").$$render(
       $$result,
       {
         label: "Your Message",
@@ -2041,7 +1871,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         type: "submit",
         variant: "unelevated",
         disabled: loading,
-        style: "height: 44px; min-width: 180px; margin: auto"
+        style: "height: 44px; min-width: 250px; margin: auto"
       },
       {},
       {
@@ -2050,7 +1880,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         }
       }
     )}</form></div></section>
-${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}`;
+${validate_component(ContactFooter, "ContactFooter").$$render($$result, {}, {}, {})}`;
   } while (!$$settled);
   return $$rendered;
 });

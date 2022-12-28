@@ -44,7 +44,7 @@
 
   let reviews = [
     {
-      name: "Zac Cobb",
+      name: "Zac Corn-on-a-Cobb",
       company: "Property Client",
       avatar: avatar1,
       avatarFallback: avatar1alt,

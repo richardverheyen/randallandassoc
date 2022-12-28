@@ -1,7 +1,7 @@
 <script>
-  import banner2 from "$lib/images/tac-banner2.webp";
-  import banner1 from "$lib/images/tac-banner1.webp";
-  import bannerFull from "$lib/images/tac-banner.jpg";
+  import banner2 from "$lib/images/contact-banner2.webp";
+  import banner1 from "$lib/images/contact-banner1.webp";
+  import bannerFull from "$lib/images/contact-banner.jpg";
 </script>
 
 <section id="terms-and-conditions">
@@ -51,6 +51,14 @@
         margin-bottom: 2em;
         max-width: 850px;
         text-align: center;
+
+        > a {
+			color: black;
+			text-decoration: none;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
       }
     }
   }

@@ -86,6 +86,14 @@
         margin: 0 auto 2em;
         max-width: 850px;
         text-align: center;
+
+		> a {
+			color: black;
+			text-decoration: none;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
       }
 
       ul {

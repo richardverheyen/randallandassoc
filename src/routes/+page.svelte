@@ -73,8 +73,8 @@
 
 <Testimonials />
 
-<section>
-  <div class="gutters contact-us">
+<section id="contact-us">
+  <div class="gutters">
     <h2 class="mdc-typography--heading2">
       Contact us.<br /> Get in touch today for a fast responce within 24hrs.
     </h2>
@@ -137,23 +137,28 @@
     ul {
       padding: 0;
       text-align: center;
-      
+
       > li {
         list-style: none;
       }
     }
   }
 
-  .contact-us {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 6em;
+#contact-us {
+  background-image: url({banner2});
 
-    p {
-      padding: 0;
-      margin-top: 0;
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-bottom: 6em;
+
+      p {
+        padding: 0;
+        margin-top: 0;
+      }
     }
+    
 }
 </style>

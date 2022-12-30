@@ -33,7 +33,7 @@
       />
       <source type="image/webp" srcset={banner1} />
 
-      <img src={bannerFull} alt="A work station with coffee" />
+      <img src={bannerFull} alt="A city scape" />
     </picture>
     <div class="logo">
       <img src={logo} alt="Randall and Associates" />
@@ -53,8 +53,8 @@
         For over twenty years Joshua Randall has represented and supported the
         legal interests of a diverse range of individuals and companies
         throughout New South Wales. Putting YOU first is crucial as we develop
-        realistic and sustainable legal solutions that work when you most need
-        it.
+        realistic and sustainable legal solutions that work when you need it
+        most.
       </p>
     </div>
   </div>
@@ -70,9 +70,12 @@
             <Media
               class="card-media-16x9"
               aspectRatio="16x9"
-              style="background: grey"
+              style="background: #484c5a"
             />
-            <Content>Property and Conveyancing</Content>
+            <Content
+              ><a href="/property-and-conveyancing">Property and Conveyancing</a
+              ></Content
+            >
           </PrimaryAction>
         </Card>
       </li>
@@ -82,9 +85,9 @@
             <Media
               class="card-media-16x9"
               aspectRatio="16x9"
-              style="background: grey"
+              style="background: #484c5a"
             />
-            <Content>Personal Injury</Content>
+            <Content><a href="/personal-injury">Personal Injury</a></Content>
           </PrimaryAction>
         </Card>
       </li>
@@ -94,9 +97,10 @@
             <Media
               class="card-media-16x9"
               aspectRatio="16x9"
-              style="background: grey"
+              style="background: #484c5a"
             />
-            <Content>Wills and Estates</Content>
+            <Content><a href="/wills-and-estates">Wills and Estates</a></Content
+            >
           </PrimaryAction>
         </Card>
       </li>
@@ -201,6 +205,10 @@
     > li {
       margin: 10px 10px;
       min-width: 290px;
+
+      a {
+        text-decoration: none;
+      }
 
       .card-media-16x9 {
         background-image: url({banner2});

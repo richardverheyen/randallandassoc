@@ -58,22 +58,22 @@
 
       h2 {
         text-align: center;
-        margin-top: 3em;
+        margin-top: 40px;
         margin-bottom: 1em;
       }
       p {
         margin-top: 0;
         margin-bottom: 2em;
-        max-width: 850px;
+        max-width: 690px;
         text-align: center;
 
         > a {
-			color: black;
-			text-decoration: none;
-		}
-		a:hover {
-			text-decoration: underline;
-		}
+          color: black;
+          text-decoration: none;
+        }
+        a:hover {
+          text-decoration: underline;
+        }
       }
 
       ul {
@@ -82,6 +82,7 @@
         max-width: 600px;
         > li {
           list-style-type: "\2713";
+          padding-left: 10px;
           margin-bottom: 2em;
         }
       }

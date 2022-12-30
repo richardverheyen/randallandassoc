@@ -2,6 +2,7 @@
   import phone from "$lib/phone.svg";
   import email from "$lib/email.svg";
   import video from "$lib/video.svg";
+  import location from "$lib/location.svg";
 </script>
 
 <section class="footer">
@@ -17,6 +18,11 @@
       <h5>Email</h5>
       <p>Email us to book an appointment</p>
       <a href="mailto:mail@randallandassoc.com">mail@randallandassoc.com</a>
+    </div>
+    <div>
+      <img src={location} alt="location" />
+      <h5>Visit Us</h5>
+      <p>Level 3, Pyrmont Bridge Road<br /> Pyrmont NSW 2009</p>
     </div>
     <div>
       <img src={video} alt="video" />

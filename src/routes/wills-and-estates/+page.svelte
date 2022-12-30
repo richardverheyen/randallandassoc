@@ -79,7 +79,7 @@
 
       h2 {
         text-align: center;
-        margin-top: 3em;
+        margin-top: 40px;
         margin-bottom: 1em;
       }
       p {
@@ -87,21 +87,22 @@
         max-width: 850px;
         text-align: center;
 
-		> a {
-			color: black;
-			text-decoration: none;
-		}
-		a:hover {
-			text-decoration: underline;
-		}
+        > a {
+          color: black;
+          text-decoration: none;
+        }
+        a:hover {
+          text-decoration: underline;
+        }
       }
 
       ul {
         padding: 0 2em;
-		max-width: 600px;
+        max-width: 600px;
         > li {
           list-style-type: "\2713";
-		  margin-bottom: 2em;
+          padding-left: 10px;
+          margin-bottom: 2em;
         }
       }
     }

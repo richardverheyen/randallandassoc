@@ -44,12 +44,12 @@
       </li>
     </ul>
     <div id="hamburger">
-      <IconButton 
+      <IconButton
         ripple={false}
         on:click={() => {
-        open = !open;
-      }}
-        ><Icon class="material-icons" style="color: white;"
+          open = !open;
+        }}
+        ><Icon class="material-icons" style="color: white; font-size: 40px;"
           >{open ? "close" : "menu"}</Icon
         ></IconButton
       >
@@ -67,9 +67,7 @@
     <ul class="mobile-nav">
       <!-- svelte-ignore a11y-click-events-have-key-events -->
       <li
-        aria-current={$page.url.pathname === "/"
-          ? "page"
-          : undefined}
+        aria-current={$page.url.pathname === "/" ? "page" : undefined}
         on:click={() => {
           open = false;
         }}
@@ -130,10 +128,13 @@
       </li>
     </ul>
 
-    <a href="/" class="logo"
-    on:click={() => {
-      open = false;
-    }}>
+    <a
+      href="/"
+      class="logo"
+      on:click={() => {
+        open = false;
+      }}
+    >
       <img src={logo} alt="logo" />
     </a>
   </Content>
@@ -147,6 +148,9 @@
       display: flex;
       align-items: center;
       width: 100%;
+      // @media (max-width: 900px) {
+      //   height: 66px;
+      // }
 
       ul {
         position: relative;
@@ -156,6 +160,7 @@
         width: 100%;
         display: flex;
         align-items: center;
+        justify-content: right;
         list-style: none;
         background-size: contain;
 
@@ -213,8 +218,8 @@
           width: auto;
           height: 190px;
 
-          @media (max-width: 420px) {
-            height: 160px;
+          @media (max-width: 900px) {
+            height: 150px;
           }
         }
 

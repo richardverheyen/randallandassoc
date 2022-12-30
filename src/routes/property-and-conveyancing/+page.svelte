@@ -109,22 +109,23 @@
       }
       p {
         margin-bottom: 2em;
-        max-width: 850px;
+        max-width: 715px;
         text-align: center;
-		> a {
-			color: black;
-			text-decoration: none;
-		}
-		a:hover {
-			text-decoration: underline;
-		}
+        > a {
+          color: black;
+          text-decoration: none;
+        }
+        a:hover {
+          text-decoration: underline;
+        }
       }
 
       ul {
-        padding: 0 2em;
-		
+        margin: 0;
+
         > li {
           list-style-type: "\2713";
+          padding: 0 0 20px 10px;
         }
       }
     }

@@ -118,7 +118,14 @@
             : 0}%, {innerWidth > 750 ? -100 * offset : 0}%)"
         >
           <article class="hidden" aria-hidden="true" style="opacity: {offset};">
-            <div>
+            {#if innerWidth <= 750}
+              <img
+                width="40"
+                src={reviews[Math.floor($displayed_count + 1)]?.avatar}
+                alt=""
+              />
+            {/if}
+            <div class="stars">
               {#each reviews[Math.floor($displayed_count + 1)]?.rating || [] as icon}
                 <Icon class="material-icons">{icon}</Icon>
               {/each}
@@ -131,7 +138,14 @@
             </p>
           </article>
           <article style="opacity: {1 - offset};">
-            <div>
+            {#if innerWidth <= 750}
+              <img
+                width="40"
+                src={reviews[Math.floor($displayed_count)]?.avatar}
+                alt=""
+              />
+            {/if}
+            <div class="stars">
               {#each reviews[Math.floor($displayed_count)]?.rating || [] as icon}
                 <Icon class="material-icons">{icon}</Icon>
               {/each}
@@ -250,6 +264,10 @@
       justify-content: center;
       padding: 0 2em;
       box-sizing: border-box;
+
+      .stars {
+        margin-top: 10px;
+      }
 
       @media (min-width: 751px) {
         p.name {

@@ -121,14 +121,14 @@
       Contact us for fast, easy and affordable service.
     </p>
     <div>
-      <Button
+      <!-- <Button
         on:click={() => goto("/contact")}
         variant="unelevated"
         style="height: 44px; min-width: 250px; margin-bottom: 10px;"
       >
         <Icon class="material-symbols-rounded">forum</Icon>
         <Label>Get a Quote</Label>
-      </Button>
+      </Button> -->
       <Button
         on:click={() => goto("/contact")}
         variant="unelevated"
@@ -224,7 +224,7 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      padding-bottom: 6em;
+      padding: 6em 0;
 
       @media (max-width: 980px) {
         background-color: #e8d6b3;

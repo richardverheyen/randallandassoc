@@ -1,8 +1,8 @@
-import { c as create_ssr_component, p as compute_rest_props, q as get_current_component, t as getContext, v as validate_component, m as missing_component, C as now, D as loop, b as subscribe, l as each, e as escape, k as add_attribute } from "../../chunks/index.js";
-import { D as Drawer, a as Content, A as AppContent, C as CommonIcon, I as IconButton, l as logo } from "../../chunks/Subtitle.js";
+import { c as create_ssr_component, p as compute_rest_props, q as get_current_component, t as getContext, v as validate_component, m as missing_component, C as now, D as loop, b as subscribe, l as each, e as escape, f as spread, w as escape_attribute_value, h as escape_object, k as add_attribute } from "../../chunks/index.js";
+import { D as Drawer, a as Content$1, A as AppContent, C as CommonIcon, I as IconButton, l as logo } from "../../chunks/Subtitle.js";
 import { L as List, I as Item, G as Graphic, T as Text, P as PrimaryText, S as SecondaryText, B as Button } from "../../chunks/Button.js";
 import { w as writable } from "../../chunks/index2.js";
-import { f as forwardEventsBuilder, c as classMap, S as SmuiElement } from "../../chunks/classAdderBuilder.js";
+import { f as forwardEventsBuilder, c as classMap, S as SmuiElement, a as classAdderBuilder } from "../../chunks/classAdderBuilder.js";
 const CommonLabel = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$restProps = compute_rest_props($$props, ["use", "class", "component", "tag", "getElement"]);
   const forwardEvents = forwardEventsBuilder(get_current_component());
@@ -174,7 +174,7 @@ const avatar3 = "/_app/immutable/assets/avatar3-60f9ab82.webp";
 const avatar3alt = "/_app/immutable/assets/avatar3-78282b4b.png";
 const Testimonials_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: "section.svelte-on72st.svelte-on72st{margin:4em 0}h2.svelte-on72st.svelte-on72st{text-align:center}.testimonials.svelte-on72st.svelte-on72st{position:relative;display:flex;justify-content:center;overflow:hidden;z-index:0}@media(max-width: 750px){.testimonials.svelte-on72st .desktop-navigation.svelte-on72st{display:none}}.testimonials.svelte-on72st .main-content.svelte-on72st{height:100%;box-sizing:border-box;width:100%;min-width:500px;overflow:hidden;text-align:center;position:relative;padding:0 3em;height:300px}@media(max-width: 850px) and (min-width: 751px){.testimonials.svelte-on72st .main-content.svelte-on72st{min-width:400px}}@media(min-width: 751px){.testimonials.svelte-on72st .main-content.svelte-on72st{height:350px;mask-image:linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0) 8%, rgb(0, 0, 0) 92%, rgba(0, 0, 0, 0));-webkit-mask-image:linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0) 8%, rgb(0, 0, 0) 92%, rgba(0, 0, 0, 0))}}@media(max-width: 750px){.testimonials.svelte-on72st .main-content.svelte-on72st{min-width:calc(100vw - 1em)}}@media(max-width: 500px){.testimonials.svelte-on72st .main-content.svelte-on72st{height:420px}}.testimonials.svelte-on72st .main-content .testimonial-display.svelte-on72st{width:100%;height:100%;margin-left:-2em;width:calc(100% + 4em)}@media(min-width: 751px){.testimonials.svelte-on72st .carousel-icons.svelte-on72st{display:none}}.testimonials.svelte-on72st article.svelte-on72st{position:absolute;display:flex;flex-direction:column;width:100%;height:100%;color:var(--color-theme-1);align-items:center;justify-content:center;padding:0 2em;box-sizing:border-box}@media(min-width: 751px){.testimonials.svelte-on72st article p.name.svelte-on72st{display:none}}.testimonials.svelte-on72st .hidden.svelte-on72st{top:100%;left:0%;user-select:none}@media(max-width: 750px){.testimonials.svelte-on72st .hidden.svelte-on72st{left:100%;top:0%}}",
+  code: "section.svelte-711foc.svelte-711foc{margin:4em 0}h2.svelte-711foc.svelte-711foc{text-align:center}.testimonials.svelte-711foc.svelte-711foc{position:relative;display:flex;justify-content:center;overflow:hidden;z-index:0}@media(max-width: 750px){.testimonials.svelte-711foc .desktop-navigation.svelte-711foc{display:none}}.testimonials.svelte-711foc .main-content.svelte-711foc{height:100%;box-sizing:border-box;width:100%;min-width:500px;overflow:hidden;text-align:center;position:relative;padding:0 3em;height:300px}@media(max-width: 850px) and (min-width: 751px){.testimonials.svelte-711foc .main-content.svelte-711foc{min-width:400px}}@media(min-width: 751px){.testimonials.svelte-711foc .main-content.svelte-711foc{height:350px;mask-image:linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0) 8%, rgb(0, 0, 0) 92%, rgba(0, 0, 0, 0));-webkit-mask-image:linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0) 8%, rgb(0, 0, 0) 92%, rgba(0, 0, 0, 0))}}@media(max-width: 750px){.testimonials.svelte-711foc .main-content.svelte-711foc{min-width:calc(100vw - 1em)}}@media(max-width: 500px){.testimonials.svelte-711foc .main-content.svelte-711foc{height:420px}}.testimonials.svelte-711foc .main-content .testimonial-display.svelte-711foc{width:100%;height:100%;margin-left:-2em;width:calc(100% + 4em)}@media(min-width: 751px){.testimonials.svelte-711foc .carousel-icons.svelte-711foc{display:none}}.testimonials.svelte-711foc article.svelte-711foc{position:absolute;display:flex;flex-direction:column;width:100%;height:100%;color:var(--color-theme-1);align-items:center;justify-content:center;padding:0 2em;box-sizing:border-box}.testimonials.svelte-711foc article .stars.svelte-711foc{margin-top:10px}@media(min-width: 751px){.testimonials.svelte-711foc article p.name.svelte-711foc{display:none}}.testimonials.svelte-711foc .hidden.svelte-711foc{top:100%;left:0%;user-select:none}@media(max-width: 750px){.testimonials.svelte-711foc .hidden.svelte-711foc{left:100%;top:0%}}",
   map: null
 };
 function modulo(n, m) {
@@ -188,7 +188,7 @@ const Testimonials = create_ssr_component(($$result, $$props, $$bindings, slots)
   $$unsubscribe_displayed_count = subscribe(displayed_count, (value) => $displayed_count = value);
   let reviews = [
     {
-      name: "Zac Cobb",
+      name: "Zac Corn-on-a-Cobb",
       company: "Property Client",
       avatar: avatar1,
       avatarFallback: avatar1alt,
@@ -223,8 +223,8 @@ const Testimonials = create_ssr_component(($$result, $$props, $$bindings, slots)
   $$unsubscribe_displayed_count();
   return `
 
-<section id="${"testimonials"}" class="${"svelte-on72st"}"><div class="${"gutters"}"><h2 class="${"mdc-typography--headline2 svelte-on72st"}">Feedback from our clients</h2></div>
-  <div class="${"testimonials svelte-on72st"}"><div class="${"desktop-navigation svelte-on72st"}">${validate_component(Drawer, "Drawer").$$render(
+<section id="${"testimonials"}" class="${"svelte-711foc"}"><div class="${"gutters"}"><h2 class="${"mdc-typography--headline2 svelte-711foc"}">Feedback from our clients</h2></div>
+  <div class="${"testimonials svelte-711foc"}"><div class="${"desktop-navigation svelte-711foc"}">${validate_component(Drawer, "Drawer").$$render(
     $$result,
     {
       style: "border-right: 0; background: none; width: 350px"
@@ -232,7 +232,7 @@ const Testimonials = create_ssr_component(($$result, $$props, $$bindings, slots)
     {},
     {
       default: () => {
-        return `${validate_component(Content, "Content").$$render($$result, { style: "display: flex;" }, {}, {
+        return `${validate_component(Content$1, "Content").$$render($$result, { style: "display: flex;" }, {}, {
           default: () => {
             return `${validate_component(List, "List").$$render(
               $$result,
@@ -295,10 +295,11 @@ const Testimonials = create_ssr_component(($$result, $$props, $$bindings, slots)
 
     ${validate_component(AppContent, "AppContent").$$render($$result, {}, {}, {
     default: () => {
-      return `<main class="${"main-content svelte-on72st"}">
+      return `<main class="${"main-content svelte-711foc"}">
         
         
-        <div class="${"testimonial-display svelte-on72st"}" style="${"transform: translate(" + escape(0, true) + "%, " + escape(0, true) + "%)"}"><article class="${"hidden svelte-on72st"}" aria-hidden="${"true"}" style="${"opacity: " + escape(offset, true) + ";"}"><div>${each(reviews[Math.floor($displayed_count + 1)]?.rating || [], (icon) => {
+        <div class="${"testimonial-display svelte-711foc"}" style="${"transform: translate(" + escape(0, true) + "%, " + escape(0, true) + "%)"}"><article class="${"hidden svelte-711foc"}" aria-hidden="${"true"}" style="${"opacity: " + escape(offset, true) + ";"}">${``}
+            <div class="${"stars svelte-711foc"}">${each(reviews[Math.floor($displayed_count + 1)]?.rating || [], (icon) => {
         return `${validate_component(CommonIcon, "Icon").$$render($$result, { class: "material-icons" }, {}, {
           default: () => {
             return `${escape(icon)}`;
@@ -306,8 +307,9 @@ const Testimonials = create_ssr_component(($$result, $$props, $$bindings, slots)
         })}`;
       })}</div>
             <p>${escape(reviews[Math.floor($displayed_count + 1)]?.text)}</p>
-            <p class="${"name svelte-on72st"}">${escape(reviews[Math.floor($displayed_count + 1)]?.name)} - ${escape(reviews[Math.floor($displayed_count + 1)]?.company)}</p></article>
-          <article style="${"opacity: " + escape(1 - offset, true) + ";"}" class="${"svelte-on72st"}"><div>${each(reviews[Math.floor($displayed_count)]?.rating || [], (icon) => {
+            <p class="${"name svelte-711foc"}">${escape(reviews[Math.floor($displayed_count + 1)]?.name)} - ${escape(reviews[Math.floor($displayed_count + 1)]?.company)}</p></article>
+          <article style="${"opacity: " + escape(1 - offset, true) + ";"}" class="${"svelte-711foc"}">${``}
+            <div class="${"stars svelte-711foc"}">${each(reviews[Math.floor($displayed_count)]?.rating || [], (icon) => {
         return `${validate_component(CommonIcon, "Icon").$$render($$result, { class: "material-icons" }, {}, {
           default: () => {
             return `${escape(icon)}`;
@@ -315,9 +317,9 @@ const Testimonials = create_ssr_component(($$result, $$props, $$bindings, slots)
         })}`;
       })}</div>
             <p>${escape(reviews[Math.floor($displayed_count)]?.text)}</p>
-            <p class="${"name svelte-on72st"}">${escape(reviews[Math.floor($displayed_count)]?.name)} - ${escape(reviews[Math.floor($displayed_count)]?.company)}</p></article></div>
+            <p class="${"name svelte-711foc"}">${escape(reviews[Math.floor($displayed_count)]?.name)} - ${escape(reviews[Math.floor($displayed_count)]?.company)}</p></article></div>
 
-        <div class="${"carousel-icons svelte-on72st"}">${validate_component(IconButton, "IconButton").$$render(
+        <div class="${"carousel-icons svelte-711foc"}">${validate_component(IconButton, "IconButton").$$render(
         $$result,
         {
           disabled: count === 0,
@@ -355,15 +357,158 @@ const Testimonials = create_ssr_component(($$result, $$props, $$bindings, slots)
   })}</div>
 </section>`;
 });
+const Card = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let $$restProps = compute_rest_props($$props, ["use", "class", "variant", "padded", "getElement"]);
+  forwardEventsBuilder(get_current_component());
+  let { use = [] } = $$props;
+  let { class: className = "" } = $$props;
+  let { variant = "raised" } = $$props;
+  let { padded = false } = $$props;
+  let element;
+  function getElement() {
+    return element;
+  }
+  if ($$props.use === void 0 && $$bindings.use && use !== void 0)
+    $$bindings.use(use);
+  if ($$props.class === void 0 && $$bindings.class && className !== void 0)
+    $$bindings.class(className);
+  if ($$props.variant === void 0 && $$bindings.variant && variant !== void 0)
+    $$bindings.variant(variant);
+  if ($$props.padded === void 0 && $$bindings.padded && padded !== void 0)
+    $$bindings.padded(padded);
+  if ($$props.getElement === void 0 && $$bindings.getElement && getElement !== void 0)
+    $$bindings.getElement(getElement);
+  return `<div${spread(
+    [
+      {
+        class: escape_attribute_value(classMap({
+          [className]: true,
+          "mdc-card": true,
+          "mdc-card--outlined": variant === "outlined",
+          "smui-card--padded": padded
+        }))
+      },
+      escape_object($$restProps)
+    ],
+    {}
+  )}${add_attribute("this", element, 0)}>${slots.default ? slots.default({}) : ``}
+</div>`;
+});
+const Content = classAdderBuilder({
+  class: "smui-card__content",
+  tag: "div"
+});
+const PrimaryAction = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let $$restProps = compute_rest_props($$props, ["use", "class", "style", "ripple", "color", "padded", "tabindex", "getElement"]);
+  forwardEventsBuilder(get_current_component());
+  let { use = [] } = $$props;
+  let { class: className = "" } = $$props;
+  let { style = "" } = $$props;
+  let { ripple = true } = $$props;
+  let { color = void 0 } = $$props;
+  let { padded = false } = $$props;
+  let { tabindex = 0 } = $$props;
+  let element;
+  let internalClasses = {};
+  let internalStyles = {};
+  function getElement() {
+    return element;
+  }
+  if ($$props.use === void 0 && $$bindings.use && use !== void 0)
+    $$bindings.use(use);
+  if ($$props.class === void 0 && $$bindings.class && className !== void 0)
+    $$bindings.class(className);
+  if ($$props.style === void 0 && $$bindings.style && style !== void 0)
+    $$bindings.style(style);
+  if ($$props.ripple === void 0 && $$bindings.ripple && ripple !== void 0)
+    $$bindings.ripple(ripple);
+  if ($$props.color === void 0 && $$bindings.color && color !== void 0)
+    $$bindings.color(color);
+  if ($$props.padded === void 0 && $$bindings.padded && padded !== void 0)
+    $$bindings.padded(padded);
+  if ($$props.tabindex === void 0 && $$bindings.tabindex && tabindex !== void 0)
+    $$bindings.tabindex(tabindex);
+  if ($$props.getElement === void 0 && $$bindings.getElement && getElement !== void 0)
+    $$bindings.getElement(getElement);
+  return `<div${spread(
+    [
+      {
+        class: escape_attribute_value(classMap({
+          [className]: true,
+          "mdc-card__primary-action": true,
+          "smui-card__primary-action--padded": padded,
+          ...internalClasses
+        }))
+      },
+      {
+        style: escape_attribute_value(Object.entries(internalStyles).map(([name, value]) => `${name}: ${value};`).concat([style]).join(" "))
+      },
+      {
+        tabindex: escape_attribute_value(tabindex)
+      },
+      escape_object($$restProps)
+    ],
+    {}
+  )}${add_attribute("this", element, 0)}><div class="${"mdc-card__ripple"}"></div>
+  ${slots.default ? slots.default({}) : ``}
+</div>`;
+});
+const Media = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let $$restProps = compute_rest_props($$props, ["use", "class", "aspectRatio", "getElement"]);
+  forwardEventsBuilder(get_current_component());
+  let { use = [] } = $$props;
+  let { class: className = "" } = $$props;
+  let { aspectRatio = void 0 } = $$props;
+  let element;
+  function getElement() {
+    return element;
+  }
+  if ($$props.use === void 0 && $$bindings.use && use !== void 0)
+    $$bindings.use(use);
+  if ($$props.class === void 0 && $$bindings.class && className !== void 0)
+    $$bindings.class(className);
+  if ($$props.aspectRatio === void 0 && $$bindings.aspectRatio && aspectRatio !== void 0)
+    $$bindings.aspectRatio(aspectRatio);
+  if ($$props.getElement === void 0 && $$bindings.getElement && getElement !== void 0)
+    $$bindings.getElement(getElement);
+  return `<div${spread(
+    [
+      {
+        class: escape_attribute_value(classMap({
+          [className]: true,
+          "mdc-card__media": true,
+          "mdc-card__media--square": aspectRatio === "square",
+          "mdc-card__media--16-9": aspectRatio === "16x9"
+        }))
+      },
+      escape_object($$restProps)
+    ],
+    {}
+  )}${add_attribute("this", element, 0)}>${slots.default ? slots.default({}) : ``}
+</div>`;
+});
+classAdderBuilder({
+  class: "mdc-card__media-content",
+  tag: "div"
+});
+classAdderBuilder({
+  class: "mdc-card__action-buttons",
+  tag: "div"
+});
+classAdderBuilder({
+  class: "mdc-card__action-icons",
+  tag: "div"
+});
 const banner2 = "/_app/immutable/assets/home-banner2-51d10a4d.webp";
 const banner1 = "/_app/immutable/assets/home-banner1-acf3bc19.webp";
 const bannerFull = "/_app/immutable/assets/home-banner-full-313f1baa.jpg";
 const _page_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".logo.svelte-6h0lrl.svelte-6h0lrl.svelte-6h0lrl{position:absolute;width:400px;max-width:calc(100vw - 2em);height:180px;max-height:calc((100vw - 2em) / 2.5);overflow:hidden}.logo.svelte-6h0lrl>img.svelte-6h0lrl.svelte-6h0lrl{position:absolute;left:50%;top:45%;transform:translate(-50%, -50%);width:125%}.about.svelte-6h0lrl.svelte-6h0lrl.svelte-6h0lrl{display:flex;justify-content:center;padding:2em 0}@media(max-width: 1000px){.about.svelte-6h0lrl.svelte-6h0lrl.svelte-6h0lrl{flex-direction:column;text-align:center;align-items:center}}.about.svelte-6h0lrl>div.svelte-6h0lrl.svelte-6h0lrl{display:flex;align-items:center;max-width:500px;padding:0 2em}.services.svelte-6h0lrl.svelte-6h0lrl.svelte-6h0lrl{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2em 0}.services.svelte-6h0lrl ul.svelte-6h0lrl.svelte-6h0lrl{padding:0;text-align:center}.services.svelte-6h0lrl ul.svelte-6h0lrl>li.svelte-6h0lrl{list-style:none}.contact-us.svelte-6h0lrl.svelte-6h0lrl.svelte-6h0lrl{display:flex;flex-direction:column;align-items:center;text-align:center;padding-bottom:6em}.contact-us.svelte-6h0lrl p.svelte-6h0lrl.svelte-6h0lrl{padding:0;margin-top:0}",
+  code: ".logo.svelte-atq2g1.svelte-atq2g1.svelte-atq2g1{position:absolute;width:400px;max-width:calc(100vw - 2em);height:180px;max-height:calc((100vw - 2em) / 2.5);overflow:hidden}.logo.svelte-atq2g1>img.svelte-atq2g1.svelte-atq2g1{position:absolute;left:50%;top:45%;transform:translate(-50%, -50%);width:125%}.about.svelte-atq2g1.svelte-atq2g1.svelte-atq2g1{display:flex;justify-content:center;padding:2em 0}@media(max-width: 1000px){.about.svelte-atq2g1.svelte-atq2g1.svelte-atq2g1{flex-direction:column;text-align:center;align-items:center}}.about.svelte-atq2g1>div.svelte-atq2g1.svelte-atq2g1{display:flex;align-items:center;max-width:500px;padding:0 2em}.services.svelte-atq2g1.svelte-atq2g1.svelte-atq2g1{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2em 0}.services.svelte-atq2g1 ul.svelte-atq2g1.svelte-atq2g1{padding:0;text-align:center}.services.svelte-atq2g1 ul.svelte-atq2g1>li.svelte-atq2g1{list-style:none;margin:50px 50px}.card-container.svelte-atq2g1.svelte-atq2g1.svelte-atq2g1{display:flex}@media(max-width: 925px){.card-container.svelte-atq2g1.svelte-atq2g1.svelte-atq2g1{flex-direction:column}}.card-container.svelte-atq2g1>li.svelte-atq2g1.svelte-atq2g1{margin:10px 10px;min-width:290px}.card-container.svelte-atq2g1>li a.svelte-atq2g1.svelte-atq2g1{text-decoration:none}#contact-us.svelte-atq2g1.svelte-atq2g1.svelte-atq2g1{background-image:url({banner2})}#contact-us.svelte-atq2g1>div.svelte-atq2g1.svelte-atq2g1{display:flex;flex-direction:column;align-items:center;text-align:center;padding-bottom:6em}@media(max-width: 980px){#contact-us.svelte-atq2g1>div.svelte-atq2g1.svelte-atq2g1{background-color:#e8d6b3;padding:45px 45px}}#contact-us.svelte-atq2g1>div.svelte-atq2g1 p.svelte-atq2g1{padding:0;margin-top:0}",
   map: null
 };
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let vars = `background-image: url(${banner2});`;
   $$result.css.add(css);
   return `${$$result.head += `<!-- HEAD_svelte-1woy9cy_START -->${$$result.title = `<title>Randall and Associates</title>`, ""}<meta name="${"Randall and Associates"}" content="${"Joshua Randall is the Director/Principal Lawyer of Randall & Associates, a law firm providing legal services focusing in Property & Conveyancing, Personal Injury, and Wills & Estate matters."}"><!-- HEAD_svelte-1woy9cy_END -->`, ""}
 
@@ -371,36 +516,123 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       <source type="${"image/webp"}"${add_attribute("srcset", banner2, 0)} media="${"(min-resolution: 50dpi)"}">
       <source type="${"image/webp"}"${add_attribute("srcset", banner1, 0)}>
 
-      <img${add_attribute("src", bannerFull, 0)} alt="${"A work station with coffee"}"></picture>
-    <div class="${"logo svelte-6h0lrl"}"><img${add_attribute("src", logo, 0)} alt="${"Randall and Associates"}" class="${"svelte-6h0lrl"}"></div></div></section>
+      <img${add_attribute("src", bannerFull, 0)} alt="${"A city scape"}"></picture>
+    <div class="${"logo svelte-atq2g1"}"><img${add_attribute("src", logo, 0)} alt="${"Randall and Associates"}" class="${"svelte-atq2g1"}"></div></div></section>
 
-<section><div class="${"gutters about svelte-6h0lrl"}"><div class="${"left svelte-6h0lrl"}"><h2 class="${"mdc-typography--heading2"}">Sydney Lawyers &amp; Conveyancers<br> you can count on.
+<section><div class="${"gutters about svelte-atq2g1"}"><div class="${"left svelte-atq2g1"}"><h2 class="${"mdc-typography--heading2"}">Sydney Lawyers &amp; Conveyancers<br> you can count on.
       </h2></div>
-    <div class="${"right svelte-6h0lrl"}"><p class="${"about mdc-typography--body1 svelte-6h0lrl"}">For over twenty years Joshua Randall has represented and supported the
+    <div class="${"right svelte-atq2g1"}"><p class="${"about mdc-typography--body1 svelte-atq2g1"}">For over twenty years Joshua Randall has represented and supported the
         legal interests of a diverse range of individuals and companies
         throughout New South Wales. Putting YOU first is crucial as we develop
-        realistic and sustainable legal solutions that work when you most need
-        it.
+        realistic and sustainable legal solutions that work when you need it
+        most.
       </p></div></div></section>
 
-<section style="${"background: #E8D6B3;"}"><div class="${"gutters services svelte-6h0lrl"}"><h2 class="${"mdc-typography--headline2"}">Services we offer
-    </h2>
-    <ul class="${"svelte-6h0lrl"}"><li class="${"svelte-6h0lrl"}">Property and Conveyancing</li>
-      <li class="${"svelte-6h0lrl"}">Personal Injury</li>
-      <li class="${"svelte-6h0lrl"}">Wills and Estates</li></ul></div></section>
+<section style="${"background: #E8D6B3;"}"><div class="${"gutters services svelte-atq2g1"}">
+    <ul class="${"card-container svelte-atq2g1"}"><li class="${"svelte-atq2g1"}">${validate_component(Card, "Card").$$render($$result, {}, {}, {
+    default: () => {
+      return `${validate_component(PrimaryAction, "PrimaryAction").$$render($$result, {}, {}, {
+        default: () => {
+          return `${validate_component(Media, "Media").$$render(
+            $$result,
+            {
+              class: "card-media-16x9",
+              aspectRatio: "16x9",
+              style: "background: #484c5a"
+            },
+            {},
+            {}
+          )}
+            ${validate_component(Content, "Content").$$render($$result, {}, {}, {
+            default: () => {
+              return `<a href="${"/property-and-conveyancing"}" class="${"svelte-atq2g1"}">Property and Conveyancing</a>`;
+            }
+          })}`;
+        }
+      })}`;
+    }
+  })}</li>
+      <li class="${"svelte-atq2g1"}">${validate_component(Card, "Card").$$render($$result, {}, {}, {
+    default: () => {
+      return `${validate_component(PrimaryAction, "PrimaryAction").$$render($$result, {}, {}, {
+        default: () => {
+          return `${validate_component(Media, "Media").$$render(
+            $$result,
+            {
+              class: "card-media-16x9",
+              aspectRatio: "16x9",
+              style: "background: #484c5a"
+            },
+            {},
+            {}
+          )}
+            ${validate_component(Content, "Content").$$render($$result, {}, {}, {
+            default: () => {
+              return `<a href="${"/personal-injury"}" class="${"svelte-atq2g1"}">Personal Injury</a>`;
+            }
+          })}`;
+        }
+      })}`;
+    }
+  })}</li>
+      <li class="${"svelte-atq2g1"}">${validate_component(Card, "Card").$$render($$result, {}, {}, {
+    default: () => {
+      return `${validate_component(PrimaryAction, "PrimaryAction").$$render($$result, {}, {}, {
+        default: () => {
+          return `${validate_component(Media, "Media").$$render(
+            $$result,
+            {
+              class: "card-media-16x9",
+              aspectRatio: "16x9",
+              style: "background: #484c5a"
+            },
+            {},
+            {}
+          )}
+            ${validate_component(Content, "Content").$$render($$result, {}, {}, {
+            default: () => {
+              return `<a href="${"/wills-and-estates"}" class="${"svelte-atq2g1"}">Wills and Estates</a>`;
+            }
+          })}`;
+        }
+      })}`;
+    }
+  })}</li></ul></div></section>
 
 ${validate_component(Testimonials, "Testimonials").$$render($$result, {}, {}, {})}
 
-<section><div class="${"gutters contact-us svelte-6h0lrl"}"><h2 class="${"mdc-typography--heading2"}">Contact us.<br> Get in touch today for a fast responce within 24hrs.
+<section id="${"contact-us"}"${add_attribute("style", vars, 0)} class="${"svelte-atq2g1"}"><div class="${"gutters svelte-atq2g1"}"><h2 class="${"mdc-typography--heading2"}">Contact us.<br> Get in touch today for a fast responce within 24hrs.
     </h2>
-    <p class="${"about mdc-typography--body1 svelte-6h0lrl"}">Randall and Associates are ready to assit you with your legal matters.
+    <p class="${"about mdc-typography--body1 svelte-atq2g1"}">Randall and Associates are ready to assit you with your legal matters.<br>
       Contact us for fast, easy and affordable service.
     </p>
-    ${validate_component(Button, "Button").$$render(
+    <div>${validate_component(Button, "Button").$$render(
     $$result,
     {
       variant: "unelevated",
-      style: "height: 44px; min-width: 250px;"
+      style: "height: 44px; min-width: 250px; margin-bottom: 10px;"
+    },
+    {},
+    {
+      default: () => {
+        return `${validate_component(CommonIcon, "Icon").$$render($$result, { class: "material-symbols-rounded" }, {}, {
+          default: () => {
+            return `forum`;
+          }
+        })}
+        ${validate_component(CommonLabel, "Label").$$render($$result, {}, {}, {
+          default: () => {
+            return `Get a Quote`;
+          }
+        })}`;
+      }
+    }
+  )}
+      ${validate_component(Button, "Button").$$render(
+    $$result,
+    {
+      variant: "unelevated",
+      style: "height: 44px; min-width: 250px; margin-bottom: 10px;"
     },
     {},
     {
@@ -410,14 +642,14 @@ ${validate_component(Testimonials, "Testimonials").$$render($$result, {}, {}, {}
             return `mail`;
           }
         })}
-      ${validate_component(CommonLabel, "Label").$$render($$result, {}, {}, {
+        ${validate_component(CommonLabel, "Label").$$render($$result, {}, {}, {
           default: () => {
             return `Enquire Online`;
           }
         })}`;
       }
     }
-  )}</div>
+  )}</div></div>
 </section>`;
 });
 export {

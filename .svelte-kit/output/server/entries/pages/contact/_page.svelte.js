@@ -2,6 +2,7 @@ import { c as create_ssr_component, b as subscribe, s as setContext, o as onDest
 import { f as forwardEventsBuilder, c as classMap, a as classAdderBuilder } from "../../../chunks/classAdderBuilder.js";
 import { w as writable } from "../../../chunks/index2.js";
 import { G as Graphic, L as List, I as Item, B as Button } from "../../../chunks/Button.js";
+import { b as banner1, a as banner2, c as bannerFull } from "../../../chunks/contact-banner.js";
 function exclude(obj, keys) {
   let names = Object.getOwnPropertyNames(obj);
   const newObj = {};
@@ -1731,12 +1732,10 @@ const Option = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$unsubscribe_selectedValue();
   return $$rendered;
 });
-const banner2 = "/_app/immutable/assets/contact-banner2-125af5e4.webp";
-const banner1 = "/_app/immutable/assets/contact-banner1-45cd011f.webp";
-const bannerFull = "/_app/immutable/assets/contact-banner-8e472086.jpg";
 const phone = "/_app/immutable/assets/phone-59fc09f4.svg";
 const email = "/_app/immutable/assets/email-e34c11c9.svg";
 const video = "/_app/immutable/assets/video-f9f88f42.svg";
+const location = "/_app/immutable/assets/location-d24d42a7.svg";
 const ContactFooter_svelte_svelte_type_style_lang = "";
 const css$1 = {
   code: ".footer.svelte-pk4ovo.svelte-pk4ovo.svelte-pk4ovo.svelte-pk4ovo{background-color:#282e3c}.footer.svelte-pk4ovo .icons h5.svelte-pk4ovo.svelte-pk4ovo.svelte-pk4ovo{margin:15px 0 10px}.footer.svelte-pk4ovo .icons.svelte-pk4ovo.svelte-pk4ovo.svelte-pk4ovo{display:flex;justify-content:space-around;align-items:center}@media(max-width: 735px){.footer.svelte-pk4ovo .icons.svelte-pk4ovo.svelte-pk4ovo.svelte-pk4ovo{flex-direction:column}}.footer.svelte-pk4ovo .icons.svelte-pk4ovo>div.svelte-pk4ovo.svelte-pk4ovo{margin:30px 0;height:190px;width:33%;color:white;padding:1em}@media(max-width: 735px){.footer.svelte-pk4ovo .icons.svelte-pk4ovo>div.svelte-pk4ovo.svelte-pk4ovo{display:flex;align-items:center;flex-direction:column;width:100%;max-width:440px;height:auto;text-align:center}}.footer.svelte-pk4ovo .icons.svelte-pk4ovo>div.svelte-pk4ovo>img.svelte-pk4ovo{filter:invert(100%)}.footer.svelte-pk4ovo .icons.svelte-pk4ovo>div.svelte-pk4ovo>p.svelte-pk4ovo,.footer.svelte-pk4ovo .icons>div a.svelte-pk4ovo.svelte-pk4ovo.svelte-pk4ovo{margin:6px 0;color:white;text-decoration:none;font-size:15px}.footer.svelte-pk4ovo .icons>div a.svelte-pk4ovo.svelte-pk4ovo.svelte-pk4ovo:hover{text-decoration:underline}",
@@ -1752,6 +1751,9 @@ const ContactFooter = create_ssr_component(($$result, $$props, $$bindings, slots
       <h5 class="${"svelte-pk4ovo"}">Email</h5>
       <p class="${"svelte-pk4ovo"}">Email us to book an appointment</p>
       <a href="${"mailto:mail@randallandassoc.com"}" class="${"svelte-pk4ovo"}">mail@randallandassoc.com</a></div>
+    <div class="${"svelte-pk4ovo"}"><img${add_attribute("src", location, 0)} alt="${"location"}" class="${"svelte-pk4ovo"}">
+      <h5 class="${"svelte-pk4ovo"}">Visit Us</h5>
+      <p class="${"svelte-pk4ovo"}">Level 3, Pyrmont Bridge Road<br> Pyrmont NSW 2009</p></div>
     <div class="${"svelte-pk4ovo"}"><img${add_attribute("src", video, 0)} alt="${"video"}" class="${"svelte-pk4ovo"}">
       <h5 class="${"svelte-pk4ovo"}">Video Consultation</h5>
       <p class="${"svelte-pk4ovo"}">We are pleased to offer video consultations for our clients. Please

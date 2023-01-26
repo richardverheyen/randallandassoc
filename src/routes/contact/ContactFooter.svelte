@@ -22,7 +22,7 @@
     <div>
       <img src={location} alt="location" />
       <h5>Visit Us</h5>
-      <p>Level 3, Pyrmont Bridge Road<br /> Pyrmont NSW 2009</p>
+      <p>Level 1/5, George St<br /> North Strathfield NSW 2137</p>
     </div>
     <div>
       <img src={video} alt="video" />

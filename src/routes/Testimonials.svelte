@@ -44,31 +44,31 @@
 
   let reviews = [
     {
-      name: "Zac Corn-on-a-Cobb",
-      company: "Property Client",
+      name: "Richard Verheyen",
+      company: "Legal Client",
       avatar: avatar1,
       avatarFallback: avatar1alt,
-      jobTitle: "Property Client",
+      jobTitle: "Legal Client",
       rating: ["star", "star", "star", "star", "star"],
-      text: '"Very thorough and great communication throughout the entire process from the time we made our offer on the property right up until settlement. Would definitely recommend!"',
+      text: '"Josh was quick to respond and knew his stuff, I\'ll use him again in the future."',
     },
     {
-      name: "Emily Johnson",
-      company: "Wills and Estate Client",
+      name: "Sue-Ellen Hemphill",
+      company: "Property Client",
       avatar: avatar2,
       avatarFallback: avatar2alt,
-      jobTitle: "Wills and Estate Client",
-      rating: ["star", "star", "star", "star", "star_half"],
-      text: '"I recently used Randall and Associates to draft a new will and update my estate plan. The process was smooth and efficient, and the staff was knowledgeable and professional. They answered all of my questions and made sure I understood everything before moving forward. I was very satisfied with the final result and would highly recommend Joshua Randall to anyone in need of these services."',
+      jobTitle: "Property Client",
+      rating: ["star", "star", "star", "star", "star"],
+      text: '"Highly recommend Randall & Associates. Josh provided excellent service and communication, ensuring the sale of our property was seamless. Josh is extremely knowledgeable in uncommon conveyancing matters."',
     },
     {
-      name: "Tom Davis",
+      name: "Kiran Grewal",
       company: "Personal Injury Client",
       avatar: avatar3,
       avatarFallback: avatar3alt,
-      jobTitle: "Personal Injury Client ",
+      jobTitle: "Legal Client",
       rating: ["star", "star", "star", "star", "star"],
-      text: "\"After my recent car accident a friend recommended Randall and Associates to me and I'm so glad I called them. I spoke to Joshua Randall and he was really understanding and helpful. The whole team at Randall and Associates was amazing and they did a great job handling my case. I'm really happy with the outcome and would definitely recommend them to anyone who needs help with a personal injury claim.\"",
+      text: '"Highly recommend Randall and Associates. Josh Randall is an extremely knowledgeable, professional and responsive lawyer. Will continue to use their services."',
     },
   ];
 </script>

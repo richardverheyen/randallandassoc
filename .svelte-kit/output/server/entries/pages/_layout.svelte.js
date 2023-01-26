@@ -628,7 +628,7 @@ const Scrim = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 const Header_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: "header.svelte-1e53vh1.svelte-1e53vh1.svelte-1e53vh1{background:#282e3c}header.svelte-1e53vh1 nav.svelte-1e53vh1.svelte-1e53vh1{display:flex;align-items:center;width:100%}header.svelte-1e53vh1 nav ul.svelte-1e53vh1.svelte-1e53vh1{position:relative;padding:0;margin:0;height:8em;width:100%;display:flex;align-items:center;list-style:none;background-size:contain}@media(max-width: 1000px){header.svelte-1e53vh1 nav ul.svelte-1e53vh1.svelte-1e53vh1{display:none}}header.svelte-1e53vh1 nav ul.svelte-1e53vh1 li.svelte-1e53vh1{position:relative;height:100%;margin-left:1em}header.svelte-1e53vh1 nav ul.svelte-1e53vh1 li[aria-current=page].svelte-1e53vh1{background-color:var(--color-theme-2)}header.svelte-1e53vh1 nav #hamburger.svelte-1e53vh1.svelte-1e53vh1{margin-left:auto}@media(min-width: 1001px){header.svelte-1e53vh1 nav #hamburger.svelte-1e53vh1.svelte-1e53vh1{display:none}}header.svelte-1e53vh1 nav a.svelte-1e53vh1.svelte-1e53vh1{display:flex;height:100%;align-items:center;padding:0 0.5rem;font-weight:700;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.1em;text-decoration:none;transition:color 0.2s linear;color:white}header.svelte-1e53vh1 nav a.logo.svelte-1e53vh1.svelte-1e53vh1{width:240px;height:8em;position:relative;overflow:hidden}@media(max-width: 420px){header.svelte-1e53vh1 nav a.logo.svelte-1e53vh1.svelte-1e53vh1{width:180px;height:7em}}header.svelte-1e53vh1 nav a.svelte-1e53vh1>img.svelte-1e53vh1{position:absolute;top:46%;left:50%;transform:translate(-50%, -50%);width:auto;height:190px}@media(max-width: 420px){header.svelte-1e53vh1 nav a.svelte-1e53vh1>img.svelte-1e53vh1{height:160px}}header.svelte-1e53vh1 nav a.svelte-1e53vh1.svelte-1e53vh1:hover{color:var(--color-theme-1);color:gray}ul.mobile-nav.svelte-1e53vh1.svelte-1e53vh1.svelte-1e53vh1{display:flex;flex-direction:column;padding:3em}ul.mobile-nav.svelte-1e53vh1 li.svelte-1e53vh1.svelte-1e53vh1{list-style:none}ul.mobile-nav.svelte-1e53vh1 li.svelte-1e53vh1 h2 a.svelte-1e53vh1,ul.mobile-nav.svelte-1e53vh1 li.svelte-1e53vh1 h2 a.svelte-1e53vh1:link,ul.mobile-nav.svelte-1e53vh1 li.svelte-1e53vh1 h2 a.svelte-1e53vh1:visited{color:white;text-decoration:none}ul.mobile-nav.svelte-1e53vh1 li.svelte-1e53vh1 h2 a.svelte-1e53vh1:hover,ul.mobile-nav.svelte-1e53vh1 li.svelte-1e53vh1 h2 a.svelte-1e53vh1:link:hover,ul.mobile-nav.svelte-1e53vh1 li.svelte-1e53vh1 h2 a.svelte-1e53vh1:visited:hover{text-decoration:underline}ul.mobile-nav.svelte-1e53vh1 li[aria-current=page].svelte-1e53vh1 h2 a.svelte-1e53vh1{text-decoration:underline}",
+  code: "header.svelte-1f57uqo.svelte-1f57uqo.svelte-1f57uqo{background:#282e3c}header.svelte-1f57uqo nav.svelte-1f57uqo.svelte-1f57uqo{display:flex;align-items:center;width:100%}header.svelte-1f57uqo nav ul.svelte-1f57uqo.svelte-1f57uqo{position:relative;padding:0;margin:0;height:8em;width:100%;display:flex;align-items:center;justify-content:right;list-style:none;background-size:contain}@media(max-width: 1000px){header.svelte-1f57uqo nav ul.svelte-1f57uqo.svelte-1f57uqo{display:none}}header.svelte-1f57uqo nav ul.svelte-1f57uqo li.svelte-1f57uqo{position:relative;height:100%;margin-left:1em}header.svelte-1f57uqo nav ul.svelte-1f57uqo li[aria-current=page].svelte-1f57uqo{background-color:var(--color-theme-2)}header.svelte-1f57uqo nav #hamburger.svelte-1f57uqo.svelte-1f57uqo{margin-left:auto}@media(min-width: 1001px){header.svelte-1f57uqo nav #hamburger.svelte-1f57uqo.svelte-1f57uqo{display:none}}header.svelte-1f57uqo nav a.svelte-1f57uqo.svelte-1f57uqo{display:flex;height:100%;align-items:center;padding:0 0.5rem;font-weight:700;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.1em;text-decoration:none;transition:color 0.2s linear;color:white}header.svelte-1f57uqo nav a.logo.svelte-1f57uqo.svelte-1f57uqo{width:240px;height:8em;position:relative;overflow:hidden}@media(max-width: 420px){header.svelte-1f57uqo nav a.logo.svelte-1f57uqo.svelte-1f57uqo{width:180px;height:7em}}header.svelte-1f57uqo nav a.svelte-1f57uqo>img.svelte-1f57uqo{position:absolute;top:46%;left:50%;transform:translate(-50%, -50%);width:auto;height:190px}@media(max-width: 900px){header.svelte-1f57uqo nav a.svelte-1f57uqo>img.svelte-1f57uqo{height:150px}}header.svelte-1f57uqo nav a.svelte-1f57uqo.svelte-1f57uqo:hover{color:var(--color-theme-1);color:gray}ul.mobile-nav.svelte-1f57uqo.svelte-1f57uqo.svelte-1f57uqo{display:flex;flex-direction:column;padding:3em}ul.mobile-nav.svelte-1f57uqo li.svelte-1f57uqo.svelte-1f57uqo{list-style:none}ul.mobile-nav.svelte-1f57uqo li.svelte-1f57uqo h2 a.svelte-1f57uqo,ul.mobile-nav.svelte-1f57uqo li.svelte-1f57uqo h2 a.svelte-1f57uqo:link,ul.mobile-nav.svelte-1f57uqo li.svelte-1f57uqo h2 a.svelte-1f57uqo:visited{color:white;text-decoration:none}ul.mobile-nav.svelte-1f57uqo li.svelte-1f57uqo h2 a.svelte-1f57uqo:hover,ul.mobile-nav.svelte-1f57uqo li.svelte-1f57uqo h2 a.svelte-1f57uqo:link:hover,ul.mobile-nav.svelte-1f57uqo li.svelte-1f57uqo h2 a.svelte-1f57uqo:visited:hover{text-decoration:underline}ul.mobile-nav.svelte-1f57uqo li[aria-current=page].svelte-1f57uqo h2 a.svelte-1f57uqo{text-decoration:underline}",
   map: null
 };
 const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -641,31 +641,31 @@ const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   do {
     $$settled = true;
     $$rendered = `${validate_component(Scrim, "Scrim").$$render($$result, { fixed: false }, {}, {})}
-<header class="${"svelte-1e53vh1"}"><nav class="${"gutters svelte-1e53vh1"}"><a href="${"/"}" class="${"logo svelte-1e53vh1"}"><img${add_attribute("src", logo, 0)} alt="${"logo"}" class="${"svelte-1e53vh1"}"></a>
+<header class="${"svelte-1f57uqo"}"><nav class="${"gutters svelte-1f57uqo"}"><a href="${"/"}" class="${"logo svelte-1f57uqo"}"><img${add_attribute("src", logo, 0)} alt="${"logo"}" class="${"svelte-1f57uqo"}"></a>
 
-    <ul class="${"svelte-1e53vh1"}"><li${add_attribute(
+    <ul class="${"svelte-1f57uqo"}"><li${add_attribute(
       "aria-current",
       $page.url.pathname === "/property-and-conveyancing" ? "page" : void 0,
       0
-    )} class="${"svelte-1e53vh1"}"><a href="${"/property-and-conveyancing"}" class="${"svelte-1e53vh1"}">Property &amp; Conveyancing</a></li>
+    )} class="${"svelte-1f57uqo"}"><a href="${"/property-and-conveyancing"}" class="${"svelte-1f57uqo"}">Property &amp; Conveyancing</a></li>
       <li${add_attribute(
       "aria-current",
       $page.url.pathname === "/personal-injury" ? "page" : void 0,
       0
-    )} class="${"svelte-1e53vh1"}"><a href="${"/personal-injury"}" class="${"svelte-1e53vh1"}">Personal Injury</a></li>
+    )} class="${"svelte-1f57uqo"}"><a href="${"/personal-injury"}" class="${"svelte-1f57uqo"}">Personal Injury</a></li>
       <li${add_attribute(
       "aria-current",
       $page.url.pathname === "/wills-and-estates" ? "page" : void 0,
       0
-    )} class="${"svelte-1e53vh1"}"><a href="${"/wills-and-estates"}" class="${"svelte-1e53vh1"}">Wills &amp; Estates</a></li>
-      <li${add_attribute("aria-current", $page.url.pathname === "/contact" ? "page" : void 0, 0)} class="${"svelte-1e53vh1"}"><a href="${"/contact"}" class="${"svelte-1e53vh1"}">Contact</a></li></ul>
-    <div id="${"hamburger"}" class="${"svelte-1e53vh1"}">${validate_component(IconButton, "IconButton").$$render($$result, { ripple: false }, {}, {
+    )} class="${"svelte-1f57uqo"}"><a href="${"/wills-and-estates"}" class="${"svelte-1f57uqo"}">Wills &amp; Estates</a></li>
+      <li${add_attribute("aria-current", $page.url.pathname === "/contact" ? "page" : void 0, 0)} class="${"svelte-1f57uqo"}"><a href="${"/contact"}" class="${"svelte-1f57uqo"}">Contact</a></li></ul>
+    <div id="${"hamburger"}" class="${"svelte-1f57uqo"}">${validate_component(IconButton, "IconButton").$$render($$result, { ripple: false }, {}, {
       default: () => {
         return `${validate_component(CommonIcon, "Icon").$$render(
           $$result,
           {
             class: "material-icons",
-            style: "color: white;"
+            style: "color: white; font-size: 40px;"
           },
           {},
           {
@@ -701,28 +701,28 @@ ${validate_component(Drawer, "Drawer").$$render(
             {},
             {
               default: () => {
-                return `<ul class="${"mobile-nav svelte-1e53vh1"}">
-      <li${add_attribute("aria-current", $page.url.pathname === "/" ? "page" : void 0, 0)} class="${"svelte-1e53vh1"}"><h2 class="${"mdc-typography--heading2"}"><a href="${"/"}" class="${"svelte-1e53vh1"}">Home</a></h2></li>
+                return `<ul class="${"mobile-nav svelte-1f57uqo"}">
+      <li${add_attribute("aria-current", $page.url.pathname === "/" ? "page" : void 0, 0)} class="${"svelte-1f57uqo"}"><h2 class="${"mdc-typography--heading2"}"><a href="${"/"}" class="${"svelte-1f57uqo"}">Home</a></h2></li>
       
       <li${add_attribute(
                   "aria-current",
                   $page.url.pathname === "/property-and-conveyancing" ? "page" : void 0,
                   0
-                )} class="${"svelte-1e53vh1"}"><h2 class="${"mdc-typography--heading2"}"><a href="${"/property-and-conveyancing"}" class="${"svelte-1e53vh1"}">Property &amp; Conveyancing</a></h2></li>
+                )} class="${"svelte-1f57uqo"}"><h2 class="${"mdc-typography--heading2"}"><a href="${"/property-and-conveyancing"}" class="${"svelte-1f57uqo"}">Property &amp; Conveyancing</a></h2></li>
       
       <li${add_attribute(
                   "aria-current",
                   $page.url.pathname === "/personal-injury" ? "page" : void 0,
                   0
-                )} class="${"svelte-1e53vh1"}"><h2 class="${"mdc-typography--heading2"}"><a href="${"/personal-injury"}" class="${"svelte-1e53vh1"}">Personal Injury</a></h2></li>
+                )} class="${"svelte-1f57uqo"}"><h2 class="${"mdc-typography--heading2"}"><a href="${"/personal-injury"}" class="${"svelte-1f57uqo"}">Personal Injury</a></h2></li>
       
       <li${add_attribute(
                   "aria-current",
                   $page.url.pathname === "/wills-and-estates" ? "page" : void 0,
                   0
-                )} class="${"svelte-1e53vh1"}"><h2 class="${"mdc-typography--heading2"}"><a href="${"/wills-and-estates"}" class="${"svelte-1e53vh1"}">Wills &amp; Estates</a></h2></li>
+                )} class="${"svelte-1f57uqo"}"><h2 class="${"mdc-typography--heading2"}"><a href="${"/wills-and-estates"}" class="${"svelte-1f57uqo"}">Wills &amp; Estates</a></h2></li>
       
-      <li${add_attribute("aria-current", $page.url.pathname === "/contact" ? "page" : void 0, 0)} class="${"svelte-1e53vh1"}"><h2 class="${"mdc-typography--heading2"}"><a href="${"/contact"}" class="${"svelte-1e53vh1"}">Contact</a></h2></li></ul>
+      <li${add_attribute("aria-current", $page.url.pathname === "/contact" ? "page" : void 0, 0)} class="${"svelte-1f57uqo"}"><h2 class="${"mdc-typography--heading2"}"><a href="${"/contact"}" class="${"svelte-1f57uqo"}">Contact</a></h2></li></ul>
 
     <a href="${"/"}" class="${"logo"}"><img${add_attribute("src", logo, 0)} alt="${"logo"}"></a>`;
               }

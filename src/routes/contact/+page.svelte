@@ -30,13 +30,28 @@
   async function postContact(e) {
     e.preventDefault();
     loading = true;
-    await new Promise((resolve) => setTimeout(resolve, 500));
-    loading = false;
-    messageSent = true;
-
-    toast.success("Message Sent, we'll be in touch shortly", {
-      duration: 4000,
-      position: "bottom-center",
+    
+    fetch("https://us-central1-randallandassoc.cloudfunctions.net/contactForm", {
+      "method": "POST",
+      body: JSON.stringify({
+        name,
+        email,
+        areaOfEnquiry,
+        message
+      })
+    }).then(() => {
+      toast.success("Message Sent, we'll be in touch shortly", {
+        duration: 4000,
+        position: "bottom-center",
+      });
+      loading = false;
+      messageSent = true;
+    }).catch(() => {
+      toast.error("That didn't work! Please try emailing us instead", {
+        duration: 4000,
+        position: "bottom-center",
+      });
+      loading = false;
     });
   }
 </script>

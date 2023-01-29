@@ -260,7 +260,7 @@
       text-align: center;
       padding: 1.5em 0;
 
-      @media (max-width: 980px) {
+      @media (max-width: 920px) {
         background-color: #e8d6b3;
         padding: 45px 45px;
       }

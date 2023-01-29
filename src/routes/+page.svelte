@@ -66,41 +66,53 @@
     <ul class="card-container">
       <li>
         <Card>
-          <PrimaryAction on:click={() => clicked++}>
+          <PrimaryAction
+            on:click={() =>
+              (window.location.href = "/property-and-conveyancing")}
+          >
             <Media
               class="card-media-16x9"
               aspectRatio="16x9"
-              style="background: #484c5a"
-            />
-            <Content
-              ><a href="/property-and-conveyancing">Property and Conveyancing</a
-              ></Content
-            >
+              style="background: #484c5a;position: relative"
+              ><span class="material-symbols-outlined icon">
+                real_estate_agent
+              </span>
+            </Media>
+            <Content>Property and Conveyancing</Content>
           </PrimaryAction>
         </Card>
       </li>
       <li>
         <Card>
-          <PrimaryAction on:click={() => clicked++}>
+          <PrimaryAction
+            on:click={() => (window.location.href = "/personal-injury")}
+          >
             <Media
               class="card-media-16x9"
               aspectRatio="16x9"
-              style="background: #484c5a"
-            />
-            <Content><a href="/personal-injury">Personal Injury</a></Content>
+              style="background: #484c5a;position: relative"
+              ><span class="material-symbols-outlined icon">
+                personal_injury
+              </span>
+            </Media>
+            <Content>Personal Injury</Content>
           </PrimaryAction>
         </Card>
       </li>
       <li>
         <Card>
-          <PrimaryAction on:click={() => clicked++}>
+          <PrimaryAction
+            on:click={() => (window.location.href = "/wills-and-estates")}
+          >
             <Media
               class="card-media-16x9"
               aspectRatio="16x9"
-              style="background: #484c5a"
-            />
-            <Content><a href="/wills-and-estates">Wills and Estates</a></Content
+              style="background: #484c5a;position: relative"
+              ><span class="material-symbols-outlined icon">
+                history_edu
+              </span></Media
             >
+            <Content>Wills and Estates</Content>
           </PrimaryAction>
         </Card>
       </li>
@@ -225,6 +237,15 @@
 
       .card-media-16x9 {
         background-image: url({banner2});
+
+        .icon {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 80px;
+          color: rgba(255, 255, 255, 0.6);
+        }
       }
     }
   }

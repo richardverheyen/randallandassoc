@@ -192,6 +192,14 @@
       > li {
         list-style: none;
         margin: 50px 50px;
+
+        @media (max-width: 1170px) {
+          margin: 25px 25px;
+        }
+
+        @media (max-width: 1025px) {
+          margin: 10px 10px;
+        }
       }
     }
   }
@@ -208,6 +216,11 @@
 
       a {
         text-decoration: none;
+        color: black;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
 
       .card-media-16x9 {
@@ -224,7 +237,7 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      padding: 6em 0;
+      padding: 1.5em 0;
 
       @media (max-width: 980px) {
         background-color: #e8d6b3;

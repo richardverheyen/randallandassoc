@@ -57,7 +57,7 @@
       @media (min-width: 551px) {
         min-height: 216px;
 
-        &:not(:first-child):not(:last-child) {
+        &:not(:first-child):not(:nth-child(3)):not(:last-child) {
           margin-left: 2.4rem;
         }
       }
@@ -86,7 +86,7 @@
       }
     }
 
-    @media (max-width: 900px) and (min-width: 551px) {
+    @media (max-width: 1060px) and (min-width: 551px) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1em;
@@ -104,6 +104,7 @@
       > li:nth-child(3) {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
+        margin-left: 0;
       }
       > li:nth-child(4) {
         grid-column: 2 / 3;
@@ -133,8 +134,8 @@
       justify-content: space-between;
       color: white;
       @media (max-width: 724px) {
-          justify-content: center;
-        }
+        justify-content: center;
+      }
 
       > p {
         font-size: 15px;

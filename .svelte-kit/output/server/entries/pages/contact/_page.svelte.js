@@ -1753,11 +1753,12 @@ const ContactFooter = create_ssr_component(($$result, $$props, $$bindings, slots
       <a href="${"mailto:mail@randallandassoc.com"}" class="${"svelte-wkpw58"}">mail@randallandassoc.com</a></div>
     <div class="${"svelte-wkpw58"}"><img${add_attribute("src", location, 0)} alt="${"location"}" class="${"svelte-wkpw58"}">
       <h5 class="${"svelte-wkpw58"}">Visit Us</h5>
-      <p class="${"svelte-wkpw58"}">Level 1/5, George St<br> North Strathfield NSW 2137</p></div>
+      <p class="${"svelte-wkpw58"}">Level 1/5, George St<br> North Strathfield NSW 2137</p>
+      <p class="${"svelte-wkpw58"}">(By appointment only)</p></div>
     <div class="${"svelte-wkpw58"}"><img${add_attribute("src", video, 0)} alt="${"video"}" class="${"svelte-wkpw58"}">
       <h5 class="${"svelte-wkpw58"}">Video Consultation</h5>
       <p class="${"svelte-wkpw58"}">We are pleased to offer video consultations for our clients. Please
-        complete the form above or call us to arrange an online meeting
+        complete the form above or call us to arrange an online meeting.
       </p></div></div>
 </section>`;
 });
@@ -1772,7 +1773,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let areaOfEnquiry = "";
   let message = "";
   let loading = false;
-  let options = ["Property & Conveyancing", "Personal Injury", "Wills and Estates"];
+  let options = ["Property & Conveyancing", "Personal Injury", "Wills and Estates", "Other"];
   $$result.css.add(css);
   let $$settled;
   let $$rendered;

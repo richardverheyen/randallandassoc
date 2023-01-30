@@ -39,7 +39,6 @@
           email,
           areaOfEnquiry,
           message,
-          foo: "bar",
         }),
       }
     )

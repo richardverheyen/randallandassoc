@@ -22,6 +22,7 @@
     "Property & Conveyancing",
     "Personal Injury",
     "Wills and Estates",
+    "Other",
   ];
 
   /**
@@ -30,29 +31,34 @@
   async function postContact(e) {
     e.preventDefault();
     loading = true;
-    
-    fetch("https://us-central1-randallandassoc.cloudfunctions.net/contactForm", {
-      "method": "POST",
-      body: JSON.stringify({
-        name,
-        email,
-        areaOfEnquiry,
-        message
+
+    fetch(
+      "https://us-central1-randallandassoc.cloudfunctions.net/contactForm",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          name,
+          email,
+          areaOfEnquiry,
+          message,
+        }),
+      }
+    )
+      .then(() => {
+        toast.success("Message Sent, we'll be in touch shortly", {
+          duration: 4000,
+          position: "bottom-center",
+        });
+        loading = false;
+        messageSent = true;
       })
-    }).then(() => {
-      toast.success("Message Sent, we'll be in touch shortly", {
-        duration: 4000,
-        position: "bottom-center",
+      .catch(() => {
+        toast.error("That didn't work! Please try emailing us instead", {
+          duration: 4000,
+          position: "bottom-center",
+        });
+        loading = false;
       });
-      loading = false;
-      messageSent = true;
-    }).catch(() => {
-      toast.error("That didn't work! Please try emailing us instead", {
-        duration: 4000,
-        position: "bottom-center",
-      });
-      loading = false;
-    });
   }
 </script>
 

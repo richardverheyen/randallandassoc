@@ -22,39 +22,46 @@
     "Property & Conveyancing",
     "Personal Injury",
     "Wills and Estates",
+    "Other",
   ];
 
-  /**
-   * @param {{ preventDefault: () => void; }} e
-   */
   async function postContact() {
-    console.log('foo');
+    console.log("foo");
     loading = true;
-    
-    fetch("https://australia-southeast1-randallandassoc.cloudfunctions.net/contactUsForm", {
-      method: "POST",
-      headers: {'Content-Type':'application/json'},
-      body: JSON.stringify({
-        name,
-        email,
-        areaOfEnquiry,
-        message,
-        "foo": "bar"
+
+    fetch(
+      "https://australia-southeast1-randallandassoc.cloudfunctions.net/contactUsForm",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          areaOfEnquiry,
+          message,
+          foo: "bar",
+        }),
+      }
+    )
+      .then(() => {
+        toast.success("Message Sent, we'll be in touch shortly", {
+          duration: 4000,
+          position: "bottom-center",
+        });
+        loading = false;
+        messageSent = true;
       })
-    }).then(() => {
-      toast.success("Message Sent, we'll be in touch shortly", {
-        duration: 4000,
-        position: "bottom-center",
+      .catch(() => {
+        toast.error("That didn't work! Please try emailing us instead", {
+          duration: 4000,
+          position: "bottom-center",
+        });
+        messageSent = true;
+        loading = false;
+      })
+      .finally(() => {
+        loading = false;
       });
-      messageSent = true;
-    }).catch(() => {
-      toast.error("That didn't work! Please try emailing us instead", {
-        duration: 4000,
-        position: "bottom-center",
-      });
-    }).finally(() => {
-      loading = false;
-    });
   }
 </script>
 

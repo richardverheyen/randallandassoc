@@ -23,13 +23,14 @@
       <img src={location} alt="location" />
       <h5>Visit Us</h5>
       <p>Level 1/5, George St<br /> North Strathfield NSW 2137</p>
+      <p>(By appointment only)</p>
     </div>
     <div>
       <img src={video} alt="video" />
       <h5>Video Consultation</h5>
       <p>
         We are pleased to offer video consultations for our clients. Please
-        complete the form above or call us to arrange an online meeting
+        complete the form above or call us to arrange an online meeting.
       </p>
     </div>
   </div>

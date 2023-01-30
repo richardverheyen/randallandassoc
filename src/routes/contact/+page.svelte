@@ -27,30 +27,32 @@
   /**
    * @param {{ preventDefault: () => void; }} e
    */
-  async function postContact(e) {
-    e.preventDefault();
+  async function postContact() {
+    console.log('foo');
     loading = true;
     
-    fetch("https://us-central1-randallandassoc.cloudfunctions.net/contactForm", {
-      "method": "POST",
+    fetch("https://australia-southeast1-randallandassoc.cloudfunctions.net/contactUsForm", {
+      method: "POST",
+      headers: {'Content-Type':'application/json'},
       body: JSON.stringify({
         name,
         email,
         areaOfEnquiry,
-        message
+        message,
+        "foo": "bar"
       })
     }).then(() => {
       toast.success("Message Sent, we'll be in touch shortly", {
         duration: 4000,
         position: "bottom-center",
       });
-      loading = false;
       messageSent = true;
     }).catch(() => {
       toast.error("That didn't work! Please try emailing us instead", {
         duration: 4000,
         position: "bottom-center",
       });
+    }).finally(() => {
       loading = false;
     });
   }
@@ -73,7 +75,7 @@
   </div>
 
   <div class="gutters">
-    <form on:submit={postContact}>
+    <form on:submit|preventDefault={postContact}>
       <h4 class="mdc-typography--headline4">Contact Us</h4>
       <fieldset>
         <Textfield

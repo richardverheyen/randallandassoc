@@ -1738,25 +1738,25 @@ const video = "/_app/immutable/assets/video-f9f88f42.svg";
 const location = "/_app/immutable/assets/location-d24d42a7.svg";
 const ContactFooter_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: ".footer.svelte-pk4ovo.svelte-pk4ovo.svelte-pk4ovo.svelte-pk4ovo{background-color:#282e3c}.footer.svelte-pk4ovo .icons h5.svelte-pk4ovo.svelte-pk4ovo.svelte-pk4ovo{margin:15px 0 10px}.footer.svelte-pk4ovo .icons.svelte-pk4ovo.svelte-pk4ovo.svelte-pk4ovo{display:flex;justify-content:space-around;align-items:center}@media(max-width: 735px){.footer.svelte-pk4ovo .icons.svelte-pk4ovo.svelte-pk4ovo.svelte-pk4ovo{flex-direction:column}}.footer.svelte-pk4ovo .icons.svelte-pk4ovo>div.svelte-pk4ovo.svelte-pk4ovo{margin:30px 0;height:190px;width:33%;color:white;padding:1em}@media(max-width: 735px){.footer.svelte-pk4ovo .icons.svelte-pk4ovo>div.svelte-pk4ovo.svelte-pk4ovo{display:flex;align-items:center;flex-direction:column;width:100%;max-width:440px;height:auto;text-align:center}}.footer.svelte-pk4ovo .icons.svelte-pk4ovo>div.svelte-pk4ovo>img.svelte-pk4ovo{filter:invert(100%)}.footer.svelte-pk4ovo .icons.svelte-pk4ovo>div.svelte-pk4ovo>p.svelte-pk4ovo,.footer.svelte-pk4ovo .icons>div a.svelte-pk4ovo.svelte-pk4ovo.svelte-pk4ovo{margin:6px 0;color:white;text-decoration:none;font-size:15px}.footer.svelte-pk4ovo .icons>div a.svelte-pk4ovo.svelte-pk4ovo.svelte-pk4ovo:hover{text-decoration:underline}",
+  code: ".footer.svelte-wkpw58.svelte-wkpw58.svelte-wkpw58.svelte-wkpw58{background-color:#282e3c}.footer.svelte-wkpw58 .icons h5.svelte-wkpw58.svelte-wkpw58.svelte-wkpw58{margin:15px 0 10px}.footer.svelte-wkpw58 .icons.svelte-wkpw58.svelte-wkpw58.svelte-wkpw58{display:flex;justify-content:space-around;align-items:center}@media(max-width: 1115px){.footer.svelte-wkpw58 .icons.svelte-wkpw58.svelte-wkpw58.svelte-wkpw58{flex-direction:column}}.footer.svelte-wkpw58 .icons.svelte-wkpw58>div.svelte-wkpw58.svelte-wkpw58{margin:30px 0;height:190px;width:33%;color:white;padding:1em}@media(max-width: 1115px){.footer.svelte-wkpw58 .icons.svelte-wkpw58>div.svelte-wkpw58.svelte-wkpw58{display:flex;align-items:center;flex-direction:column;width:100%;max-width:440px;height:auto;text-align:center}}.footer.svelte-wkpw58 .icons.svelte-wkpw58>div.svelte-wkpw58>img.svelte-wkpw58{filter:invert(100%)}.footer.svelte-wkpw58 .icons.svelte-wkpw58>div.svelte-wkpw58>p.svelte-wkpw58,.footer.svelte-wkpw58 .icons>div a.svelte-wkpw58.svelte-wkpw58.svelte-wkpw58{margin:6px 0;color:white;text-decoration:none;font-size:15px}.footer.svelte-wkpw58 .icons>div a.svelte-wkpw58.svelte-wkpw58.svelte-wkpw58:hover{text-decoration:underline}",
   map: null
 };
 const ContactFooter = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
-  return `<section class="${"footer svelte-pk4ovo"}"><div class="${"gutters icons svelte-pk4ovo"}"><div class="${"svelte-pk4ovo"}"><img${add_attribute("src", phone, 0)} alt="${"phone"}" class="${"svelte-pk4ovo"}">
-      <h5 class="${"svelte-pk4ovo"}">Phone</h5>
-      <p class="${"svelte-pk4ovo"}">Talk to our experienced lawyers</p>
-      <p class="${"svelte-pk4ovo"}">(02) 8378 7698</p></div>
-    <div class="${"svelte-pk4ovo"}"><img${add_attribute("src", email, 0)} alt="${"email"}" class="${"svelte-pk4ovo"}">
-      <h5 class="${"svelte-pk4ovo"}">Email</h5>
-      <p class="${"svelte-pk4ovo"}">Email us to book an appointment</p>
-      <a href="${"mailto:mail@randallandassoc.com"}" class="${"svelte-pk4ovo"}">mail@randallandassoc.com</a></div>
-    <div class="${"svelte-pk4ovo"}"><img${add_attribute("src", location, 0)} alt="${"location"}" class="${"svelte-pk4ovo"}">
-      <h5 class="${"svelte-pk4ovo"}">Visit Us</h5>
-      <p class="${"svelte-pk4ovo"}">Level 3, Pyrmont Bridge Road<br> Pyrmont NSW 2009</p></div>
-    <div class="${"svelte-pk4ovo"}"><img${add_attribute("src", video, 0)} alt="${"video"}" class="${"svelte-pk4ovo"}">
-      <h5 class="${"svelte-pk4ovo"}">Video Consultation</h5>
-      <p class="${"svelte-pk4ovo"}">We are pleased to offer video consultations for our clients. Please
+  return `<section class="${"footer svelte-wkpw58"}"><div class="${"gutters icons svelte-wkpw58"}"><div class="${"svelte-wkpw58"}"><img${add_attribute("src", phone, 0)} alt="${"phone"}" class="${"svelte-wkpw58"}">
+      <h5 class="${"svelte-wkpw58"}">Phone</h5>
+      <p class="${"svelte-wkpw58"}">Talk to our experienced lawyers</p>
+      <p class="${"svelte-wkpw58"}">(02) 8378 7698</p></div>
+    <div class="${"svelte-wkpw58"}"><img${add_attribute("src", email, 0)} alt="${"email"}" class="${"svelte-wkpw58"}">
+      <h5 class="${"svelte-wkpw58"}">Email</h5>
+      <p class="${"svelte-wkpw58"}">Email us to book an appointment</p>
+      <a href="${"mailto:mail@randallandassoc.com"}" class="${"svelte-wkpw58"}">mail@randallandassoc.com</a></div>
+    <div class="${"svelte-wkpw58"}"><img${add_attribute("src", location, 0)} alt="${"location"}" class="${"svelte-wkpw58"}">
+      <h5 class="${"svelte-wkpw58"}">Visit Us</h5>
+      <p class="${"svelte-wkpw58"}">Level 1/5, George St<br> North Strathfield NSW 2137</p></div>
+    <div class="${"svelte-wkpw58"}"><img${add_attribute("src", video, 0)} alt="${"video"}" class="${"svelte-wkpw58"}">
+      <h5 class="${"svelte-wkpw58"}">Video Consultation</h5>
+      <p class="${"svelte-wkpw58"}">We are pleased to offer video consultations for our clients. Please
         complete the form above or call us to arrange an online meeting
       </p></div></div>
 </section>`;

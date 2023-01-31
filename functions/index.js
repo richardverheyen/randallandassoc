@@ -14,7 +14,8 @@ let transporter = nodemailer.createTransport({
   },
 });
 
-exports.contactUsForm = functions
+exports.contactUsFormFinal = functions
+  .region("australia-southeast1")
   .https
   .onRequest((req, res) => {
     cors(req, res, async () => {
@@ -22,8 +23,7 @@ exports.contactUsForm = functions
 
       const mailOptions = {
         from: `🟩 Webform Response <rich@goodcallcopywriting.com>`, // Something like: Jane Doe <janedoe@gmail.com>
-        // to: "mail@randallandassoc.com",
-        to: "richard.verheyen@gmail.com",
+        to: "mail@randallandassoc.com",
         subject: areaOfEnquiry || "No subject stated", // email subject
         html: `
                 <p>Name: ${name}</p>

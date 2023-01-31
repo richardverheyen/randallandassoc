@@ -30,7 +30,7 @@
     loading = true;
 
     fetch(
-      "https://australia-southeast1-randallandassoc.cloudfunctions.net/contactUsForm",
+      "https://australia-southeast1-randallandassoc.cloudfunctions.net/contactUsFormFinal",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

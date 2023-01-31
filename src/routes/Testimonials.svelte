@@ -44,10 +44,18 @@
 
   let reviews = [
     {
+      name: "Kiran Grewal",
+      company: "Legal Client",
+      avatar: avatar3,
+      avatarFallback: avatar3alt,
+      rating: ["star", "star", "star", "star", "star"],
+      text: '"Highly recommend Randall and Associates. Josh Randall is an extremely knowledgeable, professional and responsive lawyer. Will continue to use their services."',
+    },
+    {
       name: "Sue-Ellen Hemphill",
       company: "Property Client",
-      avatar: avatar2,
-      avatarFallback: avatar2alt,
+      avatar: "https://place-hold.it/40x40?text=SH&fontsize=16",
+      avatarFallback: "https://place-hold.it/40x40?text=SH&fontsize=16",
       rating: ["star", "star", "star", "star", "star"],
       text: '"Highly recommend Randall & Associates. Josh provided excellent service and communication, ensuring the sale of our property was seamless. Josh is extremely knowledgeable in uncommon conveyancing matters."',
     },
@@ -58,14 +66,6 @@
       avatarFallback: avatar1alt,
       rating: ["star", "star", "star", "star", "star"],
       text: '"Josh was quick to respond and knew his stuff, I\'ll use him again in the future."',
-    },
-    {
-      name: "Kiran Grewal",
-      company: "Legal Client",
-      avatar: avatar3,
-      avatarFallback: avatar3alt,
-      rating: ["star", "star", "star", "star", "star"],
-      text: '"Highly recommend Randall and Associates. Josh Randall is an extremely knowledgeable, professional and responsive lawyer. Will continue to use their services."',
     },
   ];
 </script>
@@ -89,7 +89,7 @@
                 on:click={() => (count = index)}
               >
                 <Graphic
-                  style="background-image: url({item.avatar});background-size: 40px;"
+                  style="background-image: url({item.avatar});background-size: 40px;border-radius:50%"
                 />
 
                 <Text>
@@ -120,6 +120,7 @@
                 width="40"
                 src={reviews[Math.floor($displayed_count + 1)]?.avatar}
                 alt=""
+                style="border-radius:50%"
               />
             {/if}
             <div class="stars">

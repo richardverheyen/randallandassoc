@@ -65,56 +65,55 @@
     <!-- <h2 class="mdc-typography--headline2">Services we offer</h2> -->
     <ul class="card-container">
       <li>
-        <Card>
-          <PrimaryAction
-            on:click={() =>
-              (window.location.href = "/property-and-conveyancing")}
-          >
-            <Media
-              class="card-media-16x9"
-              aspectRatio="16x9"
-              style="background: #484c5a;position: relative"
-              ><span class="material-symbols-outlined icon">
-                real_estate_agent
-              </span>
-            </Media>
-            <Content>Property and Conveyancing</Content>
-          </PrimaryAction>
-        </Card>
+        <a href="/property-and-conveyancing" style="text-decoration: none;">
+          <Card>
+            <PrimaryAction>
+              <Media
+                class="card-media-16x9"
+                aspectRatio="16x9"
+                style="background: #484c5a;position: relative"
+                ><span class="material-symbols-outlined icon">
+                  real_estate_agent
+                </span>
+              </Media>
+              <Content>Property and Conveyancing</Content>
+            </PrimaryAction>
+          </Card>
+        </a>
       </li>
       <li>
-        <Card>
-          <PrimaryAction
-            on:click={() => (window.location.href = "/personal-injury")}
-          >
-            <Media
-              class="card-media-16x9"
-              aspectRatio="16x9"
-              style="background: #484c5a;position: relative"
-              ><span class="material-symbols-outlined icon">
-                personal_injury
-              </span>
-            </Media>
-            <Content>Personal Injury</Content>
-          </PrimaryAction>
-        </Card>
+        <a href="/personal-injury" style="text-decoration: none;">
+          <Card>
+            <PrimaryAction>
+              <Media
+                class="card-media-16x9"
+                aspectRatio="16x9"
+                style="background: #484c5a;position: relative"
+                ><span class="material-symbols-outlined icon">
+                  personal_injury
+                </span>
+              </Media>
+              <Content>Personal Injury</Content>
+            </PrimaryAction>
+          </Card>
+        </a>
       </li>
       <li>
-        <Card>
-          <PrimaryAction
-            on:click={() => (window.location.href = "/wills-and-estates")}
-          >
-            <Media
-              class="card-media-16x9"
-              aspectRatio="16x9"
-              style="background: #484c5a;position: relative"
-              ><span class="material-symbols-outlined icon">
-                history_edu
-              </span></Media
-            >
-            <Content>Wills and Estates</Content>
-          </PrimaryAction>
-        </Card>
+        <a href="/wills-and-estates" style="text-decoration: none;">
+          <Card>
+            <PrimaryAction>
+              <Media
+                class="card-media-16x9"
+                aspectRatio="16x9"
+                style="background: #484c5a;position: relative"
+                ><span class="material-symbols-outlined icon">
+                  history_edu
+                </span></Media
+              >
+              <Content>Wills and Estates</Content>
+            </PrimaryAction>
+          </Card>
+        </a>
       </li>
     </ul>
   </div>

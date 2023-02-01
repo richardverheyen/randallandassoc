@@ -186,6 +186,14 @@ const Testimonials = create_ssr_component(($$result, $$props, $$bindings, slots)
   $$unsubscribe_displayed_count = subscribe(displayed_count, (value) => $displayed_count = value);
   let reviews = [
     {
+      name: "Kiran Grewal",
+      company: "Legal Client",
+      avatar: avatar3,
+      avatarFallback: avatar3alt,
+      rating: ["star", "star", "star", "star", "star"],
+      text: '"Highly recommend Randall and Associates. Josh Randall is an extremely knowledgeable, professional and responsive lawyer. Will continue to use their services."'
+    },
+    {
       name: "Sue-Ellen Hemphill",
       company: "Property Client",
       avatar: "https://place-hold.it/40x40?text=SH&fontsize=16",
@@ -200,14 +208,6 @@ const Testimonials = create_ssr_component(($$result, $$props, $$bindings, slots)
       avatarFallback: avatar1alt,
       rating: ["star", "star", "star", "star", "star"],
       text: `"Josh was quick to respond and knew his stuff, I'll use him again in the future."`
-    },
-    {
-      name: "Kiran Grewal",
-      company: "Legal Client",
-      avatar: avatar3,
-      avatarFallback: avatar3alt,
-      rating: ["star", "star", "star", "star", "star"],
-      text: '"Highly recommend Randall and Associates. Josh Randall is an extremely knowledgeable, professional and responsive lawyer. Will continue to use their services."'
     }
   ];
   $$result.css.add(css$1);
@@ -253,7 +253,7 @@ const Testimonials = create_ssr_component(($$result, $$props, $$bindings, slots)
                           return `${validate_component(Graphic, "Graphic").$$render(
                             $$result,
                             {
-                              style: "background-image: url(" + item.avatar + ");background-size: 40px;"
+                              style: "background-image: url(" + item.avatar + ");background-size: 40px;border-radius:50%"
                             },
                             {},
                             {}

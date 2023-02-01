@@ -8,6 +8,8 @@ const config = {
 		}
 	}),
 
+	trailingSlash: 'always',
+
 	kit: {
 		adapter: adapter({
 			pages: 'public',

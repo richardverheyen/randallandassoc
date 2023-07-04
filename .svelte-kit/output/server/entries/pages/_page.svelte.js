@@ -499,7 +499,7 @@ const banner1 = "/_app/immutable/assets/home-banner1-acf3bc19.webp";
 const bannerFull = "/_app/immutable/assets/home-banner-full-313f1baa.jpg";
 const _page_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".logo.svelte-1kodxm6.svelte-1kodxm6.svelte-1kodxm6{position:absolute;width:400px;max-width:calc(100vw - 2em);height:180px;max-height:calc((100vw - 2em) / 2.5);overflow:hidden}.logo.svelte-1kodxm6>img.svelte-1kodxm6.svelte-1kodxm6{position:absolute;left:50%;top:45%;transform:translate(-50%, -50%);width:125%}.about.svelte-1kodxm6.svelte-1kodxm6.svelte-1kodxm6{display:flex;justify-content:center;padding:2em 0}@media(max-width: 1000px){.about.svelte-1kodxm6.svelte-1kodxm6.svelte-1kodxm6{flex-direction:column;text-align:center;align-items:center}}.about.svelte-1kodxm6>div.svelte-1kodxm6.svelte-1kodxm6{display:flex;align-items:center;max-width:500px;padding:0 2em}.services.svelte-1kodxm6.svelte-1kodxm6.svelte-1kodxm6{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2em 0}.services.svelte-1kodxm6 ul.svelte-1kodxm6.svelte-1kodxm6{padding:0;text-align:center}.services.svelte-1kodxm6 ul.svelte-1kodxm6>li.svelte-1kodxm6{list-style:none;margin:50px 50px}@media(max-width: 1170px){.services.svelte-1kodxm6 ul.svelte-1kodxm6>li.svelte-1kodxm6{margin:25px 25px}}@media(max-width: 1025px){.services.svelte-1kodxm6 ul.svelte-1kodxm6>li.svelte-1kodxm6{margin:10px 10px}}.card-container.svelte-1kodxm6.svelte-1kodxm6.svelte-1kodxm6{display:flex}@media(max-width: 925px){.card-container.svelte-1kodxm6.svelte-1kodxm6.svelte-1kodxm6{flex-direction:column}}.card-container.svelte-1kodxm6>li.svelte-1kodxm6.svelte-1kodxm6{margin:10px 10px;min-width:290px}.card-container.svelte-1kodxm6>li .card-media-16x9 .icon.svelte-1kodxm6.svelte-1kodxm6{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);font-size:80px;color:rgba(255, 255, 255, 0.6)}#contact-us.svelte-1kodxm6.svelte-1kodxm6.svelte-1kodxm6{background-image:url({banner2})}#contact-us.svelte-1kodxm6>div.svelte-1kodxm6.svelte-1kodxm6{display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.5em 0}@media(max-width: 920px){#contact-us.svelte-1kodxm6>div.svelte-1kodxm6.svelte-1kodxm6{background-color:#e8d6b3;padding:45px 45px}}#contact-us.svelte-1kodxm6>div.svelte-1kodxm6 p.svelte-1kodxm6{padding:0;margin-top:0}",
+  code: ".logo.svelte-1kodxm6.svelte-1kodxm6.svelte-1kodxm6{position:absolute;width:400px;max-width:calc(100vw - 2em);height:180px;max-height:calc((100vw - 2em) / 2.5);overflow:hidden}.logo.svelte-1kodxm6>img.svelte-1kodxm6.svelte-1kodxm6{position:absolute;left:50%;top:45%;transform:translate(-50%, -50%);width:125%}.about.svelte-1kodxm6.svelte-1kodxm6.svelte-1kodxm6{display:flex;justify-content:center;padding:2em 0}@media(max-width: 1000px){.about.svelte-1kodxm6.svelte-1kodxm6.svelte-1kodxm6{flex-direction:column;text-align:center;align-items:center}}.about.svelte-1kodxm6>div.svelte-1kodxm6.svelte-1kodxm6{display:flex;align-items:center;max-width:500px;padding:0 2em}.services.svelte-1kodxm6.svelte-1kodxm6.svelte-1kodxm6{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2em 0}.services.svelte-1kodxm6 ul.svelte-1kodxm6.svelte-1kodxm6{padding:0;text-align:center}.services.svelte-1kodxm6 ul.svelte-1kodxm6>li.svelte-1kodxm6{list-style:none;margin:50px 50px}@media(max-width: 1170px){.services.svelte-1kodxm6 ul.svelte-1kodxm6>li.svelte-1kodxm6{margin:25px 25px}}@media(max-width: 1025px){.services.svelte-1kodxm6 ul.svelte-1kodxm6>li.svelte-1kodxm6{margin:10px 10px}}.card-container.svelte-1kodxm6.svelte-1kodxm6.svelte-1kodxm6{display:flex}@media(max-width: 925px){.card-container.svelte-1kodxm6.svelte-1kodxm6.svelte-1kodxm6{flex-direction:column}}.card-container.svelte-1kodxm6>li.svelte-1kodxm6.svelte-1kodxm6{margin:10px 10px;min-width:290px}.card-container.svelte-1kodxm6>li a.svelte-1kodxm6.svelte-1kodxm6{text-decoration:none;color:black}.card-container.svelte-1kodxm6>li a.svelte-1kodxm6.svelte-1kodxm6:hover{text-decoration:underline}.card-container.svelte-1kodxm6>li .card-media-16x9 .icon.svelte-1kodxm6.svelte-1kodxm6{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);font-size:80px;color:rgba(255, 255, 255, 0.6)}#contact-us.svelte-1kodxm6.svelte-1kodxm6.svelte-1kodxm6{background-image:url({banner2})}#contact-us.svelte-1kodxm6>div.svelte-1kodxm6.svelte-1kodxm6{display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.5em 0}@media(max-width: 920px){#contact-us.svelte-1kodxm6>div.svelte-1kodxm6.svelte-1kodxm6{background-color:#e8d6b3;padding:45px 45px}}#contact-us.svelte-1kodxm6>div.svelte-1kodxm6 p.svelte-1kodxm6{padding:0;margin-top:0}",
   map: null
 };
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -524,7 +524,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       </p></div></div></section>
 
 <section style="${"background: #E8D6B3;"}"><div class="${"gutters services svelte-1kodxm6"}">
-    <ul class="${"card-container svelte-1kodxm6"}"><li class="${"svelte-1kodxm6"}">${validate_component(Card, "Card").$$render($$result, {}, {}, {
+    <ul class="${"card-container svelte-1kodxm6"}"><li class="${"svelte-1kodxm6"}"><a href="${"/property-and-conveyancing"}" style="${"text-decoration: none;"}" class="${"svelte-1kodxm6"}">${validate_component(Card, "Card").$$render($$result, {}, {}, {
     default: () => {
       return `${validate_component(PrimaryAction, "PrimaryAction").$$render($$result, {}, {}, {
         default: () => {
@@ -539,11 +539,11 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
             {
               default: () => {
                 return `<span class="${"material-symbols-outlined icon svelte-1kodxm6"}">real_estate_agent
-              </span>`;
+                </span>`;
               }
             }
           )}
-            ${validate_component(Content, "Content").$$render($$result, {}, {}, {
+              ${validate_component(Content, "Content").$$render($$result, {}, {}, {
             default: () => {
               return `Property and Conveyancing`;
             }
@@ -551,8 +551,8 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         }
       })}`;
     }
-  })}</li>
-      <li class="${"svelte-1kodxm6"}">${validate_component(Card, "Card").$$render($$result, {}, {}, {
+  })}</a></li>
+      <li class="${"svelte-1kodxm6"}"><a href="${"/personal-injury"}" style="${"text-decoration: none;"}" class="${"svelte-1kodxm6"}">${validate_component(Card, "Card").$$render($$result, {}, {}, {
     default: () => {
       return `${validate_component(PrimaryAction, "PrimaryAction").$$render($$result, {}, {}, {
         default: () => {
@@ -567,11 +567,11 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
             {
               default: () => {
                 return `<span class="${"material-symbols-outlined icon svelte-1kodxm6"}">personal_injury
-              </span>`;
+                </span>`;
               }
             }
           )}
-            ${validate_component(Content, "Content").$$render($$result, {}, {}, {
+              ${validate_component(Content, "Content").$$render($$result, {}, {}, {
             default: () => {
               return `Personal Injury`;
             }
@@ -579,8 +579,8 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         }
       })}`;
     }
-  })}</li>
-      <li class="${"svelte-1kodxm6"}">${validate_component(Card, "Card").$$render($$result, {}, {}, {
+  })}</a></li>
+      <li class="${"svelte-1kodxm6"}"><a href="${"/wills-and-estates"}" style="${"text-decoration: none;"}" class="${"svelte-1kodxm6"}">${validate_component(Card, "Card").$$render($$result, {}, {}, {
     default: () => {
       return `${validate_component(PrimaryAction, "PrimaryAction").$$render($$result, {}, {}, {
         default: () => {
@@ -595,11 +595,11 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
             {
               default: () => {
                 return `<span class="${"material-symbols-outlined icon svelte-1kodxm6"}">history_edu
-              </span>`;
+                </span>`;
               }
             }
           )}
-            ${validate_component(Content, "Content").$$render($$result, {}, {}, {
+              ${validate_component(Content, "Content").$$render($$result, {}, {}, {
             default: () => {
               return `Wills and Estates`;
             }
@@ -607,7 +607,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         }
       })}`;
     }
-  })}</li></ul></div></section>
+  })}</a></li></ul></div></section>
 
 ${validate_component(Testimonials, "Testimonials").$$render($$result, {}, {}, {})}
 

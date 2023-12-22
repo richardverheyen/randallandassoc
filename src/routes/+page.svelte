@@ -12,6 +12,19 @@
 
   import logo from "$lib/logo.svg";
   let vars = `background-image: url(${banner2});`;
+
+  import { onMount } from 'svelte';
+	import toast, { Toaster } from 'svelte-french-toast';
+
+	onMount(() => {
+		toast("We wish you a Merry Christmas and a happy and prosperous New Year. \n\nPlease note this office will be closed from 3:00 p.m. on Friday, 22 December 2023 and will re-open at 9:00 a.m. on Monday, 15 January 2024.", {
+      icon: '🎄', 
+      duration: 10000,
+      position: "top-left",
+      style: "max-width: 390px"
+    });
+	})
+  
 </script>
 
 <svelte:head>
